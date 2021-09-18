@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-18T02:48:21.176Z</updated>
+  <updated>2021-09-18T03:33:41.804Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo博客主题之hexo-theme-matery的介绍（转载于blinkfox）</title>
+    <link href="http://example.com/2021/09/18/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
+    <id>http://example.com/2021/09/18/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
+    <published>2021-09-18T03:13:35.000Z</published>
+    <updated>2021-09-18T03:33:41.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-matery&quot;&gt;&lt;a href=&quot;#hexo-theme-matery&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="转载内容" scheme="http://example.com/categories/%E8%BD%AC%E8%BD%BD%E5%86%85%E5%AE%B9/"/>
+    
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="matery" scheme="http://example.com/tags/matery/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo+Github+matery的个人博客搭建（补充）</title>
-    <link href="http://example.com/2021/09/18/hello-world/"/>
-    <id>http://example.com/2021/09/18/hello-world/</id>
+    <link href="http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/"/>
+    <id>http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/</id>
     <published>2021-09-18T02:43:00.000Z</published>
-    <updated>2021-09-18T02:48:21.176Z</updated>
+    <updated>2021-09-18T03:23:10.267Z</updated>
     
     
       
