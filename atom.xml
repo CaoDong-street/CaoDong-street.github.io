@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>No Party For Cao Dong</title>
+  <title>Cao Dong street</title>
   
   <subtitle>草东街</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-18T03:33:41.804Z</updated>
+  <updated>2021-09-18T14:05:55.236Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode配置C++环境2(修改中)</title>
+    <link href="http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing-2/"/>
+    <id>http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing-2/</id>
+    <published>2021-09-18T13:59:34.000Z</published>
+    <updated>2021-09-18T14:05:55.236Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;./VSCode%E9%85%8D%E7%BD%AEC++%E7%8E%AF%E5%A2%83/2.png&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="http://example.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="VSCode" scheme="http://example.com/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode配置C++环境（修改中）</title>
+    <link href="http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing/"/>
+    <id>http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing/</id>
+    <published>2021-09-18T12:17:03.000Z</published>
+    <updated>2021-09-18T14:05:51.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装VSCode与C&quot;&gt;&lt;a href=&quot;#安装VSCode与C&quot; class=&quot;headerlink&quot; title=&quot;安装VSCode与C++&quot;&gt;&lt;/a&gt;安装VSCode与C++&lt;/h2&gt;&lt;p&gt;参考&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="http://example.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="VSCode" scheme="http://example.com/tags/VSCode/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客主题之hexo-theme-matery的介绍（转载于blinkfox）</title>
