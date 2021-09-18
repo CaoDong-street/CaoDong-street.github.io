@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2021/09/17/hello-world/"/>
-      <url>/2021/09/17/hello-world/</url>
+      <title>Hexo+Github+matery的个人博客搭建（补充）</title>
+      <link href="/2021/09/18/hello-world/"/>
+      <url>/2021/09/18/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>最近想做一下自己的博客内容，记录一下平时的学习。参考了 <a href="https://zhuanlan.zhihu.com/p/111614119">Github + Hexo 搭建个人博客超详细教程</a> 进行博客搭建。但是出现了一些由于版本更新问题所以在这里记录一下，刚开始写博客，解决方法不一定正确。</p><h2 id="博客根目录下配置文件-config-yml的由于版本更新出现的问题"><a href="#博客根目录下配置文件-config-yml的由于版本更新出现的问题" class="headerlink" title="博客根目录下配置文件_config.yml的由于版本更新出现的问题"></a>博客根目录下配置文件_config.yml的由于版本更新出现的问题</h2><h3 id="配置文件-config-yml最后几行的原始内容"><a href="#配置文件-config-yml最后几行的原始内容" class="headerlink" title="配置文件_config.yml最后几行的原始内容"></a>配置文件_config.yml最后几行的原始内容</h3><pre class=" language-yaml"><code class="language-yaml">    <span class="token comment" spellcheck="true"># Deployment</span>    <span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>      <span class="token key atrule">type</span><span class="token punctuation">:</span></code></pre><h3 id="Github-Hexo-搭建个人博客超详细教程-中对于配置文件-config-yml最后几行的修改"><a href="#Github-Hexo-搭建个人博客超详细教程-中对于配置文件-config-yml最后几行的修改" class="headerlink" title="Github + Hexo 搭建个人博客超详细教程 中对于配置文件_config.yml最后几行的修改"></a><a href="https://zhuanlan.zhihu.com/p/111614119">Github + Hexo 搭建个人博客超详细教程</a> 中对于配置文件_config.yml最后几行的修改</h3><pre class=" language-yaml"><code class="language-yaml">    <span class="token comment" spellcheck="true"># Deployment</span>    <span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/deployment.html</span>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>      <span class="token key atrule">type</span><span class="token punctuation">:</span> git      <span class="token key atrule">repository</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>panakot/panakot.github.io.git（你的github.io地址）      <span class="token key atrule">branch</span><span class="token punctuation">:</span> master</code></pre><h3 id="我对配置文件-config-yml最后几行的修改"><a href="#我对配置文件-config-yml最后几行的修改" class="headerlink" title="我对配置文件_config.yml最后几行的修改"></a>我对配置文件_config.yml最后几行的修改</h3><pre class=" language-yaml"><code class="language-yaml">    <span class="token comment" spellcheck="true"># Deployment</span>    <span class="token comment" spellcheck="true">## Docs: https://hexo.io/docs/one-command-deployment</span>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>      <span class="token key atrule">type</span><span class="token punctuation">:</span> git      <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com<span class="token punctuation">:</span>panakot/panakot.github.io.git（你的github.io地址）      <span class="token key atrule">branch</span><span class="token punctuation">:</span> main</code></pre><h2 id="博客主题matery的配置"><a href="#博客主题matery的配置" class="headerlink" title="博客主题matery的配置"></a>博客主题matery的配置</h2><p>最好直接参考原主题开发者的在个人博客中的使用说明，matery的作者闪烁之狐的相关说明网址可参考<a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">Hexo博客主题之hexo-theme-matery的介绍</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> 学习经验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> matery </tag>
+            
+        </tags>
       
     </entry>
     
