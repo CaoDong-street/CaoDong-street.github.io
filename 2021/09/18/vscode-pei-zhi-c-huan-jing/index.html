@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VSCode配置C++环境（修改中1）, Cao Dong">
+    <meta name="keywords" content="VSCode配置C++环境, Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>VSCode配置C++环境（修改中1） | Cao Dong</title>
+    <title>VSCode配置C++环境 | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">VSCode配置C++环境（修改中1）</h1>
+                    <h1 class="description center-align post-title">VSCode配置C++环境</h1>
                 </div>
             </div>
         </div>
@@ -450,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    545
+                    263
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -480,113 +480,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="安装VSCode与C"><a href="#安装VSCode与C" class="headerlink" title="安装VSCode与C++"></a>安装VSCode与C++</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48468423/article/details/118950592">VsCode安装和配置c/c++环境（超完整，小白专用）</a></p>
-<h2 id="VSCode配置c"><a href="#VSCode配置c" class="headerlink" title="VSCode配置c++"></a>VSCode配置c++</h2><p>在下载玩c/c++插件后进行如下几步</p>
-<h3 id="新建如下文件夹以及文件"><a href="#新建如下文件夹以及文件" class="headerlink" title="新建如下文件夹以及文件"></a>新建如下文件夹以及文件</h3><p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gul7lusjruj60ak09kaag02.jpg" alt="首页"></p>
-<h3 id="填写相关配置文件"><a href="#填写相关配置文件" class="headerlink" title="填写相关配置文件"></a>填写相关配置文件</h3><p><strong>c_cpp_properties.json</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">{</span>
-    <span class="token key atrule">"configurations"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span>
-            <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"Win32"</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"includePath"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                <span class="token string">"${workspaceRoot}"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/include/**"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++/mingw32"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++/backward"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../include"</span><span class="token punctuation">,</span>
-                <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include-fixed"</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"defines"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                <span class="token string">"_DEBUG"</span><span class="token punctuation">,</span>
-                <span class="token string">"UNICODE"</span><span class="token punctuation">,</span>
-                <span class="token string">"__GNUC__=6"</span><span class="token punctuation">,</span>
-                <span class="token string">"__cdecl=__attribute__((__cdecl__))"</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"intelliSenseMode"</span><span class="token punctuation">:</span> <span class="token string">"msvc-x64"</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"browse"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-                <span class="token key atrule">"limitSymbolsToIncludedHeaders"</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token punctuation">,</span>
-                <span class="token key atrule">"databaseFilename"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-                <span class="token key atrule">"path"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                    <span class="token string">"${workspaceRoot}"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/include/**"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++/mingw32"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include/c++/backward"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../include"</span><span class="token punctuation">,</span>
-                    <span class="token string">"d:/software/mingw/bin/../lib/gcc/mingw32/9.2.0/include-fixed"</span>
-                <span class="token punctuation">]</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token key atrule">"version"</span><span class="token punctuation">:</span> <span class="token number">4</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>launch.json</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">{</span>  
-    <span class="token key atrule">"version"</span><span class="token punctuation">:</span> <span class="token string">"0.2.0"</span><span class="token punctuation">,</span>  
-    <span class="token key atrule">"configurations"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>  
-        <span class="token punctuation">{</span>  
-            <span class="token key atrule">"name"</span><span class="token punctuation">:</span> <span class="token string">"(gdb) Launch"</span><span class="token punctuation">,</span> // 配置名称，将会在启动配置的下拉菜单中显示  
-            <span class="token key atrule">"type"</span><span class="token punctuation">:</span> <span class="token string">"cppdbg"</span><span class="token punctuation">,</span>       // 配置类型，这里只能为cppdbg  
-            <span class="token key atrule">"request"</span><span class="token punctuation">:</span> <span class="token string">"launch"</span><span class="token punctuation">,</span>    // 请求配置类型，可以为launch（启动）或attach（附加）  
-            <span class="token key atrule">"program"</span><span class="token punctuation">:</span> <span class="token string">"${workspaceFolder}/exe/${fileBasenameNoExtension}.exe"</span><span class="token punctuation">,</span>// 将要进行调试的程序的路径  
-            <span class="token key atrule">"args"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>             // 程序调试时传递给程序的命令行参数，一般设为空即可  
-            <span class="token key atrule">"stopAtEntry"</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span class="token punctuation">,</span>   // 设为true时程序将暂停在程序入口处，一般设置为false  
-            <span class="token key atrule">"cwd"</span><span class="token punctuation">:</span> <span class="token string">"${workspaceFolder}"</span><span class="token punctuation">,</span> // 调试程序时的工作目录，一般为$<span class="token punctuation">{</span>workspaceFolder<span class="token punctuation">}</span>即代码所在目录  
-            <span class="token key atrule">"environment"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  
-            <span class="token key atrule">"externalConsole"</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token punctuation">,</span> // 调试时是否显示控制台窗口，一般设置为true显示控制台  
-            <span class="token key atrule">"MIMode"</span><span class="token punctuation">:</span> <span class="token string">"gdb"</span><span class="token punctuation">,</span>  
-            <span class="token key atrule">"miDebuggerPath"</span><span class="token punctuation">:</span> <span class="token string">"D:/software/mingW/bin/gdb.exe"</span><span class="token punctuation">,</span> // miDebugger的路径，注意这里要与MinGw的路径对应  
-            <span class="token key atrule">"preLaunchTask"</span><span class="token punctuation">:</span> <span class="token string">"g++"</span><span class="token punctuation">,</span> // 调试会话开始前执行的任务，一般为编译程序，c++为g++<span class="token punctuation">,</span> c为gcc  
-            <span class="token key atrule">"setupCommands"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>  
-                <span class="token punctuation">{</span>   
-		    <span class="token key atrule">"description"</span><span class="token punctuation">:</span> <span class="token string">"Enable pretty-printing for gdb"</span><span class="token punctuation">,</span>  
-                    <span class="token key atrule">"text"</span><span class="token punctuation">:</span> <span class="token string">"-enable-pretty-printing"</span><span class="token punctuation">,</span>  
-                    <span class="token key atrule">"ignoreFailures"</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  
-                <span class="token punctuation">}</span>  
-            <span class="token punctuation">]</span>  
-        <span class="token punctuation">}</span>  
-    <span class="token punctuation">]</span>  
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>tasks.json</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">{</span>
-    <span class="token key atrule">"version"</span><span class="token punctuation">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
-    <span class="token key atrule">"command"</span><span class="token punctuation">:</span> <span class="token string">"g++"</span><span class="token punctuation">,</span>
-    <span class="token key atrule">"args"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-        <span class="token string">"-g"</span><span class="token punctuation">,</span>
-        <span class="token string">"${file}"</span><span class="token punctuation">,</span>
-        <span class="token string">"-o"</span><span class="token punctuation">,</span>
-        <span class="token string">"${workspaceFolder}/exe/${fileBasenameNoExtension}.exe"</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span> // 编译命令参数
-    <span class="token key atrule">"problemMatcher"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        <span class="token key atrule">"owner"</span><span class="token punctuation">:</span> <span class="token string">"cpp"</span><span class="token punctuation">,</span>
-        <span class="token key atrule">"fileLocation"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-            <span class="token string">"relative"</span><span class="token punctuation">,</span>
-            <span class="token string">"\\"</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token key atrule">"pattern"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            <span class="token key atrule">"regexp"</span><span class="token punctuation">:</span> <span class="token string">"^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$"</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"file"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"line"</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"column"</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"severity"</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
-            <span class="token key atrule">"message"</span><span class="token punctuation">:</span> <span class="token number">5</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="填写测试文件"><a href="#填写测试文件" class="headerlink" title="填写测试文件"></a>填写测试文件</h3><p><strong>test.cpp</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">#include &lt;iostream&gt;</span>
-   using namespace std;
-
-   int main()
-   <span class="token punctuation">{</span>
-       cout&lt;&lt;"Hello World<span class="token tag">!</span>"&lt;&lt;endl;
-       return 0;
-   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="安装VSCode与C"><a href="#安装VSCode与C" class="headerlink" title="安装VSCode与C++"></a>安装VSCode与C++</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhouzi_heng/article/details/115014059">【c++】VSCode配置 c++ 环境（小白教程））</a></p>
+<h2 id="VSCode配置c"><a href="#VSCode配置c" class="headerlink" title="VSCode配置c++"></a>VSCode配置c++</h2><p>网上有许多关于vscode下c++配置，一种是配置文件的方法，一种是添加插件直接配置的方法</p>
+<h3 id="配置文件法"><a href="#配置文件法" class="headerlink" title="配置文件法"></a>配置文件法</h3><p><img src="https://tva2.sinaimg.cn/large/007mx13gly1gul7mhhg36j60k8087wfz02.jpg" alt="第一步"><br><img src="https://tva4.sinaimg.cn/large/007mx13gly1gul7mqrtwgj60c8047js602.jpg" alt="第二步"></p>
+<h3 id="配置插件法（两种）"><a href="#配置插件法（两种）" class="headerlink" title="配置插件法（两种）"></a>配置插件法（两种）</h3><p>可选两种：</p>
+<p><em>Code runner</em> （右上角箭头运行）</p>
+<p><em>C/C++ Compile Run</em>（F6运行）</p>
+<p>参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77645306">windows 10上使用vscode编译运行和调试C/C++</a></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="对应测试文件"><a href="#对应测试文件" class="headerlink" title="对应测试文件"></a>对应测试文件</h3><p><strong>test.cpp</strong></p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"> <span class="token comment">#include&lt;iostream&gt;</span>
+ 
+using namespace std;
+ 
+int main()
+<span class="token punctuation">{</span>
+	int num;
+	cout&lt;&lt;"请输入一个整型数：";
+	cin<span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span>num;
+	cout&lt;&lt;"八进制数是："&lt;&lt;oct&lt;&lt;num&lt;&lt;endl;
+	cout&lt;&lt;"十进制数是："&lt;&lt;dec&lt;&lt;num&lt;&lt;endl;
+	cout&lt;&lt;"十六进制数是："&lt;&lt;hex&lt;&lt;num&lt;&lt;endl;
+	return 0;
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>插件法可以直接在vscode中查看编译结果</p>
+<p>配置文件的方法需要再下载插件<em>Code Runner</em>运行生成的exe文件，配置成功后的运行文件可在输入数字后反应。（存在中文乱码的问题需要处理）</p>
 
                 
             </div>
@@ -704,31 +621,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/09/18/vscode-pei-zhi-c-huan-jing-2/">
+                <a href="/2021/09/19/vscode-jia-c-huan-jing-xia-bian-yi-yu-yan-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="VSCode配置C++环境2(修改中1)">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="VSCode加C++环境下编译语言遇到的问题以及解决方法">
                         
-                        <span class="card-title">VSCode配置C++环境2(修改中1)</span>
+                        <span class="card-title">VSCode加C++环境下编译语言遇到的问题以及解决方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            解决问题：中文乱码
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-19
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    环境配置
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
+                                    学习经验
                                 </a>
                             
                             
@@ -1006,7 +923,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.5k</span>&nbsp;字
+                class="white-color">5.6k</span>&nbsp;字
             
             
             
