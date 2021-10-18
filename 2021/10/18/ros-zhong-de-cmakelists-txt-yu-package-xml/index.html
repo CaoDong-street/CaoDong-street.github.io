@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++学习路线, Cao Dong">
+    <meta name="keywords" content="ROS中的CMakeLists.txt与package.xml, Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C++学习路线 | Cao Dong</title>
+    <title>ROS中的CMakeLists.txt与package.xml | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++学习路线</h1>
+                    <h1 class="description center-align post-title">ROS中的CMakeLists.txt与package.xml</h1>
                 </div>
             </div>
         </div>
@@ -412,12 +412,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/CMakeLists-txt/">
+                                <span class="chip bg-color">CMakeLists.txt</span>
                             </a>
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/package-xml/">
+                                <span class="chip bg-color">package.xml</span>
                             </a>
                         
                     </div>
@@ -428,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                学习经验
+                            <a href="/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                ROS学习笔记
                             </a>
                         
                     </div>
@@ -441,7 +441,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-10-18
                 </div>
                 
 
@@ -450,14 +450,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    137
+                    871
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -480,7 +480,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>二  基础四大件：<br>1.数据结构与算法 《大话数据结构》c/c++  ，《算法第四版》 java ，《剑指offer》<br>2.计算机网络《tcp/ip详解》<br>3.操作系统  《深入理解操作系统》<br>4.设计模式 《大话设计模式》<br>三 应用于编程<br>1.linux使用<br>《linux就该这么学》<br>2.编译和调试<br>GUN官方GCC和GDB文档<br>《debugging  with gdb 》中文版<br>《跟我一起写makefile》陈皓<br>3.linux环境编程<br>《unix环境高级编程》<br>《linux高性能服务器编程》<br>《posix多线程程序设计》</p>
+                <h2 id="CMakeLists-txt文件编辑说明"><a href="#CMakeLists-txt文件编辑说明" class="headerlink" title="CMakeLists.txt文件编辑说明"></a>CMakeLists.txt文件编辑说明</h2><h3 id="编译功能包"><a href="#编译功能包" class="headerlink" title="编译功能包"></a>编译功能包</h3><p>节点的代码已经完成，C++是一种编译语言，在运行之前需要将代码编译成可执行文件，如果使用Python等解析语言编写代码，则不需要进行编译，可以省去此步骤。</p>
+<p>ROS中的编译器使用的是CMake，编译规则通过功能包中的CMakeLists.txt文件设置，使用catkin命令创建的功能包中会自动生成该文件，已经配置多数编译选项，并且包含详细的注释，我们几乎不用查看相关的说明手册，稍作修改就可以编译自己的代码。</p>
+<p>打开功能包中的CMakeLists.txt文件，找到以下配置项，去掉注释并稍作修改：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">include_directories(include  ${catkin_INCLUDE_DIRS})
+
+add_executable(talker  src/talker.cpp)
+target_link_libraries(talker  ${catkin_LIBRARIES})
+add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)
+    
+add_executable(listener  src/listener.cpp)
+target_link_libraries(listener  ${catkin_LIBRARIES})
+add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对于这个较为简单的功能包，主要用到了以下四种编译配置项。</p>
+<p>（1）include_directories</p>
+<p>用于设置头文件的相对路径。全局路径默认是功能包的所在目录，比如功能包的头文件一般会放到功能包根目录下的include文件夹中，所以此处需要添加该文件夹。此外，该配置项还包含ROS catkin编译器默认包含的其他头文件路径，比如ROS默认安装路径、Linux系统路径等。</p>
+<p>（2）add_executable</p>
+<p>用于设置需要编译的代码和生成的可执行文件。第一个参数为期望生成的可执行文件的名称，后边的参数为<u>参与编译的源码文件（cpp）</u>，如果需要多个代码文件，则可在后面依次列出，中间使用空格进行分隔。</p>
+<p>（3）target_link_libraries</p>
+<p>用于设置链接库。很多功能需要使用系统或者第三方的库函数，通过该选项可以配置执行文件链接的库文件，其第一个参数与add_executable相同，是可执行文件的名称，后面依次列出需要链接的库。此处编译的Publisher和Subscriber没有使用其他库，添加默认链接库即可。</p>
+<p>（4）add_dependencies</p>
+<p>用于设置依赖。在很多应用中，我们需要定义语言无关的消息类型，消息类型会在编译过程中产生相应语言的代码，如果编译的可执行文件依赖这些动态生成的代码，则需要使用add_dependencies添加<code>${PROJECT_NAME}_generate_messages_cpp</code>配置，即该功能包动态产生的消息代码。该编译规则也可以添加其他需要依赖的功能包。<br>以上编译内容会帮助系统生成两个可执行文件：talker和listener，放置在工作空间的~/catkin_ws/devel/lib/<package name="">路径下。</package></p>
+<h3 id="自定义话题消息"><a href="#自定义话题消息" class="headerlink" title="自定义话题消息"></a>自定义话题消息</h3><p>打开功能包的CMakeLists.txt文件，在find_package中添加消息生成依赖的功能包message_generation，这样在编译时才能找到所需要的文件：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">find_package(catkin  REQUIRED  COMPONENTS
+             geometry_msgs
+             roscpp
+             rospy
+             std_msgs
+             message_generation)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>catkin依赖也需要进行以下设置：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">catkin_package(……
+               CATKIN_DEPENDS  geometry_msgs  roscpp  rospy  std_msgs  message_runtime
+               ……)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>最后设置需要编译的msg文件：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">add_message_files(
+    FILES
+    Person.msg)
+generate_messages(
+	DEPENDENCIES
+    std_msgs)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>相关热门文章</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/buzaishihaizi/article/details/78524929">ROS中的CMakelists_buzaishihaizi的博客-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44095441/article/details/88643752">ROS中的CMakeLists.txt详解_听涯的博客-CSDN博客</a></p>
+<h2 id="package-xml文件编辑说明"><a href="#package-xml文件编辑说明" class="headerlink" title="package.xml文件编辑说明"></a>package.xml文件编辑说明</h2><p>参考热门文章</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43247439/article/details/107101646">ROS中的package.xml的使用_Alex的博客-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://sychaichangkun.gitbooks.io/ros-tutorial-icourse163/content/chapter2/2.5.html">package.xml · 中国大学MOOC———《机器人操作系统入门》讲义 (gitbooks.io)</a></p>
 
                 
             </div>
@@ -507,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/26/c-xue-xi-lu-xian/">http://example.com/2021/09/26/c-xue-xi-lu-xian/</a>
+                    <a href="http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/">http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,12 +593,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/CMakeLists-txt/">
+                                    <span class="chip bg-color">CMakeLists.txt</span>
                                 </a>
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/package-xml/">
+                                    <span class="chip bg-color">package.xml</span>
                                 </a>
                             
                         </div>
@@ -594,17 +642,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/">
+                <a href="/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="使用PSP-CaRS框架撰写与工程相关的研究型文章">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="ROS中的CMakeLists.txt与package.xml">
                         
-                        <span class="card-title">使用PSP-CaRS框架撰写与工程相关的研究型文章</span>
+                        <span class="card-title">ROS中的CMakeLists.txt与package.xml</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -614,30 +663,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%96%87%E7%AB%A0%E6%92%B0%E5%86%99%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    文章撰写经验
+                            <a href="/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    ROS学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PSP/">
-                        <span class="chip bg-color">PSP</span>
+                    <a href="/tags/CMakeLists-txt/">
+                        <span class="chip bg-color">CMakeLists.txt</span>
                     </a>
                     
-                    <a href="/tags/CaRS/">
-                        <span class="chip bg-color">CaRS</span>
+                    <a href="/tags/package-xml/">
+                        <span class="chip bg-color">package.xml</span>
                     </a>
                     
                 </div>
@@ -651,31 +701,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/23/wen-xian-yue-du/">
+                <a href="/2021/10/18/ros-zhong-de-launch-qi-dong-wen-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="文献阅读">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="ROS中的launch启动文件">
                         
-                        <span class="card-title">文献阅读</span>
+                        <span class="card-title">ROS中的launch启动文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为了更好地阅读文献做的小笔记
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    ROS学习笔记
                                 </a>
                             
                             
@@ -685,12 +735,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/endnote/">
-                        <span class="chip bg-color">endnote</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9D%9A%E6%9E%9C%E4%BA%91-pdf-expert/">
-                        <span class="chip bg-color">坚果云+pdf expert</span>
+                    <a href="/tags/launch/">
+                        <span class="chip bg-color">launch</span>
                     </a>
                     
                 </div>
@@ -821,6 +867,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
