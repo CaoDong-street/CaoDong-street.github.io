@@ -412,12 +412,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">无人机学习</span>
-                            </a>
-                        
                             <a href="/tags/fast-planner/">
                                 <span class="chip bg-color">fast planner</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">无人机学习</span>
                             </a>
                         
                     </div>
@@ -484,22 +484,22 @@
 <h2 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h2><h3 id="基于梯度的路径优化"><a href="#基于梯度的路径优化" class="headerlink" title="基于梯度的路径优化"></a>基于梯度的路径优化</h3><p> GTO是一种主要的路径生成算法，把路径生成看作一个最小化目标函数的非线性优化问题。问题：局部最小值</p>
 <h3 id="拓扑路径规划"><a href="#拓扑路径规划" class="headerlink" title="拓扑路径规划"></a>拓扑路径规划</h3><p> 已经有人利用拓扑上不同路径的思想进行规划，其中寻找属于不同的同伦(同调)或可见不用形状类的路径。缺点：要么对象是二维平面，要么对象在3维空间，但是算法的复杂度过高。</p>
 <h2 id="路径引导轨迹优化"><a href="#路径引导轨迹优化" class="headerlink" title="路径引导轨迹优化"></a>路径引导轨迹优化</h2><p>PATH-GUIDED    TRAJECTORY    OPTIMIZATION    ,PGO</p>
-<h3 id="A-优化失效分析"><a href="#A-优化失效分析" class="headerlink" title="A. 优化失效分析"></a>A. 优化失效分析</h3><p> 如下图所示，优化失败的典型例子，当轨迹穿过ESDF(用橙色虚线表示)的“谷”(a)或“脊”(b)时，轨迹的相邻部分被推向相反的方向。红色箭头表示ESDF的梯度，黄色箭头表示目标函数的梯度。这个目标函数就是我们B问题公式化需要产生的函数。<br><img src="https://img-blog.csdnimg.cn/20210511103645488.png">
+<h3 id="A-优化失效分析"><a href="#A-优化失效分析" class="headerlink" title="A. 优化失效分析"></a>A. 优化失效分析</h3><p> 如下图所示，优化失败的典型例子，当轨迹穿过ESDF(用橙色虚线表示)的“谷”(a)或“脊”(b)时，轨迹的相邻部分被推向相反的方向。红色箭头表示ESDF的梯度，黄色箭头表示目标函数的梯度。这个目标函数就是我们B问题公式化需要产生的函数。<br><img src="https://img-blog.csdnimg.cn/20210511103645488.png" alt="">
  </p>
 <p>对于这种情况，仅仅靠ESDF的梯度并不够，需要额外的信息(目标函数)。</p>
 <h3 id="B-问题公式化-PGO的实现方法的数学形式"><a href="#B-问题公式化-PGO的实现方法的数学形式" class="headerlink" title="B. 问题公式化(PGO的实现方法的数学形式)"></a>B. 问题公式化(PGO的实现方法的数学形式)</h3><p> 文中提出的PGO方法是对上面GTO的改进，它把路径用B样条来表示。对于PGO方法，分为两步，第一个阶段产生一个过渡的预热轨迹（warmup trajectory），然后对这个warmup trajectory的平滑度以及与间隙值(与障碍物之间的)再进行优化。两个阶段如下图：<br><img src="https://img-blog.csdnimg.cn/20210511104613350.png" alt=" "><br> 第一阶段：a图的绿色是初始B样条轨迹，橙色的是几何引导路径，几何引导路径把初始轨迹拉到没有碰撞的地方形成预热路径（蓝色)</p>
 <p>​    第二阶段：b图中，对预热路径再进一步进行平滑度和间隙值(与障碍物之间的)的优化，得到红色最终轨迹。这个几何引导路径通过A<em>或者RRT</em>等传统方法就可以得到，但本文用的是<strong>采样</strong>的方法(拓扑路径搜索 ,    TOPOLOGICAL    PATH    SEARCHING)得到这条引导路径。</p>
-<p> 第一阶段的优化目标函数是：<br><img src="https://img-blog.csdnimg.cn/20210522155741955.png"><br>这里 f_s是轨迹平滑性惩罚函数，而f_g是引导路径和b样条轨迹之间的距离的惩罚代价，其定义如下，主要是利用模拟弹性力来构造惩罚函数：<br><img src="https://img-blog.csdnimg.cn/2021052215582930.png"></p>
-<p><img src="https://img-blog.csdnimg.cn/2021052215593092.png"></p>
+<p> 第一阶段的优化目标函数是：<br><img src="https://img-blog.csdnimg.cn/20210522155741955.png" alt=""><br>这里 f_s是轨迹平滑性惩罚函数，而f_g是引导路径和b样条轨迹之间的距离的惩罚代价，其定义如下，主要是利用模拟弹性力来构造惩罚函数：<br><img src="https://img-blog.csdnimg.cn/2021052215582930.png" alt=""></p>
+<p><img src="https://img-blog.csdnimg.cn/2021052215593092.png" alt=""></p>
 <p>第二阶段的优化目标函数如下，f_s是轨迹平滑性惩罚(成本)函数，f_c是在ESDF上评估的碰撞成本函数，当轨迹接近障碍物时，ESDF的碰撞成本迅速增长。再利用惩罚函数f_v与f_a对速度和加速度的不可行程度进行量化，第二阶段的主要内容参考<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8758904">fast-planner文章：Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a>。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210522160705169.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210522160705169.png" alt=""></p>
 <h2 id="拓扑路径搜索"><a href="#拓扑路径搜索" class="headerlink" title="拓扑路径搜索"></a>拓扑路径搜索</h2><p>TOPOLOGICAL    PATH    SEARCHING</p>
 <p>上面讲了用一个几何引导路径得到了一条相对最优的路径，但是这条路径可能并不是最好的。本文提出了一个采样的方法来寻找几条不同的路径来引导上面PGO。</p>
 <h3 id="A-拓扑等价关系"><a href="#A-拓扑等价关系" class="headerlink" title="A. 拓扑等价关系"></a>A. 拓扑等价关系</h3><p>通过改进<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/220122862_Path_Deformation_Roadmaps_Compact_Graphs_with_Useful_Cycles_for_Motion_Planning"> Path Deformation Roadmaps: Compact Graphs with Useful Cycles for Motion Planning )</a>中的可见性变形 (visibility deformation，VD)（对于等价性检查来说，VD的计算代价很高,要测试VD关系，应该计算一个可见性图，并在其中进行路径搜索，这比测试UVD的复杂性更高。），提出一种统一的可见性变形(uniform visibility deformation,UVD)的定义：</p>
 <p>存在两条可以被s∈[0,1]参数化的轨迹τ1(s)、 τ2(s)并且满足τ1(0) =τ2(0)， τ1(1) =τ2(1)，如果对所有情况，连接τ1(s)、τ2(s)的线段是无碰撞的。那么这两条轨迹属于统一的可见性变形类。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210522163233453.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210522163233453.png" alt=""></p>
 <h3 id="B-拓扑路径图"><a href="#B-拓扑路径图" class="headerlink" title="B. 拓扑路径图"></a>B. 拓扑路径图</h3><p>设计拓扑路径的算法伪代码：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210522162830452.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210522162830452.png" alt=""></p>
 <p>设计拓扑路径的算法伪代码中函数的解释：</p>
 <p><code>AddGuard(G,b)</code>增加guard节点到G中</p>
 <p><code>sample()</code>通过采样节点，</p>
@@ -515,10 +515,10 @@
 <p><code>N_max</code>采样个数限制</p>
 <p><code>G</code>所有guard点以及connect点的集合</p>
 <p>在设计拓扑路径图中，我们引入了两种不同的图节点，即guard和connector，类似于Visibility-PRM。guard负责探索自由空间的不同部分，任何两个guard点g1和g2是彼此是不可见的(连接g1和g2的线段存在碰撞)。在主循环之前，在起始点和结束点创建两个guard点。每当采样点对所有其他guard都不可见时，就会在此点创建一个新的guard(第6-7行)。为了形成路线图的路径，使用连接器连接不同的guard(第7-19行)。当采样点恰好对两个guard可见时，就会创建一个新connector，要么连接guard以形成拓扑上不同的连接(第19-20行)，要么替换现有connector以创建更短的路径(第16-17行)。设置时间限制(t_max)或采样次数限制(N_max)来终止循环。其中起始点和终点之间的结点搜索算法参考<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0921889016300495">Integrated online trajectory planning and optimization in distinctive topologies - ScienceDirect</a>。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210524113127738.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210524113127738.png" alt=""></p>
 <p>拓扑路径生成图如上，任何两个guard节点之间是看不到的，也就是它们的连线是碰撞的。每次在地图上采样一个点，如果这个点另外的任何一个guard都看不到，那么这个点就记作一个新的guard点。然后继续采样，如果一个采样点刚好可以被两个guard点看到，那么就把这个点记作connector，然后把这个connector和这两个guard点连起来。连接好以后做两个事：如果这是一条全新的拓扑路径，那么就保留，否则判断两条拓扑路径的长度，把长的那条去掉。</p>
 <h3 id="C-路径缩短和修剪"><a href="#C-路径缩短和修剪" class="headerlink" title="C. 路径缩短和修剪"></a>C. 路径缩短和修剪</h3><p>如图7(e)所示，由算法1得到的一些路径可能会绕行。导致PGO的第一阶段会使轨迹过度变形，使轨迹变得不光滑。因此，需要通过算法2为深度优先搜索得到的每条路径P_r找到一个拓扑上等效的捷径路径P_s(如图8所示)。该算法首先将路径P_r一致地离散化为一组P_d点，而P_r的第一个点即为P_s的第一个点。在每次迭代中，如果P_s中的前一个点看不见P_d中的一个点(两点连线被障碍物占据的体素挡住了)(Line 3,4)，则第一个阻塞了P_s中的前一个点的视野的障碍物对应的占据的体素的中心点就可以被找到(Line 5)。然后通过以垂直于l_d与且与ESDF梯度共面的方向推离障碍物中心点得到新点P_o(Line 6)。之后，这个新点被添加Ps中(第7行)。这个过程一直持续到最后一个点。(离开的点)</p>
-<p><img src="https://img-blog.csdnimg.cn/20210524114458852.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210524114458852.png" alt=""></p>
 <p>算法2伪代码函数</p>
 <p><code>Disecreze(P)</code>将轨迹统一离散为点集</p>
 <p><code>.front()</code>取点集中的前一个点</p>
@@ -527,7 +527,7 @@
 <p><code>BlockPoint(l)</code>得到遮挡线段障碍物的体素的中心点</p>
 <p><code>PushAwayObs(p,l)</code>以l方向推离点得到新点P_o</p>
 <p><code>.push_back(p)</code>将P点加入点集</p>
-<p><img src="https://img-blog.csdnimg.cn/20210524115705594.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210524115705594.png" alt=""></p>
 <h2 id="实时拓扑路径规划"><a href="#实时拓扑路径规划" class="headerlink" title="实时拓扑路径规划"></a>实时拓扑路径规划</h2><p>路径引导轨迹优化的算法输出了一组有效的路径，可以指导轨迹优化。我们将它们与PGO进行适当的集成，以便实时重新规划。在飞行过程中，特定视界内的一段全球轨道会被定期检查以确保安全。一旦检测到碰撞，拓扑路线图的构建就会在一个立方体内触发，这是由段的开始和结束位置以及(rx, ry, rz)指定立方体的大小决定的。从路线图中提取的路径被缩短和修剪，之后每条路径调用一个独立的PGO。</p>
 <p>值得注意的是，可选择的UVD类的数量随着障碍的数量呈指数增长。因此，在复杂的环境中，为所有路径进行优化可能是很难的。由于这个原因，我们只选择第一次中的k_max中的最短路径，长度超过最短路径rmax的数倍的路径也被排除在外。这种策略限制了复杂性，不会导致潜在最优性的缺失，因为非常长的路径不太可能产生最优轨迹。在实际应用中，我们发现kmax = 5是充分的。</p>
 <p>以上内容，本文参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39366151/article/details/116642551"> Robust Real-time UAV Replanning Using Guided Gradient-based Optimization and Topological Paths_无心留踪迹的博客-CSDN博客</a>进行修正与补充。</p>
@@ -597,12 +597,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">无人机学习</span>
-                                </a>
-                            
                                 <a href="/tags/fast-planner/">
                                     <span class="chip bg-color">fast planner</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">无人机学习</span>
                                 </a>
                             
                         </div>
@@ -941,7 +941,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">49.7k</span>&nbsp;字
+                class="white-color">49.8k</span>&nbsp;字
             
             
             
@@ -1161,6 +1161,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

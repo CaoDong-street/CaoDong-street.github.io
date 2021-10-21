@@ -492,7 +492,6 @@ add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)
 add_executable(listener  src/listener.cpp)
 target_link_libraries(listener  ${catkin_LIBRARIES})
 add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>对于这个较为简单的功能包，主要用到了以下四种编译配置项。</p>
 <p>（1）include_directories</p>
 <p>用于设置头文件的相对路径。全局路径默认是功能包的所在目录，比如功能包的头文件一般会放到功能包根目录下的include文件夹中，所以此处需要添加该文件夹。此外，该配置项还包含ROS catkin编译器默认包含的其他头文件路径，比如ROS默认安装路径、Linux系统路径等。</p>
@@ -509,12 +508,10 @@ add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)<span aria-hidden
              rospy
              std_msgs
              message_generation)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>catkin依赖也需要进行以下设置：</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">catkin_package(……
                CATKIN_DEPENDS  geometry_msgs  roscpp  rospy  std_msgs  message_runtime
                ……)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>最后设置需要编译的msg文件：</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">add_message_files(
     FILES
@@ -522,7 +519,6 @@ add_dependencies(talker  ${PROJECT_NAME}_generate_messages_cpp)<span aria-hidden
 generate_messages(
 	DEPENDENCIES
     std_msgs)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>相关热门文章</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/buzaishihaizi/article/details/78524929">ROS中的CMakelists_buzaishihaizi的博客-CSDN博客</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44095441/article/details/88643752">ROS中的CMakeLists.txt详解_听涯的博客-CSDN博客</a></p>
@@ -680,12 +676,12 @@ generate_messages(
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">无人机学习</span>
-                    </a>
-                    
                     <a href="/tags/fast-planner/">
                         <span class="chip bg-color">fast planner</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">无人机学习</span>
                     </a>
                     
                 </div>
@@ -944,7 +940,7 @@ generate_messages(
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">49.7k</span>&nbsp;字
+                class="white-color">49.8k</span>&nbsp;字
             
             
             
@@ -1164,6 +1160,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

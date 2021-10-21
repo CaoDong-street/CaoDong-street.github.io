@@ -62,9 +62,9 @@
     <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="无人机学习" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="fast planner" scheme="http://example.com/tags/fast-planner/"/>
+    
+    <category term="无人机学习" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -194,9 +194,9 @@
     <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="C++" scheme="http://example.com/tags/C/"/>
-    
     <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
     
   </entry>
   
@@ -212,7 +212,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;#利用坚果云+pdf expert实现文档云同步,可参考&lt;a href=&quot;https://zhuanlan.zhihu.com/p/107061669&quot;&gt;文献管理的多平台操作(Mendeley +坚果云+PDFexpert) ——让iPad+pencil</summary>
+    <summary type="html">&lt;h1 id=&quot;利用坚果云-pdf-expert实现文档云同步-可参考文献管理的多平台操作-Mendeley-坚果云-PDFexpert-——让iPad-pencil-成为科研生产力&quot;&gt;&lt;a</summary>
         
       
     
@@ -257,7 +257,7 @@
     <link href="http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/"/>
     <id>http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/</id>
     <published>2021-09-19T03:55:31.000Z</published>
-    <updated>2021-09-19T04:12:39.875Z</updated>
+    <updated>2021-10-21T11:14:54.864Z</updated>
     
     
       

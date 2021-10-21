@@ -446,7 +446,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    159
+                    330
                 </div>
                 
 
@@ -483,6 +483,15 @@
 <p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gult8rrmexj608c08cjra02.jpg" alt="图名"></p>
 <p>就可以直接通过如下指令直接插入</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token tag">!</span><span class="token punctuation">[</span>图名<span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//tva3.sinaimg.cn/large/007mx13gly1gult8rrmexj608c08cjra02.jpg)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="测试公式"><a href="#测试公式" class="headerlink" title="测试公式"></a>测试公式</h2><hr>
+<p>  <strong>BP算法</strong></p>
+<p>  训练集    $\left\{\left(x^{(1)}, y^{(1)}\right), \ldots,\left(x^{(m)}, y^{(m)}\right)\right\}$</p>
+<p>  设    $\Delta_{i j}^{(l)}=0(\text { for all } l, i, j)$</p>
+<p>  $\begin{array}{l}{\text {For } i=1 \text { to } m}\end{array}$</p>
+<script type="math/tex; mode=display">
+  \begin{array}{l}{\text { Set } a^{(1)}=x^{(i)}} \\ {\text { Perform forward propagation to compute } a^{(l)} \text { for } l=2,3, \ldots, L} \\ {\text { Using } y^{(i)}, \text { compute } \delta^{(L)}=a^{(L)}-y^{(i)}} \\ {\text { Compute } \delta^{(L-1)}, \delta^{(l+1)}, \ldots, \delta^{(2)}} \\ {\Delta_{i j}^{(l)} :=\Delta_{i j}^{(l)}+a_{j}^{(l)} \delta_{i}^{(l+1)}}\end{array}</script><p>  $\begin{array}{l}{D_{i j}^{(l)} :=\frac{1}{m} \Delta_{i j}^{(l)}+\lambda \Theta_{i j}^{(l)}} &amp; {\text { if } j \neq 0} \\ {D_{i j}^{(l)} :=\frac{1}{m} \Delta_{i j}^{(l)}} &amp; {\text { if } j=0}\end{array}$</p>
+<p>  其中    $\frac{\partial}{\partial \Theta_{i j}^{(l)}} J(\Theta)=D_{i j}^{(l)}$</p>
+<hr>
 
                 
             </div>
@@ -894,7 +903,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">49.7k</span>&nbsp;字
+                class="white-color">49.8k</span>&nbsp;字
             
             
             
@@ -1114,6 +1123,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

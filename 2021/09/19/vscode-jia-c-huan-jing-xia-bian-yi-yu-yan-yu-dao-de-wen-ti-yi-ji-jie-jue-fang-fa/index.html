@@ -481,8 +481,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="中文乱码问题"><a href="#中文乱码问题" class="headerlink" title="中文乱码问题"></a>中文乱码问题</h2><p>运行测试文件<strong>test.cpp</strong>，存在中文乱码的问题</p>
-<p><strong>test.cpp</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"> <span class="token comment">#include&lt;iostream&gt;</span>
+<p><strong>test.cpp</strong><br></p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"> <span class="token comment">#include&lt;iostream&gt;</span>
  
 using namespace std;
  
@@ -495,8 +494,7 @@ int main()
 	cout&lt;&lt;"十进制数是："&lt;&lt;dec&lt;&lt;num&lt;&lt;endl;
 	cout&lt;&lt;"十六进制数是："&lt;&lt;hex&lt;&lt;num&lt;&lt;endl;
 	return 0;
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p></p>
 <p>解决方法：点击vscode右下角的UTF-8，出现“选择操作”界面，选择“通过编码重新打开”，再输出“gbk”，再进行编译即可。（注意更改后保存）</p>
 
                 
@@ -906,7 +904,7 @@ int main()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">49.7k</span>&nbsp;字
+                class="white-color">49.8k</span>&nbsp;字
             
             
             
@@ -1126,6 +1124,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
