@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-21T05:03:44.790Z</updated>
+  <updated>2021-10-21T08:51:37.326Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无人机智能化的实现路径(高飞大佬)</title>
+    <link href="http://example.com/2021/10/21/wu-ren-ji-zhi-neng-hua-de-shi-xian-lu-jing/"/>
+    <id>http://example.com/2021/10/21/wu-ren-ji-zhi-neng-hua-de-shi-xian-lu-jing/</id>
+    <published>2021-10-21T05:01:44.000Z</published>
+    <updated>2021-10-21T08:51:37.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;轻量化&quot;&gt;&lt;a href=&quot;#轻量化&quot; class=&quot;headerlink&quot; title=&quot;轻量化&quot;&gt;&lt;/a&gt;轻量化&lt;/h2&gt;&lt;p&gt;减少算法中的冗余部分以保持无人机的良好性能。</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机学习" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>fast-planner初代论文笔记2</title>
