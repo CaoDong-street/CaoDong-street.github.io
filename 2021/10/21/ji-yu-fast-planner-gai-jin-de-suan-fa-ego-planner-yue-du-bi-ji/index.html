@@ -549,7 +549,7 @@
 <p><code>IsFeasible(Q)</code>判断由控制点Q决定的轨迹是否可行(主要是速度以及其多阶导数否超过限制最大值)</p>
 <p><code>ReAllocateTime(Q)</code>通过重新分配由控制点Q决定的轨迹的时间降低速度以及其多阶导数，使其满足各类速度约束。</p>
 <p><code>CurveFittingOptimize(Q)</code>将之前的惩罚中碰撞项替换为曲线拟合项，求解惩罚项最优化问题。使其在满足新时间间隔的前提下，拟合由旧控制点构成的轨迹得到新轨迹，在继承旧轨迹的无碰撞特性的前提下实现约束下可行性。</p>
-<p>我们设置B样条曲线的阶数${p_b} = 3$，控制点的个数 !${N_c}$ 为25左右，具体由规划预期距离（大约7m）和初始的邻近点间距（大约0.3m）决定。这些参数根据经验通过平衡了问题的复杂度和自由度而得到。 </p>
+<p>我们设置B样条曲线的阶数${p_b} = 3$，控制点的个数 ${N_c}$ 为25左右，具体由规划预期距离（大约7m）和初始的邻近点间距（大约0.3m）决定。这些参数根据经验通过平衡了问题的复杂度和自由度而得到。 </p>
 <p>因为根据B样条曲线的性质，一个控制点只影响周围的轨迹，所以算法的时间复杂度为 $O({N_c})$。</p>
 <p>L-BFGS的复杂性在相同的相对公差上也是线性的。(The complexity of L-BFGS is also linear on the same relative tolerance)</p>
 <p>在无碰撞路径搜索中，我们采用A星算法进行轨迹优化，而它生成的轨迹$\Gamma $常常贴着障碍物。因此，我们可以直接在A星算法生成的轨迹$\Gamma $上选择定位点（anchor point）p 而不用搜索障碍物的表面(这里才真正解释出了<u>第三节中A星算法</u>的作用)。对于图3b中定义的向量$R_i $，通过均匀b样条参数化的性质，可以推导出</p>
@@ -558,8 +558,10 @@
 <blockquote>
 <p>读到这里，我们再看看论文中的图3。</p>
 <p>第一步：根据生成一条满足终端约束但不考虑障碍物的B样条曲线 $\Phi$，依靠A星算法生成的轨迹$\Gamma $。</p>
-<p> 第二步：根据公式(19)通过B样条曲线的控制点计算出向量$R_i $，再做出垂直于$R_i $的平面$\Psi $，平面$\Psi $与依靠A星算法生成的轨迹$\Gamma $相交于定位点（anchor point）p，连接对应的定位点（anchor point）p与控制点Q，才得到直线<em>l</em>,而向量v是向量<em>l</em>对应的由起点控制点Q到终点定位点p对应的<u>单位向量</u>。(v可能是生成以后不会再变化的)。到这里才生成了{p,v}对。</p>
-<p> 论文第3节的内容到第6节才彻底解释清楚，真是折磨死我了！！！</p>
+<p>第二步：根据公式(19)通过B样条曲线的控制点计算出向量$R_i $，再做出垂直于$R_i $的平面$\Psi $，平面$\Psi $与依靠A星算法生成的轨迹$\Gamma $相交于定位点（anchor point）p，连接对应的定位点（anchor point）p与控制点Q，才得到直线<em>l</em>,而向量v是向量<em>l</em>对应的由起点控制点Q到终点定位点p对应的<u>单位向量</u>。(v可能是生成以后不会再变化的)。到这里才生成了{p,v}对。</p>
+<p>论文第3节的内容到第6节才彻底解释清楚，真是折磨死我了！！！</p>
+<p>note：思考问题：关于{p,v}对过程中，为什么将定位点p定位到A星算法生成的贴着障碍物的轨迹上，而不直接定位在障碍物表面？</p>
+<p>我的理解：在A星算法生成的轨迹(线)定位的算力成本比直接定位在障碍物表面(面)低。</p>
 </blockquote>
 <p><img src="https://pic1.zhimg.com/80/v2-d6026bb43ab95c45706b88ea954f22d8_720w.jpg" alt="原文图3"></p>
 <p>为了进一步保证安全，对最终轨迹周围具有固定半径的圆形管道进行碰撞检查，以保证轨迹和障碍物之间有足够的距离，优化程序在未检测到碰撞时停止。</p>
@@ -700,7 +702,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            《EGO-Swarm  A Fully Autonomous and Decentralized QuadrotorSwarm System in Cluttered Environments》 阅读笔记
                         
                     </div>
                     <div class="publish-info">
@@ -709,11 +711,31 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Cao Dong street
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ego-planner/">
+                        <span class="chip bg-color">ego planner</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/">
+                        <span class="chip bg-color">编队控制</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -970,7 +992,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">53.8k</span>&nbsp;字
+                class="white-color">57.8k</span>&nbsp;字
             
             
             

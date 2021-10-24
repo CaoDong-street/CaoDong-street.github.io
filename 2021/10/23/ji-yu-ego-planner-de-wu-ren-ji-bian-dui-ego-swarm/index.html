@@ -388,12 +388,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ego-planner/">
+                                <span class="chip bg-color">ego planner</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                <span class="chip bg-color">无人机</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/">
+                                <span class="chip bg-color">编队控制</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -411,14 +432,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    14 分
                 </div>
                 
 
@@ -441,7 +462,105 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>论文源码：<a target="_blank" rel="noopener" href="https://github.com/ZJU-FAST-Lab/ego-planner-swarm">ZJU-FAST-Lab/ego-planner-swarm: An efficient single/multi-agent trajectory planner for multicopters. (github.com)</a></p>
+<p>论文原文：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.04183v1">EGO-Swarm: A Fully Autonomous and Decentralized Quadrotor Swarm System in Cluttered Environments (arxiv.org)</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>提出了一种分散的、异步的多机器人自主导航系统解决方案，用于未知障碍场景下仅使用板载资源的多机器人自主导航。</p>
+<ol>
+<li>该规划系统是在基于梯度的局部规划框架下制定的，其中通过将碰撞风险作为非线性优化问题的惩罚来实现避碰。(此方法与ego-planner相同，ego-planner的详细方案见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a> )</li>
+<li>为了提高鲁棒性和避免局部极小值，我们引入了一种轻量级的拓扑轨迹生成方法。</li>
+<li>针对智能体所使用一个不可靠的轨迹共享网络，仅在几毫秒内生成安全、平滑、动态可行的轨迹。且利用深度图像中的智能体检测来校正智能体间的相对定位漂移。</li>
+</ol>
+<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><p>文章主要：</p>
+<ol>
+<li><p>扩展了之前的所作出的工作EGO-Planner。首先提出了一种新的、鲁棒的拓扑规划方法，几乎不需要额外的计算，避免了图3中的因局部最小值导致的动力学不可行以及导航碰撞问题。其次通过在目标函数中加入群碰撞的加权惩罚，实现了去中心化的互相避撞。</p>
+<p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gvpex6qfgbj60hn09stcq02.jpg" alt="原文图3"></p>
+</li>
+<li><p>我们提出了一种分散的、异步的且对不可靠的通信和定位漂移不敏感的无人机编队结构。</p>
+</li>
+<li><p>将提出的方法集成到一个全自主四旋翼系统中，并发布了硬件和软件。</p>
+</li>
+</ol>
+<h2 id="2-相关工作"><a href="#2-相关工作" class="headerlink" title="2 相关工作"></a>2 相关工作</h2><h3 id="A-单四旋翼局部路径规划"><a href="#A-单四旋翼局部路径规划" class="headerlink" title="A. 单四旋翼局部路径规划"></a>A. 单四旋翼局部路径规划</h3><p>基于梯度的运动规划是四旋翼飞行器局部规划的主流。</p>
+<h3 id="B-拓扑规划"><a href="#B-拓扑规划" class="headerlink" title="B. 拓扑规划"></a>B. 拓扑规划</h3><p>采用拓扑规划来避免局部极小值，进一步加速拓扑规划的前端。</p>
+<h3 id="C-分散的无人机群"><a href="#C-分散的无人机群" class="headerlink" title="C. 分散的无人机群"></a>C. 分散的无人机群</h3><p>现有的无人机编队算法是通过仿真验证的，没有集成传感、映射和规划能力，且无法在野外环境中实现完全自主地运动。</p>
+<h2 id="3-针对基于梯度的局部路径规划的隐式拓扑轨迹生成"><a href="#3-针对基于梯度的局部路径规划的隐式拓扑轨迹生成" class="headerlink" title="3 针对基于梯度的局部路径规划的隐式拓扑轨迹生成"></a>3 针对基于梯度的局部路径规划的隐式拓扑轨迹生成</h2><h3 id="3-1-基于EGO-PLANNER的局部路径规划"><a href="#3-1-基于EGO-PLANNER的局部路径规划" class="headerlink" title="3.1 基于EGO-PLANNER的局部路径规划"></a>3.1 基于EGO-PLANNER的局部路径规划</h3><p>ego-planner的详细方案见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a> ，ego-planner主要是将轨迹生成问题作为一个非线性优化问题进行处理，权衡平滑性惩罚项$J_s$、碰撞惩罚项$J_c$、动力学可行性惩罚项$J_d$和终端进展惩罚项$J_t$(全称为terminal progress，我在ego-planer未完全看出其体现)。</p>
+<p>但本文重新定义了描述惩罚项的函数类型：最小误差型和软单边约束型</p>
+<blockquote>
+<p>最小误差型惩罚项包括平滑性惩罚项$J_s$和终端进展惩罚项$J_t$</p>
+<p>最小误差型惩罚项是指使决策变量的线性变换<em>L(Q)</em>与期望值<em>D</em>之间的总误差最小的惩罚项，其描述公式为：</p>
+</blockquote>
+$${J_r} = \sum\limits_{\mathrm{Q} \in \Phi } {\left\| {L(\mathrm{Q}) -\mathcal{D}} \right\|_n^n} $$
+<blockquote>
+<p>软单边约束型惩罚项包括碰撞惩罚项$J_c$和动力学可行性惩罚项$J_d$</p>
+<p>软单边约束型惩罚项是用于惩罚超过特定阈值的决策变量的惩罚项$\mathcal{T}$，其描述公式为：</p>
+</blockquote>
+ $${J_r} = \sum\limits_{{\rm{Q}} \in \Phi } {\left\{ {\matrix{ {\left\| {{{L(Q) - ({\cal T} - \varepsilon )} \over S}} \right\|_n^n} &amp; {L(Q) &gt; ({\cal T} - \varepsilon )}  \cr  0 &amp; {L(Q) \le ({\cal T} - \varepsilon )}  \cr  } } \right.} $$
+<h3 id="3-2-隐式拓扑轨迹生成"><a href="#3-2-隐式拓扑轨迹生成" class="headerlink" title="3.2 隐式拓扑轨迹生成"></a>3.2 隐式拓扑轨迹生成</h3><p>定义1：</p>
+<p>均匀的可见性不同形(uniform visibility deformation,UVD)(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a>)的定义：</p>
+<p>存在两条可以被s∈[0,1]参数化的轨迹τ1(s)、 τ2(s)并且满足τ1(0) =τ2(0)， τ1(1) =τ2(1)，如果对所有情况，连接τ1(s)、τ2(s)的线段是无碰撞的。那么这两条轨迹属于均匀的可见性不同形(UVD)类。</p>
+<p>本文通过反演v得到来${{\rm{v}}_{new}} =  - {\rm{v}}$构造不同方向的距离场，再由图4(c)所示得到了新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对。再如图4(b)所示，根据新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对也得到了一条新的轨迹。这新旧两条轨迹之间明显是不满足定义1，从而可以说生成一条新的拓扑轨迹。采用该的轨迹生成方法没有采用直接搜索不同的拓扑路径的轨迹生成方法(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a>)，而是通过之前生成的{p,v}对信息得到新拓扑轨迹，故称为<u>隐式拓扑轨迹生成</u>方法。</p>
+<p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gvpeiyyn50j60n90nydo602.jpg" alt="原文图4"></p>
+<h2 id="4-无人机编队导航"><a href="#4-无人机编队导航" class="headerlink" title="4 无人机编队导航"></a>4 无人机编队导航</h2><h3 id="A-无人机相互避撞"><a href="#A-无人机相互避撞" class="headerlink" title="A. 无人机相互避撞"></a>A. 无人机相互避撞</h3><h4 id="a-主要思路"><a href="#a-主要思路" class="headerlink" title="a 主要思路"></a>a 主要思路</h4><p>首先，我们给出无人机避障的主要思路：如图6所示，单无人机自身<u>通过比较在相同轨迹时间内收到的其周围无人机的轨迹的距离</u>得到一条轨迹，从而实现避撞。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007mx13gly1gvpgz7pzlej60zr0g2n2t02.jpg" alt="原文图6"></p>
+<h4 id="b-问题建模"><a href="#b-问题建模" class="headerlink" title="b 问题建模"></a>b 问题建模</h4><p>此时我们对处于轨迹规划中的单无人机<em>k</em>构造编队碰撞惩罚项${J_{w,k}}$，软单边约束型构造编队碰撞惩罚项，其描述如下（公式中的dt不知道是什么）</p>
+<p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gvpi6tyfd7j61a108swgq02.jpg" alt=""></p>
+<p>其他不处于轨迹规划中的单无人机对应下标系数为<em>i</em>，$\Phi (t)$表示无人机在轨迹时间<em>t</em>的位置，$t_s$与$t_e$表示全局轨迹规划的开始时间和终止时间，{d_{k,t}}(t)为定义的无人机k与无人机i之间的距离，$C{\rm{ + }}\epsilon $为无人机k与无人机i的机体安全距离之和，E=diag(1,1,1/c)表示一个对角矩阵（即指除了主对角线外的元素均为零的方阵），<u>c&gt;1将欧氏距离转换为z轴主轴较短的椭球型距离，以减轻下冲风险</u>。</p>
+<blockquote>
+<p>上述下滑线内容较抽象，我们推一下{d_{k,t}}(t)的计算公式就可以明白这句话的意思了。</p>
+<p>如下推导可得，最后的的{d_{k,t}}(t)的计算公式中z对应的系数为1/c，说明降低了z对应的惩罚权重，减少z轴的位移，以减轻下冲风险（障碍物里面不包括地面或者天花板，以免撞到地面或者天花板）。</p>
+<p>椭球型距离是指\sqrt {{x^2} + {y^2} + {{{z^2}} \over c}} 的计算项。</p>
+</blockquote>
+$$\eqalign{
+  &amp; {E^{1/2}} = \left[ {\matrix{
+   1 &amp; 0 &amp; 0  \cr 
+   0 &amp; 1 &amp; 0  \cr 
+   0 &amp; 0 &amp; {{1 \over {\sqrt c }}}  \cr 
+
+ } } \right],  \cr 
+  &amp; let{\rm{  }}{\Phi _k}(t) - {\Phi _i}(t) = {[x,y,z]^T},  \cr 
+  &amp; {E^{1/2}}({\Phi _k}(t) - {\Phi _i}(t)) = {[x,y,{z \over {\sqrt c }}]^T}  \cr 
+  &amp; \left\| {{E^{1/2}}({\Phi _k}(t) - {\Phi _i}(t))} \right\| = \sqrt {{x^2} + {y^2} + {{{z^2}} \over c}}   \cr 
+  &amp; {d_{k,t}}(t) = \sqrt {{x^2} + {y^2} + {{{z^2}} \over c}}  - (C + \epsilon ) \cr} $$
+<p>将加权的编队碰撞惩罚项${J_{w,k}}$与单个无人机的进行ego-planner对应的惩罚项${J_{EGO}}$得到每个单无人机的总优化问题：</p>
+$$\mathop {\min }\limits_Q J = {J_{EGO}} + {\lambda _w}{J_{w,k}}$$
+<p>本文利用均匀b样条参数化轨迹(详细参考<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8758904">Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a>)</p>
+<h3 id="B-定位漂移补偿"><a href="#B-定位漂移补偿" class="headerlink" title="B 定位漂移补偿"></a>B 定位漂移补偿</h3><h4 id="a-背景介绍"><a href="#a-背景介绍" class="headerlink" title="a 背景介绍"></a>a 背景介绍</h4><p>由于个体在未知环境下进行定位(没有可靠的高频回路闭合)，所以定位漂移会在飞行过程中积累。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9196944">Decentralized Visual-Inertial-UWB Fusion for Relative State Estimation of Aerial Swarm | IEEE Conference Publication | IEEE Xplore（港科大组）</a>提出了一种附加超宽带距离测量的空中群状态估计方法，实现了精确的协同定位。然而，我们更多地关注于遍历障碍环境，必须为其他应用程序保留计算和通信资源。因此，受<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9196944">Decentralized Visual-Inertial-UWB Fusion for Relative State Estimation of Aerial Swarm | IEEE Conference Publication | IEEE Xplore（港科大组）</a>的启发，通过比较接收到的无人机轨迹估计的预测位置和记录无人机深度图像的测量位置，提出了一种简化的、轻量级的相对漂移估计方法。当轨迹跟踪误差可以忽略不计，且任意两个无人机中至少有一个可能会看到另一个时，这种策略就会起作用。因此，我们使用<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>的控制器进行精确跟踪，并使用广角摄像机减少丢失无人机的可能性。<u>(机器视觉的知识)</u></p>
+<h4 id="b-漂移消除过程"><a href="#b-漂移消除过程" class="headerlink" title="b 漂移消除过程"></a>b 漂移消除过程</h4><blockquote>
+<p>(这部分真的读不懂，关于无人机的slam知识了)</p>
+</blockquote>
+<p>在利用VIO估计单无人机i的当前位置$\Phi ({t_{now}})$后，由$\Phi ({t_{now}})$为球心，以R为半径(R是一个经验参数，表示实验估计的典型漂移的上界,这个与机体安全距离相关的)确定出球形信任区域S。然后将S映射到当前捕获的深度图像，即区域${S^\prime }$，映射关系如下：</p>
+$$\eqalign{
+  &amp; z{\left[ {\matrix{
+   {{s^\prime }^{\rm{T}}} &amp; 1  \cr 
+
+ } } \right]^{\rm{T}}} = {\rm{KT}}_{\rm{w}}^{\rm{c}}{\left[ {\matrix{
+   {{s^{\rm{T}}}} &amp; 1  \cr 
+
+ } } \right]^{\rm{T}}}  \cr 
+  &amp; {s^\prime } \in {S^\prime },s \in S \cr} $$
+<p><script type="math/tex">{\rm{K}}</script>和<script type="math/tex">{\rm{T}}_{\rm{w}}^{\rm{c}}</script>是相机的内在矩阵和外在矩阵。z是沿主光轴与光中心的偏差。${S^\prime }$是一个需要经过复杂计算才能得到的椭圆圆锥截面。因此，我们采用近似的轴向椭圆${\overline{S} ^\prime}$来代替精确的${S^\prime }$(<u>这里是不是能直接映射中心，然后画圆，减小算法量</u>)。由于信任区域只是一个经验区域，因此没有必要对其进行精确的定义。</p>
+<p>然后我们将${\overline{S} ^\prime}$内的每一个点投射到世界框架中，收集属于S的点，就得到一个点簇$\mathcal{P}$⊂S。然后将无人机观测的位置P视为$\mathcal{P}$的中心(第一个原始矩)，即</p>
+$${\rm{P = }}\mu _1^\prime ({\cal P})$$
+<p>上式认为如果$\mathcal{P}$只包含相应的无人机的观察，没有任何不相关的对象，这是不能保证的。然而，由于每个无人机计划的轨迹都与附近的物体有一定的距离，所以上式在大多数情况下都适用。为了提高无人机检测的鲁棒性，还增加了像素数、$\mathcal{P}$的第二个中心矩、当前测量值与前一次测量值的偏差等判据。更严格的标准增加了假阴性率，但由于定位漂移变化缓慢，假阴性率是无害的。最后，误差将$\Phi ({t_{now}})$和P输入给一个滤波器，然后从滤波器获得估计的漂移。</p>
+<blockquote>
+<p>简单来说，VIO漂移是在从接收轨迹估计的预测位置和信任区域内深度图像中的观测位置比较估计得到的。</p>
+</blockquote>
+<h3 id="C-从深度图像中去除无人机"><a href="#C-从深度图像中去除无人机" class="headerlink" title="C 从深度图像中去除无人机"></a>C 从深度图像中去除无人机</h3><p>我们使用占用网格图来存储静态障碍物，并使用深度图像进行地图融合。 移动无人机在第四节 -A 中得到处理。 因此，记录移动无人机并将其视为地图构建中的障碍是没有必要的，甚至是有害的。 </p>
+<blockquote>
+<p>因为这里的障碍物是ego planner中的碰撞项针对的障碍对象，而移动无人机的问题已经再本文提出的编队碰撞惩罚项中处理了，所以移动无人机不能视作地图构建中的障碍。</p>
+</blockquote>
+<p>为了消除移动物体的影响，我们从深度图像中屏蔽并移除在第四节-B 中检测到的无人机的像素，如图 7 所示。 除此之外，覆盖大部分视图的移动物体会干扰视觉惯性里程计（visual-inertial odometry，VIO，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40213457/article/details/81298696"> VIO学习总结</a>）。 因此，灰度图像上的无人机也被删除，使用相应的深度图像的相同掩码。 这里使用的无人机检测标准不太严格，因为误报比漏报更有害。 </p>
+<p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gvpn27eqmcj60z10khqnw02.jpg" alt="原文图7"></p>
+<h2 id="5-系统结构"><a href="#5-系统结构" class="headerlink" title="5 系统结构"></a>5 系统结构</h2><p>系统架构如图8所示，其中包含了单无人机和无人机编队通信系统的详细架构。</p>
+<p><img src="https://tvax3.sinaimg.cn/large/007mx13gly1gvq6phj44zj60en098add02.jpg" alt="图8"></p>
+<h3 id="A-单无人机导航系统"><a href="#A-单无人机导航系统" class="headerlink" title="A.单无人机导航系统"></a>A.单无人机导航系统</h3><p>单无人机系统(包括硬件和软件设置)基于我们之前的工作EGO-Planner构造的，但包括有一个额外的模块，用于补偿VIO漂移并删除图像上的目击到的其他无人机。所有组件集成到一个自组装的250毫米轴距四旋翼。对于未知环境下的轨迹生成，采用局部规划方法。当当前轨迹与新发现的障碍物发生碰撞，或无人机接近当前轨迹的末端时(<u>后者这里的末端没懂</u>)，启动规划。</p>
+<h3 id="B-通信框架"><a href="#B-通信框架" class="headerlink" title="B. 通信框架"></a>B. 通信框架</h3><p>两个网络将系统连接起来，一个是共享轨迹的广播网络，另一个是同步时间戳和管理顺序启动的链网络。</p>
+<h4 id="1-广播网络"><a href="#1-广播网络" class="headerlink" title="1) 广播网络"></a>1) 广播网络</h4><p>当一个无人机生成一条新的无碰撞轨迹时，立即广播给所有无人机。然后其他无人机接收并存储这些轨迹，以便在必要时为自己生成安全的轨迹。这种闭环策略在连接稳定且延迟可以忽略的理想情况下可以正常工作。然而，这在实践中并不能保证。因此，我们提出了两种方法来减少碰撞的可能性。</p>
+<p>首先，在网络容量下，<u>以给定的频率广播一条轨迹</u>。这不会造成计算负担，因为包含3-D路径点和其他参数的典型轨迹小于0.5KB。相比之下，现代的无线网络如蓝牙可以达到1Mbps以上的速度。其次，<u>各智能体从广播网络接收到一条碰撞轨迹后立即进行碰撞检测，如果检测到潜在的碰撞，则生成新的无碰撞轨迹</u>;该策略可以解决多个无人机在关闭时间内生成轨迹时由于延迟或丢包导致的不接收其他无人机轨迹的问题。</p>
+<p>此外，还考虑了计算复杂度随着无人机数量的增加而增加的问题。在规划之前，每个无人机将其当前位置与接收到的周围无人机的轨迹进行比较，任何超出规划范围的轨迹都将被忽略。</p>
+<h4 id="2-链网络"><a href="#2-链网络" class="headerlink" title="2) 链网络"></a>2) 链网络</h4><p>基于连接的稳定链网络，用于时间戳同步和系统启动管理。<u>在系统启动时，无人机按照预定义的顺序生成轨迹。每个无人机通过链网络接收到优先级更高的无人机的轨迹后，生成自己的初始轨迹。</u>该策略避免了系统启动时由于无人机没有其他轨迹信息而同时生成轨迹而引起的混沌。</p>
+<h2 id="6-源码精读"><a href="#6-源码精读" class="headerlink" title="6 源码精读"></a>6 源码精读</h2><p>未完待续</p>
+
                 
             </div>
             <hr/>
@@ -457,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Cao Dong street</a>
+                    <a href="/about" rel="external nofollow noreferrer">CaoDong street</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -480,7 +599,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Cao Dong street</a>
+                    <a href="/about" target="_blank">CaoDong street</a>
                     !
                 </span>
             </div>
@@ -504,7 +623,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ego-planner/">
+                                    <span class="chip bg-color">ego planner</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                    <span class="chip bg-color">无人机</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/">
+                                    <span class="chip bg-color">编队控制</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -563,7 +694,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            《EGO-Swarm  A Fully Autonomous and Decentralized QuadrotorSwarm System in Cluttered Environments》 阅读笔记
                         
                     </div>
                     <div class="publish-info">
@@ -572,13 +703,33 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Cao Dong street
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ego-planner/">
+                        <span class="chip bg-color">ego planner</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/">
+                        <span class="chip bg-color">编队控制</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -764,6 +915,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -835,7 +993,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">53.8k</span>&nbsp;字
+                class="white-color">57.8k</span>&nbsp;字
             
             
             

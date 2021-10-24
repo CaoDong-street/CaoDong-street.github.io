@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-23T01:29:34.579Z</updated>
+  <updated>2021-10-24T13:42:40.237Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,11 +21,27 @@
     <link href="http://example.com/2021/10/23/ji-yu-ego-planner-de-wu-ren-ji-bian-dui-ego-swarm/"/>
     <id>http://example.com/2021/10/23/ji-yu-ego-planner-de-wu-ren-ji-bian-dui-ego-swarm/</id>
     <published>2021-10-23T01:29:34.000Z</published>
-    <updated>2021-10-23T01:29:34.579Z</updated>
+    <updated>2021-10-24T13:42:40.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;论文源码：&lt;a href=&quot;https://github.com/ZJU-FAST-Lab/ego-planner-swarm&quot;&gt;ZJU-FAST-Lab/ego-planner-swarm: An efficient single/multi-agent</summary>
+        
+      
     
     
     
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
+    
+    <category term="ego planner" scheme="http://example.com/tags/ego-planner/"/>
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="编队控制" scheme="http://example.com/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
@@ -34,7 +50,7 @@
     <link href="http://example.com/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/"/>
     <id>http://example.com/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/</id>
     <published>2021-10-21T13:18:54.000Z</published>
-    <updated>2021-10-23T01:32:05.687Z</updated>
+    <updated>2021-10-24T13:38:08.662Z</updated>
     
     
       
@@ -88,7 +104,7 @@
     <link href="http://example.com/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/"/>
     <id>http://example.com/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/</id>
     <published>2021-10-20T14:55:47.000Z</published>
-    <updated>2021-10-23T01:31:07.353Z</updated>
+    <updated>2021-10-23T09:17:44.849Z</updated>
     
     
       
