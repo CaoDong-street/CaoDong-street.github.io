@@ -494,7 +494,7 @@
 <p>为了防止轨迹被拉出当前障碍物前，迭代过程中反复生成  {p,v}  对，判断是否为新障碍物的标准是：如果控制点${Q_i}$ 处于障碍物中时，并且对于当前得到的所有障碍物 <em>j</em>满足${d_{ij}} &gt; 0$，则该障碍物为新发现的障碍物。从而<u>只计算影响轨迹的障碍物信息</u>，减少运行时间。</p>
 <p>为了将必要的环境意识融入当地的规划中，我们需要明确地构建一个目标函数(设计基于梯度的轨迹优化器)，使轨道远离障碍。ESDF提供了这种至关重要的碰撞信息，但代价是沉重的计算负担。此外，如图2所示，由于ESDF反馈的错误信息不足，基于ESDF的规划者很容易陷入局部最小值，无法逃脱障碍。为了避免这种情况，额外的前端总是需要提供一个无碰撞的初始轨迹。由于明确设计的斥力对于不同的任务和环境都是相当有效的，所以上述方法在提供避免碰撞的重要信息方面优于ESDF。</p>
 <p><img src="https://pic3.zhimg.com/80/v2-d5111b783f90ebb2eb29ab431245e2da_720w.jpg" alt="原文图2"></p>
-<h2 id="四、基于梯度的轨迹优化器"><a href="#四、基于梯度的轨迹优化器" class="headerlink" title="四、基于梯度的轨迹优化器"></a>四、基于梯度的轨迹优化器</h2><h3 id="4-1问题建模"><a href="#4-1问题建模" class="headerlink" title="4.1问题建模"></a>4.1问题建模</h3><p>本文使用均匀B样条曲线 $\Phi$来表示轨迹（均匀B样条曲线可以参考<a href="https://link.zhihu.com/?target=https%3A//www.bilibili.com/video/BV1Dt411f7Qj%3Fp%3D21">计算机图形学bezier曲线曲面B样条曲线曲面</a>），其阶数为${p_b}$，均匀B样条曲线的每个节点有相同的时间间隔 。</p>
+<h2 id="四、基于梯度的轨迹优化器"><a href="#四、基于梯度的轨迹优化器" class="headerlink" title="四、基于梯度的轨迹优化器"></a>四、基于梯度的轨迹优化器</h2><h3 id="4-1问题建模"><a href="#4-1问题建模" class="headerlink" title="4.1问题建模"></a>4.1问题建模</h3><p>本文使用均匀B样条曲线 $\Phi$来表示轨迹（均匀B样条曲线可以参考<a target="_blank" rel="noopener" href="https://github.com/CaoDong-street/Bspline">B样条曲线绘制项目</a>进行学习），其阶数为${p_b}$，均匀B样条曲线的每个节点有相同的时间间隔 。</p>
 <p><u>B样条曲线的凸包性质</u>表明，某段曲线只与${p_b}+1$个连续的控制点有关，并且曲线被包含在这些点构成的凸包内。B样条曲线的k阶导数是 ${p_b}-k$ 阶B样条曲线。轨迹  $\Phi$ 的一阶、二阶、三阶导数的控制点分别为</p>
 <p><img src="https://www.zhihu.com/equation?tex=++V_i%3D%5Cfrac%7BQ_%7Bi%2B1%7D-Q_i%7D%7B%5CDelta+t%7D%2CA_i%3D%5Cfrac%7BV_%7Bi%2B1%7D-V_i%7D%7B%5CDelta+t%7D%EF%BC%8CJ_i%3D%5Cfrac%7BA_%7Bi%2B1%7D-A_i%7D%7B%5CDelta+t%7D+++%5Ctag%7B2%7D%5C%5C" alt=""></p>
 <p>根据无人机的微分平坦特性降低要规划的变量，优化问题可以被定义为</p>
