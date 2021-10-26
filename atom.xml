@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-24T13:42:40.237Z</updated>
+  <updated>2021-10-26T15:21:37.168Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ego-planner代码精读(1)-simple_run_launch文件</title>
+    <link href="http://example.com/2021/10/26/ego-planner-dai-ma-jing-du-simple-run-launch-wen-jian/"/>
+    <id>http://example.com/2021/10/26/ego-planner-dai-ma-jing-du-simple-run-launch-wen-jian/</id>
+    <published>2021-10-26T15:17:32.000Z</published>
+    <updated>2021-10-26T15:21:37.168Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;完整代码：&lt;a href=&quot;https://github.com/ZJU-FAST-Lab/ego-planner&quot;&gt;GitHub - ZJU-FAST-Lab/ego-planner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对应文章：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="simple_run_launch文件" scheme="http://example.com/categories/simple-run-launch%E6%96%87%E4%BB%B6/"/>
+    
+    
+    <category term="launch" scheme="http://example.com/tags/launch/"/>
+    
+    <category term="ROS" scheme="http://example.com/tags/ROS/"/>
+    
+    <category term="Cpp" scheme="http://example.com/tags/Cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>里程计话题读取</title>
+    <link href="http://example.com/2021/10/26/li-cheng-ji-hua-ti-du-qu/"/>
+    <id>http://example.com/2021/10/26/li-cheng-ji-hua-ti-du-qu/</id>
+    <published>2021-10-26T15:09:25.000Z</published>
+    <updated>2021-10-26T15:12:57.252Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;源代码加注释&quot;&gt;&lt;a href=&quot;#源代码加注释&quot; class=&quot;headerlink&quot; title=&quot;源代码加注释&quot;&gt;&lt;/a&gt;源代码加注释&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-xml&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ROS学习笔记-《ego-planner》中的odom_topic里程计话题读取" scheme="http://example.com/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E3%80%8Aego-planner%E3%80%8B%E4%B8%AD%E7%9A%84odom-topic%E9%87%8C%E7%A8%8B%E8%AE%A1%E8%AF%9D%E9%A2%98%E8%AF%BB%E5%8F%96/"/>
+    
+    
+    <category term="里程计话题读取" scheme="http://example.com/tags/%E9%87%8C%E7%A8%8B%E8%AE%A1%E8%AF%9D%E9%A2%98%E8%AF%BB%E5%8F%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>fast-planner初代论文笔记1</title>
+    <link href="http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/"/>
+    <id>http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/</id>
+    <published>2021-10-25T12:32:36.000Z</published>
+    <updated>2021-10-25T14:36:31.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对应代码地址：&lt;a href=&quot;https://github.com/HKUST-Aerial-Robotics/Fast-Planner&quot;&gt;GitHub - HKUST-Aerial-Robotics/Fast-Planner: A Robust and</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="fast planner" scheme="http://example.com/tags/fast-planner/"/>
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="轨迹优化" scheme="http://example.com/tags/%E8%BD%A8%E8%BF%B9%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>基于ego-planner的无人机编队：EGO-Swarm</title>
@@ -133,7 +217,7 @@
     <link href="http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/"/>
     <id>http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/</id>
     <published>2021-10-18T06:51:03.000Z</published>
-    <updated>2021-10-23T01:31:32.984Z</updated>
+    <updated>2021-10-26T15:13:16.440Z</updated>
     
     
       
@@ -162,7 +246,7 @@
     <link href="http://example.com/2021/10/18/ros-zhong-de-launch-qi-dong-wen-jian/"/>
     <id>http://example.com/2021/10/18/ros-zhong-de-launch-qi-dong-wen-jian/</id>
     <published>2021-10-18T03:18:47.000Z</published>
-    <updated>2021-10-23T01:31:41.877Z</updated>
+    <updated>2021-10-26T15:08:20.356Z</updated>
     
     
       
