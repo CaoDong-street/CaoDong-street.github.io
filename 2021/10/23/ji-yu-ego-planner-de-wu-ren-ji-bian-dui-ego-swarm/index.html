@@ -496,19 +496,19 @@ $${J_r} = \sum\limits_{\mathrm{Q} \in \Phi } {\left\| {L(\mathrm{Q}) -\mathcal{D
 </blockquote>
  $${J_r} = \sum\limits_{{\rm{Q}} \in \Phi } {\left\{ {\matrix{ {\left\| {{{L(Q) - ({\cal T} - \varepsilon )} \over S}} \right\|_n^n} &amp; {L(Q) &gt; ({\cal T} - \varepsilon )}  \cr  0 &amp; {L(Q) \le ({\cal T} - \varepsilon )}  \cr  } } \right.} $$
 <h3 id="3-2-隐式拓扑轨迹生成"><a href="#3-2-隐式拓扑轨迹生成" class="headerlink" title="3.2 隐式拓扑轨迹生成"></a>3.2 隐式拓扑轨迹生成</h3><p>定义1：</p>
-<p>均匀的可见性不同形(uniform visibility deformation,UVD)(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a>)的定义：</p>
+<p>均匀的可见性不同形(uniform visibility deformation,UVD)(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/">fast-planner初代论文笔记2 | Cao Dong (caodong-street.github.io)</a>)的定义：</p>
 <p>存在两条可以被s∈[0,1]参数化的轨迹τ1(s)、 τ2(s)并且满足τ1(0) =τ2(0)， τ1(1) =τ2(1)，如果对所有情况，连接τ1(s)、τ2(s)的线段是无碰撞的。那么这两条轨迹属于均匀的可见性不同形(UVD)类。</p>
-<p>本文通过反演v得到来${{\rm{v}}_{new}} =  - {\rm{v}}$构造不同方向的距离场，再由图4(c)所示得到了新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对。再如图4(b)所示，根据新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对也得到了一条新的轨迹。这新旧两条轨迹之间明显是不满足定义1，从而可以说生成一条新的拓扑轨迹。采用该的轨迹生成方法没有采用直接搜索不同的拓扑路径的轨迹生成方法(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/21/ji-yu-fast-planner-gai-jin-de-suan-fa-ego-planner-yue-du-bi-ji/">基于fast-planner改进的算法(1)-ego_planner阅读笔记 | Cao Dong (caodong-street.github.io)</a>)，而是通过之前生成的{p,v}对信息得到新拓扑轨迹，故称为<u>隐式拓扑轨迹生成</u>方法。</p>
+<p>本文通过反演v得到来${{\rm{v}}_{new}} =  - {\rm{v}}$构造不同方向的距离场，再由图4(c)所示得到了新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对。再如图4(b)所示，根据新的$\left\{ {{{\rm{p}}_{new}}{\rm{,}}{{\rm{v}}_{new}}} \right\}$对也得到了一条新的轨迹。这新旧两条轨迹之间明显是不满足定义1，从而可以说生成一条新的拓扑轨迹。采用该的轨迹生成方法没有采用直接搜索不同的拓扑路径的轨迹生成方法(详细见<a target="_blank" rel="noopener" href="https://caodong-street.github.io/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/">fast-planner初代论文笔记2 | Cao Dong (caodong-street.github.io)</a>)，而是通过之前生成的{p,v}对信息得到新拓扑轨迹，故称为<u>隐式拓扑轨迹生成</u>方法。</p>
 <p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gvpeiyyn50j60n90nydo602.jpg" alt="原文图4"></p>
 <h2 id="4-无人机编队导航"><a href="#4-无人机编队导航" class="headerlink" title="4 无人机编队导航"></a>4 无人机编队导航</h2><h3 id="A-无人机相互避撞"><a href="#A-无人机相互避撞" class="headerlink" title="A. 无人机相互避撞"></a>A. 无人机相互避撞</h3><h4 id="a-主要思路"><a href="#a-主要思路" class="headerlink" title="a 主要思路"></a>a 主要思路</h4><p>首先，我们给出无人机避障的主要思路：如图6所示，单无人机自身<u>通过比较在相同轨迹时间内收到的其周围无人机的轨迹的距离</u>得到一条轨迹，从而实现避撞。</p>
 <p><img src="https://tva1.sinaimg.cn/large/007mx13gly1gvpgz7pzlej60zr0g2n2t02.jpg" alt="原文图6"></p>
-<h4 id="b-问题建模"><a href="#b-问题建模" class="headerlink" title="b 问题建模"></a>b 问题建模</h4><p>此时我们对处于轨迹规划中的单无人机<em>k</em>构造编队碰撞惩罚项${J_{w,k}}$，软单边约束型构造编队碰撞惩罚项，其描述如下（公式中的dt不知道是什么）</p>
+<h4 id="b-问题建模"><a href="#b-问题建模" class="headerlink" title="b 问题建模"></a>b 问题建模</h4><p>此时我们对处于轨迹规划中的单无人机<em>k</em>构造编队碰撞惩罚项${J_{w,k}}$，软单边约束型构造编队碰撞惩罚项，其描述如下(dt代表微分)</p>
 <p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gvpi6tyfd7j61a108swgq02.jpg" alt=""></p>
-<p>其他不处于轨迹规划中的单无人机对应下标系数为<em>i</em>，$\Phi (t)$表示无人机在轨迹时间<em>t</em>的位置，$t_s$与$t_e$表示全局轨迹规划的开始时间和终止时间，{d_{k,t}}(t)为定义的无人机k与无人机i之间的距离，$C{\rm{ + }}\epsilon $为无人机k与无人机i的机体安全距离之和，E=diag(1,1,1/c)表示一个对角矩阵（即指除了主对角线外的元素均为零的方阵），<u>c&gt;1将欧氏距离转换为z轴主轴较短的椭球型距离，以减轻下冲风险</u>。</p>
+<p>其他不处于轨迹规划中的单无人机对应下标系数为<em>i</em>，$\Phi (t)$表示无人机在轨迹时间<em>t</em>的位置，$t_s$与$t_e$表示全局轨迹规划的开始时间和终止时间，${d_{k,t}}(t)$为定义的无人机k与无人机i之间的距离，$C{\rm{ + }}\epsilon $为无人机k与无人机i的机体安全距离之和，E=diag(1,1,1/c)表示一个对角矩阵（即指除了主对角线外的元素均为零的方阵），<u>c&gt;1将欧氏距离转换为z轴主轴较短的椭球型距离，以减轻下冲风险</u>。</p>
 <blockquote>
-<p>上述下滑线内容较抽象，我们推一下{d_{k,t}}(t)的计算公式就可以明白这句话的意思了。</p>
+<p>上述下滑线内容较抽象，我们推一下${d_{k,t}}(t)$的计算公式就可以明白这句话的意思了。</p>
 <p>如下推导可得，最后的的{d_{k,t}}(t)的计算公式中z对应的系数为1/c，说明降低了z对应的惩罚权重，减少z轴的位移，以减轻下冲风险（障碍物里面不包括地面或者天花板，以免撞到地面或者天花板）。</p>
-<p>椭球型距离是指\sqrt {{x^2} + {y^2} + {{{z^2}} \over c}} 的计算项。</p>
+<p>椭球型距离是指$\sqrt {{x^2} + {y^2} + {{{z^2}} \over c}} $的计算项。</p>
 </blockquote>
 $$\eqalign{
   &amp; {E^{1/2}} = \left[ {\matrix{
@@ -523,7 +523,7 @@ $$\eqalign{
   &amp; {d_{k,t}}(t) = \sqrt {{x^2} + {y^2} + {{{z^2}} \over c}}  - (C + \epsilon ) \cr} $$
 <p>将加权的编队碰撞惩罚项${J_{w,k}}$与单个无人机的进行ego-planner对应的惩罚项${J_{EGO}}$得到每个单无人机的总优化问题：</p>
 $$\mathop {\min }\limits_Q J = {J_{EGO}} + {\lambda _w}{J_{w,k}}$$
-<p>本文利用均匀b样条参数化轨迹(详细参考<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8758904">Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a>)</p>
+<p>本文利用均匀b样条参数化轨迹(详细参考<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8758904">Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a>，<a target="_blank" rel="noopener" href="https://github.com/CaoDong-street/Bspline">B样条曲线绘制项目</a>)</p>
 <h3 id="B-定位漂移补偿"><a href="#B-定位漂移补偿" class="headerlink" title="B 定位漂移补偿"></a>B 定位漂移补偿</h3><h4 id="a-背景介绍"><a href="#a-背景介绍" class="headerlink" title="a 背景介绍"></a>a 背景介绍</h4><p>由于个体在未知环境下进行定位(没有可靠的高频回路闭合)，所以定位漂移会在飞行过程中积累。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9196944">Decentralized Visual-Inertial-UWB Fusion for Relative State Estimation of Aerial Swarm | IEEE Conference Publication | IEEE Xplore（港科大组）</a>提出了一种附加超宽带距离测量的空中群状态估计方法，实现了精确的协同定位。然而，我们更多地关注于遍历障碍环境，必须为其他应用程序保留计算和通信资源。因此，受<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9196944">Decentralized Visual-Inertial-UWB Fusion for Relative State Estimation of Aerial Swarm | IEEE Conference Publication | IEEE Xplore（港科大组）</a>的启发，通过比较接收到的无人机轨迹估计的预测位置和记录无人机深度图像的测量位置，提出了一种简化的、轻量级的相对漂移估计方法。当轨迹跟踪误差可以忽略不计，且任意两个无人机中至少有一个可能会看到另一个时，这种策略就会起作用。因此，我们使用<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>的控制器进行精确跟踪，并使用广角摄像机减少丢失无人机的可能性。<u>(机器视觉的知识)</u></p>
 <h4 id="b-漂移消除过程"><a href="#b-漂移消除过程" class="headerlink" title="b 漂移消除过程"></a>b 漂移消除过程</h4><blockquote>
 <p>(这部分真的读不懂，关于无人机的slam知识了)</p>
