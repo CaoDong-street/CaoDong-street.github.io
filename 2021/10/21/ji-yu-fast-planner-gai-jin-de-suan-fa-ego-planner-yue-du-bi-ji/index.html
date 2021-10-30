@@ -528,7 +528,7 @@
 <p><img src="https://www.zhihu.com/equation?tex=%5CDelta+t%27%3Dr_e%5CDelta+t+%5Ctag%7B15%7D" alt=""></p>
 <p>通过求解一个如下的闭式的最小二乘问题，在速度及其导数的约束下初始生成时间跨度为${\triangle{t}^{\prime}}$  的轨迹${\Phi_f}$ ，同时保持与 ${\Phi_s}$  相同的形状和控制点数。然后重新计算光滑项惩罚和可行性项惩罚得到新的目标函数</p>
 <p><img src="https://www.zhihu.com/equation?tex=Q%3Dargmin%5C+J%E2%80%99%3D%5Clambda_sJ_s%2B%5Clambda_dJ_d%2B%5Clambda_fJ_f++%5Ctag%7B16%7D" alt=""></p>
-<p>${J_f}$   被定义为从 ${{\Phi_f}(\alpha T^{\prime})}$ 到 ${{\Phi_s}(\alpha T^)}$各向异性位移的积分，其中 $T$  和 $T^{\prime}$ 为轨迹  ${\Phi_s}$ 和  ${\Phi_f}$ 的时长，  其中$\alpha  \in \left[ {0,1} \right]$。</p>
+<p>${J_f}$   被定义为从 ${{\Phi_f}(\alpha T^{\prime})}$ 到 ${{\Phi_s}(\alpha T)}$各向异性位移的积分，其中 $T$  和 $T^{\prime}$ 为轨迹  ${\Phi_s}$ 和  ${\Phi_f}$ 的时长，  其中$\alpha  \in \left[ {0,1} \right]$。</p>
 <p>由于拟合的对象曲线 ${\Phi_s}$ 已经无碰撞，对于两条曲线，我们用带有低权重的轴向位移 ${d_a}$ 来放宽光滑调整限制，用高权重的径向位移 ${d_r}$ 来<u>防止碰撞</u>。如图5所示，我们使用球状度量来使在同一球体表面的位移产生相同的惩罚。<u>(关于径向位移和轴向位移应该在具体算法中了解，目前我认为轴向位移为该点的切线方向，而径向方向为该切线的垂线方向)</u></p>
 <p><img src="https://pic2.zhimg.com/80/v2-8e5a619734086459c284ecb62fdd20a5_720w.jpg" alt="原文图5"></p>
 <p>用于度量 ${{\Phi_f}(\alpha T^{\prime})}$ 惩罚大小的椭圆体是一个以  ${{\Phi_f}(\alpha T^{\prime})}$  为中心的椭圆，其半长轴长度为a、其半短轴长度为b。则轴向位移  ${d_a}$  和径向位移 ${d_r}$  为</p>
