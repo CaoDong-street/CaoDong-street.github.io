@@ -567,8 +567,8 @@ RAPTOR: Robust and
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">
-                            <span class="chip bg-color">文献阅读</span>
+                        <a href="/tags/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%9F%A5%E6%89%BE%E7%BB%8F%E9%AA%8C/">
+                            <span class="chip bg-color">文章写作技巧与文献阅读查找经验</span>
                         </a>
                         
                     </div>
@@ -1089,6 +1089,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

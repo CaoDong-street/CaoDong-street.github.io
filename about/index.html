@@ -337,7 +337,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">14</a></span>
+    <span class="count"><a href="/tags">11</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -367,7 +367,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">14</a></span>
+    <span class="count"><a href="/tags">11</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -577,7 +577,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["无人机","C++","fast planner","ROS","Hexo","轨迹优化","matery","ego planner","无人机学习","python"]
+                data: ["无人机","C++","fast planner","ROS","Hexo","轨迹优化","ego planner","文章写作技巧与文献阅读查找经验","python","编队控制"]
             }
         ],
         yAxis: [
@@ -590,7 +590,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [6,4,4,4,3,3,2,2,1,1],
+                data: [7,4,4,4,3,3,2,2,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -1002,6 +1002,21 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

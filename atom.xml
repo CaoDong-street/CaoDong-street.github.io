@@ -296,7 +296,7 @@
     <link href="http://example.com/2021/10/16/wu-ren-ji-xue-xi/"/>
     <id>http://example.com/2021/10/16/wu-ren-ji-xue-xi/</id>
     <published>2021-10-16T03:45:50.000Z</published>
-    <updated>2021-11-11T16:08:07.727Z</updated>
+    <updated>2021-11-11T16:23:58.192Z</updated>
     
     
       
@@ -313,7 +313,7 @@
     <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="无人机学习" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%AD%A6%E4%B9%A0/"/>
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
   </entry>
   
@@ -322,7 +322,7 @@
     <link href="http://example.com/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/"/>
     <id>http://example.com/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/</id>
     <published>2021-10-07T08:26:41.000Z</published>
-    <updated>2021-11-11T16:14:46.140Z</updated>
+    <updated>2021-11-11T16:25:40.970Z</updated>
     
     
       
@@ -338,7 +338,7 @@
     <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="PSP-CaRS文章框架" scheme="http://example.com/tags/PSP-CaRS%E6%96%87%E7%AB%A0%E6%A1%86%E6%9E%B6/"/>
+    <category term="文章写作技巧与文献阅读查找经验" scheme="http://example.com/tags/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%9F%A5%E6%89%BE%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
@@ -372,7 +372,7 @@
     <link href="http://example.com/2021/09/23/wen-xian-yue-du/"/>
     <id>http://example.com/2021/09/23/wen-xian-yue-du/</id>
     <published>2021-09-23T13:33:41.000Z</published>
-    <updated>2021-11-11T16:20:54.271Z</updated>
+    <updated>2021-11-11T16:26:11.483Z</updated>
     
     
       
@@ -388,7 +388,7 @@
     <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="文献阅读" scheme="http://example.com/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
+    <category term="文章写作技巧与文献阅读查找经验" scheme="http://example.com/tags/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%9F%A5%E6%89%BE%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
@@ -497,7 +497,7 @@
     <link href="http://example.com/2021/09/18/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
     <id>http://example.com/2021/09/18/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
     <published>2021-09-18T03:13:35.000Z</published>
-    <updated>2021-10-18T07:33:59.099Z</updated>
+    <updated>2021-11-11T16:23:28.818Z</updated>
     
     
       
@@ -515,8 +515,6 @@
     
     <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
     
-    <category term="matery" scheme="http://example.com/tags/matery/"/>
-    
   </entry>
   
   <entry>
@@ -524,7 +522,7 @@
     <link href="http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/"/>
     <id>http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/</id>
     <published>2021-09-18T02:43:00.000Z</published>
-    <updated>2021-11-11T16:06:08.391Z</updated>
+    <updated>2021-11-11T16:23:16.588Z</updated>
     
     
       
@@ -541,8 +539,6 @@
     
     
     <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
-    
-    <category term="matery" scheme="http://example.com/tags/matery/"/>
     
   </entry>
   
