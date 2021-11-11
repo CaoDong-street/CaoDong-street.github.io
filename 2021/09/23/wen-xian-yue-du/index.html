@@ -266,19 +266,6 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
 
 
 
@@ -403,12 +390,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/endnote/">
-                                <span class="chip bg-color">endnote</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%9D%9A%E6%9E%9C%E4%BA%91-pdf-expert/">
-                                <span class="chip bg-color">坚果云+pdf expert</span>
+                            <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">
+                                <span class="chip bg-color">文献阅读</span>
                             </a>
                         
                     </div>
@@ -535,12 +518,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/endnote/">
-                                    <span class="chip bg-color">endnote</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%9D%9A%E6%9E%9C%E4%BA%91-pdf-expert/">
-                                    <span class="chip bg-color">坚果云+pdf expert</span>
+                                <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">
+                                    <span class="chip bg-color">文献阅读</span>
                                 </a>
                             
                         </div>
@@ -621,10 +600,6 @@
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
                     
                     <a href="/tags/C/">
                         <span class="chip bg-color">C++</span>
@@ -879,7 +854,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.7k</span>&nbsp;字
+                class="white-color">63.8k</span>&nbsp;字
             
             
             
@@ -1099,21 +1074,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

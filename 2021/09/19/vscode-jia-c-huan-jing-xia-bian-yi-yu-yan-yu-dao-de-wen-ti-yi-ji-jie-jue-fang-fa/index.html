@@ -266,19 +266,6 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
 
 
 
@@ -405,10 +392,6 @@
                         
                             <a href="/tags/C/">
                                 <span class="chip bg-color">C++</span>
-                            </a>
-                        
-                            <a href="/tags/VSCode/">
-                                <span class="chip bg-color">VSCode</span>
                             </a>
                         
                     </div>
@@ -555,10 +538,6 @@ int main()
                                     <span class="chip bg-color">C++</span>
                                 </a>
                             
-                                <a href="/tags/VSCode/">
-                                    <span class="chip bg-color">VSCode</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -676,8 +655,8 @@ int main()
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
-                                    环境配置
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
+                                    学习经验
                                 </a>
                             
                             
@@ -689,10 +668,6 @@ int main()
                     
                     <a href="/tags/C/">
                         <span class="chip bg-color">C++</span>
-                    </a>
-                    
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
                     </a>
                     
                 </div>
@@ -895,7 +870,7 @@ int main()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.7k</span>&nbsp;字
+                class="white-color">63.8k</span>&nbsp;字
             
             
             
@@ -1115,21 +1090,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

@@ -266,19 +266,6 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
 
 
 
@@ -402,10 +389,6 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                            <a href="/tags/launch/">
-                                <span class="chip bg-color">launch</span>
-                            </a>
                         
                             <a href="/tags/ROS/">
                                 <span class="chip bg-color">ROS</span>
@@ -588,10 +571,6 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/launch/">
-                                    <span class="chip bg-color">launch</span>
-                                </a>
-                            
                                 <a href="/tags/ROS/">
                                     <span class="chip bg-color">ROS</span>
                                 </a>
@@ -675,14 +654,6 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CMakeLists-txt/">
-                        <span class="chip bg-color">CMakeLists.txt</span>
-                    </a>
-                    
-                    <a href="/tags/package-xml/">
-                        <span class="chip bg-color">package.xml</span>
-                    </a>
-                    
                     <a href="/tags/ROS/">
                         <span class="chip bg-color">ROS</span>
                     </a>
@@ -702,9 +673,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="无人机学习">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="无人机学习规划">
                         
-                        <span class="card-title">无人机学习</span>
+                        <span class="card-title">无人机学习规划</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -936,7 +907,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.7k</span>&nbsp;字
+                class="white-color">63.8k</span>&nbsp;字
             
             
             
@@ -1156,21 +1127,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

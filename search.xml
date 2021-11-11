@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>PS论文(1)</title>
+      <link href="/2021/11/08/ps-lun-wen-1/"/>
+      <url>/2021/11/08/ps-lun-wen-1/</url>
+      
+        <content type="html"><![CDATA[<p>对应文章地址：<a href="https://www.researchgate.net/publication/330591165_Decentralized_Motion_Control_in_a_Cabled-based_Multi-drone_Load_Transport_System">Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System</a></p><h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>提出了一种可证明稳定的<a href="https://zhuanlan.zhihu.com/p/45346771">分散式控制方案</a>，允许多架传统四轴飞行器通过缆索悬挂携带载荷。该方法利用无人机、绳索和负载组成的系统的基本<a href="?">能量无源性</a>，稳定地将负载从原点移动到目的地。这是在不假设飞行期间绳索张力的状态以及不对负载的进行任何测量的情况下实现的。  因为反馈测量的无人机之间的通信是不需要的，所以控制器是分散的。通过李雅普诺夫法分析证明了运动的稳定性。所提出的控制器使用光学跟踪系统和无人机机载 IMU 的测量数据成功地在室内环境中的三无人机负载运输系统上实施。</p><h2 id="2-引言"><a href="#2-引言" class="headerlink" title="2 引言"></a>2 引言</h2><h3 id="运输方案方案对比"><a href="#运输方案方案对比" class="headerlink" title="运输方案方案对比"></a>运输方案方案对比</h3><p>小型多旋翼无人机的缺点：运输负载质量受限，飞行时间短。</p><p>可以通过增加动力单元数目以及电池大小，可以提高负载上限以及相应的飞行时间。从而设计出大型多旋翼无人机。</p><p>但大型多旋翼无人机也存在缺点：在运送较小的物品时效率会非常低，在狭窄的环境中的运动也更不灵活，更难控制。</p><p>而另外一种运输负载的方式：多无人机运输有效解决了上述两种运输方式存在的问题:根据负载的重量和大小调整无人机数目。</p><h3 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h3><p>本文提出了一种简单有效的运动控制方法，用于多架无人机携带缆索悬吊载荷的控制。该系统除了具有可扩展性外，还因为其固有的冗余性而具有更强的容错能力。有一些有限的工作在多旋翼无人机的运动控制与缆索或刚性连杆悬挂负载在单一或多无人机配置。在<a href="https://ieeexplore.ieee.org/document/7843619">Geometric Control of Quadrotor UAVs Transporting a Cable-Suspended Rigid Body</a>中研究了多架四轴飞行器通过连接刚性连杆承载载荷的几何控制问题。虽然使用刚性连杆可以简化控制设计，但它限制了这种系统在航空运输中的实际用途。同时，这篇文章仅给出了仿真结果。</p><p>在<a href="https://link.springer.com/article/10.1007/s10514-017-9632-2">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中给出了具有点质量负载的单四轴飞行器的混合模型，其轨迹设计使负载的摆动最小化，这篇文章进行了实验验证，但缺少稳定性的证明。在<a href="https://ieeexplore.ieee.org/document/8038248">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中，基于点质量负载的单四轴飞行器的拉格朗日动力学模型，利用绳索始终处于张力状态的假设，提出了一种控制器。然而，这篇文章所提出的控制器无法保证该假设在包含起飞和降落过程的任意轨迹上的有效性。</p><p>除了绳索的灵活性外，无人机-负载系统的运动控制也因无人机的固有欠驱动而变得复杂<a href="https://ieeexplore.ieee.org/document/7353620">Adaptive motion control of aerial robotic manipulators based on virtual decomposition </a>，而悬挂负载的加入进一步加剧了这一问题<a href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems </a>。在控制工程文献中，这个问题一般被认为是<a href="https://zhuanlan.zhihu.com/p/106492555">双欠驱动系统</a>的轨迹跟踪问题。<a href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems</a>和<a href="https://www.researchgate.net/publication/272352741_Health_Healthcare_Access_and_Use_of_Traditional_Versus_Modern_Medicine_in_Remote_Peruvian_Amazon_Communities_A_Descriptive_Study_of_Knowledge_Attitudes_and_Practices">Quadcopter design for medicine transportation in the peruvian amazon rainforest</a>中提出的方法考虑的是固定的期望位置。在<a href="https://ieeexplore.ieee.org/abstract/document/6631275">Trajectory generation and control of a quadrotor with a cable-suspended load - A differentially-flat hybrid system </a>中，研究了具有点质量负载的单四轴飞行器的运动控制问题。然而，其分析仅限于平面情况。</p><p>本文提出了一种可证明稳定的多轴四轴飞行器的分布式运动控制方法。这种方法的控制思路为：运输应用不需要对负载本身进行非常精确的运动控制，真正重要的是整个控制系统的鲁棒稳定性。比例导数PD控制器可以在不需要精确跟踪的情况下，为传统机械臂提供鲁棒稳定的运动控制，这要归功于控制器和机械臂子系统的<a href="?">能量无源性</a>。事实上，在机器人的控制中，这种无源性已经得到了广泛的应用<a href="https://ieeexplore.ieee.org/document/194594">Adaptive motion control of rigid robots: a tutorial </a>,<br><a href="https://ieeexplore.ieee.org/document/1618740">Passive Bilateral Teleoperation With Constant Time Delay</a>,<br><a href="https://link.springer.com/book/10.1007/978-3-319-15171-7">Passivity-Based Control and Estimation in Networked Robotics（重点，是一本书）</a>。本文提出的运动控制方法依赖于无论绳索的状态如何，相互连接的无人机负载系统都具有<a href="?">能源被动性</a>的原理。该控制律由系统的无源性启发的李雅普诺夫函数导出，并考虑了无人机的欠驱动性。该控制方案可以使用局部位置/速度测量值以分布式方式在单个无人机上实施，不需要对负载进行的任何测量，也不假设绳索张力的状态。</p><blockquote><p>摘要中系统控制方案为 decentralized control (分散式控制方案)，而引言中的系统控制方案为distributed motion control(分布式运动控制)。我认为decentralized其实是被distributed所包含的，不用特意区分，具体理解可参考<a href="https://blog.csdn.net/John1688888/article/details/82966807"> “去中心化(分散式)”和“分布式”的区别</a>。</p></blockquote><h2 id="3-系统建模"><a href="#3-系统建模" class="headerlink" title="3  系统建模"></a>3  系统建模</h2><p><img src="https://tva1.sinaimg.cn/large/007mx13gly1gwbfasj40rj309d05wwez.jpg" alt="多无人机运输绳系负载"></p><p>在本文中，我们用上标来表示表示矢量的所在的坐标系。上标’ 0 ‘表示固定的世界坐标系，为了简单起见，去掉了上标’ 0 。该系统由非传统的四轴飞行器组成，通过柔性绳携带负载，如图1所示。每根绳索的一端连接到无人机的质心。在系统动力学和控制器的开发中，忽略了绳索质量。</p><p>根据图1，当绳索处于张力时，下列运动学约束成立：$${q_i} - {q_L} = {R_L}(r_i^l - {l_i}e_i^l),\forall i \in \{ 1,...,n\} $$ $$\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i}$$其中， ${q_i}$和 ${q_L}$分别表示第 ${i}$个无人机质心和负载质心在世界坐标系中的三维位置； ${R_L}$是负载体坐标系(固定在负载上的坐标系)转换为世界坐标系对应的旋转矩阵； ${e_i^l}$是沿着第 ${i}$条绳索连接且指向负载上相关连接点的单位向量，在负载体坐标系中表示； ${r_i^l}$是载荷的质心连接到第 ${i}$个附着点的矢量，并在负载体坐标系中表示； ${l_i}$表示第 ${i}$个无人机与负载连接的绳索长度。而四旋翼的移动动力学方程如下所示：$${m_i}{\ddot q_i} = {f_i}{R_i}z - {m_i}gz + {T_i}{R_L}e_i^l$$其中 ${m_i}$， ${f_i}$分别表示无人机质量和推力； $g$为重力加速度； ${T_i}$为绳索的拉力； ${R_i}$是第 ${i}$个无人机的机体坐标系(固定在四旋翼上的坐标系)转换为世界坐标系对应的旋转矩阵； $z = {\left[ {\matrix{   0 &amp; 0 &amp; 1  \cr  } } \right]^{\rm{T}}}$是在世界坐标系表示的单位向量。</p><p>四旋翼的姿态动力学方程如下所示：</p>$${M_i}({\eta _i}){\ddot \eta _i} + {C_i}({\eta _i},{\dot \eta _i}){\dot \eta _i} = \Psi {({\eta _i})^{\rm{T}}}{{\rm{\tau }}_i}$$<p>其中</p> $${\eta _i} = {\left[ {{\phi _i},{\theta _i},{\psi _i}} \right]^{\rm{T}}}$$$$\eqalign{  &amp; {M_i}({\eta _i}) = \Psi {({\eta _i})^{\rm{T}}}{J_i}\Psi ({\eta _i})  \cr   &amp; {C_i}({\eta _i},{{\dot \eta }_i}) = \Psi {({\eta _i})^{\rm{T}}}{J_i}\Psi ({\eta _i}) -  \Psi {({\eta _i})^{\rm{T}}}sk(\Psi ({\eta _i}){{\dot \eta }_i}){J_i}\Psi ({\eta _i})  \cr   &amp; \Psi ({\eta _i}) = \left[ {\matrix{   1 &amp; 0 &amp; { - \sin ({\theta _i})}  \cr    0 &amp; {\cos ({\phi _i})} &amp; {\cos ({\theta _i})\sin ({\phi _i})}  \cr    0 &amp; {\sin ({\phi _i})} &amp; {\cos ({\theta _i})\cos ({\phi _i})}  \cr  } } \right] \cr} $$ ${J_i}$是四轴飞行器在其固定坐标系中的转动矩阵， $τ$是机体坐标系中的被施加的扭矩。 $sk(·)$是所谓的斜算子。四旋翼的动力学方程主要参考[Nonlinear Hierarchical Flight Controller for Unmanned Rotorcraft: Design, Stability, and Experiments | Journal of Guidance, Control, and Dynamics ](https://arc.aiaa.org/doi/abs/10.2514/1.43768)。单刚体负载的移动动力学方程和姿态动力学方程可表示为：$$\eqalign{  &amp; {m_L}{{\ddot q}_L} =  - \sum\limits_{i = 1}^n {{T_i}{R_L}{e_i}}  - {m_L}gz  \cr   &amp; J_L^l\dot \Omega _L^l + sk(\Omega _L^l)J_L^l\Omega _L^l = \sum\limits_{i = 1}^n {sk(r_i^l)( - {T_i}e_i^l)}  \cr} $$<p>其中，其中 $J_L^l$是负载相对于质心的恒定惯量， ${m_L}$是负载的质量，  $\Omega _L^l$在其负载体坐标系中表示的负载的角速度。</p><h2 id="4-控制设计与稳定性分析"><a href="#4-控制设计与稳定性分析" class="headerlink" title="4 控制设计与稳定性分析"></a>4 控制设计与稳定性分析</h2><p>控制设计从单个无人机的姿态控制开始。设 $\det \left( {\Psi \left( {{\eta _i}} \right)} \right) \ne 0$，采用以下反馈线性化控制律:</p>$${{\rm{\tau }}_i} = {(\psi {({\eta _i})^{\rm{T}}})^{ - 1}}({M_i}({\eta _i}){v_i} + {C_i}({\eta _i},{\dot \eta _i}){\dot \eta _i})$$ ${v_i}$的定义如下$${v_i} = {{\ddot \eta }_{{d_i}}} - {K_v}{{\dot e}_{{\eta _i}}} - {K_c}{e_{{\eta _i}}}$$ ${e_{{\eta _i}}}$定义如下$${e_{{\eta _i}}} = {\eta _i} - {\eta _{{d_i}}}$$<p>其中 ${\eta _{{d_i}}}$(<u>原文中的是 ${\eta _{{i}}}$，我怀疑是有错误，因为前文已经定义了 ${\eta _{{i}}}$</u>)为期望姿态将在后文定义。 ${K_v}、{K_c}$为正常量参数，该控制器的控制目标为：</p>$${{\ddot e}_{{\eta _i}}} + {K_v}{{\dot e}_{{\eta _i}}} + {K_c}{e_{{\eta _i}}} = 0,t \ge 0$$<p>反过来，</p>$$\left\| {{e_{{\eta _i}}}(t)} \right\| \le {k_1}\left\| {{\eta _{{0_i}}}} \right\|\exp ( - \alpha t),t \ge 0$$<p>其中 ${k_1}，\alpha$为正常量。</p><p>空中运输系统的目标是从点A到点B运输负载。为了实现这一目标，为每架无人机分配一个参考虚拟点。控制律将被推导出来，这样无人机就会沿着虚拟点的轨迹从原点到终点。当无人机完全驱动时，简单的比例导数pd控制器作为无人机与参考虚拟点之间的虚拟弹簧阻尼器耦合来实现控制目标。这里提出的控制律是建立在这个简单的概念，考虑到无人机欠驱动。</p><p>未完待续~~~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 无人机 </tag>
+            
+            <tag> PS论文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ego-planner代码精读(1)-simple_run_launch文件</title>
       <link href="/2021/10/26/ego-planner-dai-ma-jing-du-simple-run-launch-wen-jian/"/>
       <url>/2021/10/26/ego-planner-dai-ma-jing-du-simple-run-launch-wen-jian/</url>
@@ -20,11 +47,9 @@
       
         <tags>
             
-            <tag> launch </tag>
+            <tag> C++ </tag>
             
             <tag> ROS </tag>
-            
-            <tag> Cpp </tag>
             
         </tags>
       
@@ -49,7 +74,7 @@
       
         <tags>
             
-            <tag> 里程计话题读取 </tag>
+            <tag> ROS </tag>
             
         </tags>
       
@@ -62,7 +87,7 @@
       <link href="/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/"/>
       <url>/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/</url>
       
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="c795d0a04d4e8442d60f7618d5237beab0d5eb2a2d541f6454191ad8538fb75c">98c5eac1e431cec725e9b50c1f9552a702d963cf7053b9bb79e2706b93e0fa253c826a426938408fe43312336336be2f524b4f0e628aba4bcc3721a164fa3dce6f2820173879eebb4f572f1824df87d55c243aef3c4b0a16c6c14610e5fbbccf88989e695134af147a7a34556021035954227c06bad9b16bf4a59eb7a8fe963eaebc54c6c791e68afb32157448e15c061ac7dd09f1cbd352bf8948939202c23880a33f40581df83e7c37e2b6189fa04ce35d34bd67a7470e6aaa1957bf079b61d480337a4a008da781fc41697fd201b438cc53941cb1802ce866207a5486165199f1b8ff6600b46e46d0151105871a6dfde59dd4b77b6db93df06af1449bd6cf07828957ab4d3486651d5584a35a7590bbcd18baf873bf9c333f217e0184d869cd28f182e3488e01e91ff28cbccdce5b30e1d07d9de6e7924ea3a1fccaf078dfa7970848bd3f2f148efb498c581197c96e299c16f6bb9ed1d2112079a78215c97533dffc3dc7fe2cc03eb2de2aac6058a92470c945c9350f86c789f3fc17eebd2e3e9268f82ff28d6a687fd965df3eec2813bcbf392c074d3bcd90e21789b2db79df7b676730bd8188b4ada240627c45845011c1064a2db4e317775b3b7f0fcf3acd666004044612df9394a80f287b602c1c7c08efbe93141bc864a7a09c510661d714674b814a09e3012e95c512fe15d4b59e6ee654f6451ed29f0e05105a3f992734e94aabe5736c6ae204d85456289cbb10eac77fdc249edc5402f234a32a71ddf7a4800cdfa1cfec3060ece32d185946526ca94a5f24b15951a7a42c24d7c32eef0cc6d94502cc800f1df6bf1d63d2f3c044714ed4988e7067dc37efcb976b90885605c4884bfa21ed9e5be7100598e4892e3c4014092c8bb81836abee9258da043762040142a3528af12dcc57c6caf0f284ea71336392af6ef299a00f55895d3186dbd2daa4cc12fcb88e5dcaebca5bf649d3b2bc393355e122f01f3f27c10fbe4ab35ba9f58a1a3f6bc9cfb6e507e2780127c0eea4ab5025a6a5109f3194e9ed7d22be4a1b2faeb4c33e975d7377e736b98530a102d6a83fc0275d0d727c78b2fe1259e5fb66d875efa8e5a4f6b8d1a29174e4b487c19a7d009863b5d51929a2fb57600cbb113031a1b13f30ecff8922f381d2eb29fd356c289f7e87f7df79f2210ac60532ef139f0b1c6e7d6097ec2b5abfa546fb9c7f1cd836d49d56e8d885804f637d054caf2fde69f2d371ae12e76fd04c5d0b6357b6ea54ed8eef971d26a1124e2516b3427f0f409b65e8491e826cf3eb7a0a00896db38f295d8caa4909e711a9771f4de0de8bbfefd697d5ae016e63117200b619d171ed6a9e82df3e5a991b8ccf28a1aec1cf6eb38f853088d7303e4e29111a46155a853cb083d7f0be5e4adf00810ca4529f6b461b6535eae629f366077a6350b35438afa3bc380c64f5bd36d804b19f5cfc56e133151036f9733ceb084825f0aa61474e0a21a7229d1a612e2aae356cf2d792313abc3b8b2c3f5c214e8d00a447f8d1f4a8f0df44fedf9f4ab68588ae50bde9fc50567196a0a598693cf051dc8cd89049575721f6adb842e19ca14663ae437cfedeaaf02eb4dfb1a1d07782a69c027c77d797757ed969dc2037b89bc21ae6e01dde1ae4bb0b3d72a098df3d5452aec01a9fbd89526f58b7268b995fda9f951ad4af98820c8f9b0be79c3a35848ff1a76f682be34b68087299fedfbd82ece77789123f125c9975c2505720d8fbe3dc99ad3377aeae608da7c273899d2a9c386c1370e5829f885ed0a1f4e76d097d8c7e76c22241d884113c6e80f4b5481d94101d9f861ac33c52d91f9da87ffd8a5f4c989c18d4b18236aeab96fbdf8a07f9befa0ad93fe8fd81c715f3fbaf075d417ae1764a2049ad8a8e28d163555a842522b72b22b7df458727fd2ab0a6e7fcb06a9fab9b76d44eef0c3c049352325d8282c44802ae9b2b309db39df82f27a1b1fde559174b66ae4e6f974257e1c90e4690583a84190957bd2f05821a6e7b08daa33a0c036ee1ca3c5725943c031fbb2353f7b614c5f2af4aba7544734cbcd9d88c1f3441d3a041e8c5ddf2b282991dfc5c2554b8a9796a7e8c27b486e99f80e1724bc7a45d322ee2eeb8344d48b6dc5fb38ca224d809794758f7cf44c03a1df3fd1c6db72b20449aef3e9313d8c6ad4bcd59908837140a7095315be1facc9ecbb650ac51180f84dcb9d7c8344624b3cd8e16144d469fa9060cc4fadf9459795815b93653e272c4792f701e91734d30c369afdc0745e80649f26a09c9e33308e2ffd38010929ed404d05c86a4599ec749ea7785e4f811fcc91220ba6468b310b69307a2423ad2c2085067f700679c22fd7abafc660d53796ce4392952fc90a71ec2185b4af49efa0a6696ccf19696da32f498bb15a9d3bfb6d0eac2f0af29702e8de12e746faacedf5fd272f1f8be8308a5d1f2e589b9b6ac0231c8bb882a6c2066e7d0d1140c7436ec4ae7cc46dcc118bde925401ae70aae72cccef74eb6b2b1404afdfc11f5a8cfda534307cd1b4510f7ba3d5f35e45e5ae6855b9ef8e7bbb1c1028e7eb54ae779b2d9419eb1bddaad6632d304c6103bae037503039c1a31a891c07803221d49dfa6851936f6d0689114511c3ba88490e732c9d38584008bd484b2e91acd419a8ca2ae414fe1982624b4cc4305fb794d3ada63e2d6099bb2011fe6fbb66ec15a20e66deed092d6d596472d916cf8ec538cf177aeb55cb60bc260142dc9271d3a288e3b61f51172d37665508322d4eadbb70c88b5e3b54f9c9db1d3fd6e7beb3fb86f7953d2f7f5df96fdbe03de40577cf75e3f214737517e0a1680c5f77d88d40dd37541fdd6bc1003ba257e07aeffa10056432e9c2e79f7bccc74fd7938465f49b1e7ff5b06a137f37db37ba4e96b5b9c0d77134ca24038a7161bd74098954bd238da61c765c20da3c736404811eea018d1d75ab2c68449d7471fb8a3490a7838b7438dae65aec5f87fda55dda5845678ce9a8b404367097334f124a2fec574822ddff64ba63774cf3fe40ea935b1385404505e8a13987a2881f13fffa3d4ae6951f28ec1447e041f25d9495c85975c47f1028a4fc2ba114b80eb00b6601e75cd685edadd9f75555ab7ea40d95f31fa1b3983e3ce05cfadbc664a06d38e5972993bf31a13ce93c439736099969f3acb06fe5cc4c238db4c0c146bf39fdedaf93969af62dad2ec6722c7d11efe179ce1e97c89a469f413fdb5c437c3a2d0d771206fed63de3b668e7cac4dd458eb40fcfc0a265314482d764b7a5a24cd76b0eea86ea9ed70ec0c443baa99eff21c94616b5a879bcfe83997a030aaf61d63893f18e65c5c73363d56efa88675c935f7e406f04ccd1b7fb0d819910e36c02f484f5d2cb9152e54ca27d6d1d17da386c92e48bdce7c3ec043c6a320a18dfac8870f813fb8da05e74c8a1bccac9dba011b9aaacb2909d815e0c8ecc7e2bc556b0d3bc15888966313dbc487b9482b4852b5a739b4be38e34c8e7e5fbce0208b1542b051386902f636351a3795b2528b86178289c4ac257cb9fcc26a33d03c9721236798a1838eaf6f30555607148318de27ca297929ad3bc3cd71382acfe3b51673ba1b0e777f782f2bc845c6653f2a69b86f534f25c7bef37c78d754c7117a64b39c7560b3eb07f67c18e55978ab1eb991d73d950e4e922a2e0a86a2fd803362ad62fd02f662aaeb5251b5962c0f0ba4d9d7d0a73cc178ac5253fa4cdf8d9ee9914fffda6499580effa915f2a9cbb8bf63ae7b81b4bf26184b3903b098d2d7ae78bd4b70e43ccbb8dc1b620d6c61f302cff144356324bff1ea0cb108ca747d</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<p>对应代码地址：<a href="https://github.com/HKUST-Aerial-Robotics/Fast-Planner">GitHub - HKUST-Aerial-Robotics/Fast-Planner: A Robust and Efficient Trajectory Planner for Quadrotors</a></p><p>对应文章地址：<a href="https://ieeexplore.ieee.org/abstract/document/8758904">Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a></p><h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>利用b样条的凸包特性，结合欧几里得距离场的梯度信息和动态约束，采用b样条优化算法提高了轨迹的光滑性和间隙。最后，通过将最终轨迹表示为非均匀b样条，采用迭代时间调整方法保证轨迹的动态可行性和非保守性。</p><h2 id="2-相关工作"><a href="#2-相关工作" class="headerlink" title="2 相关工作"></a>2 相关工作</h2><h3 id="硬约束方法"><a href="#硬约束方法" class="headerlink" title="硬约束方法"></a>硬约束方法</h3><p>硬约束方法的首创是最小snap轨迹生成<a href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>.，其中轨迹表示为分段多项式，并通过求解二次规划( quadratic programming, QP)问题生成。硬约束方法通过凸形式保证全局最优性。然而，忽略了自由空间中与障碍物的距离，这往往导致轨迹接近障碍物。此外，动力学约束是保守的，使轨迹速度不足，以快速飞行。</p><h3 id="软约束方法-本文选用的"><a href="#软约束方法-本文选用的" class="headerlink" title="软约束方法(本文选用的)"></a>软约束方法(本文选用的)</h3><p>也有方法将轨迹生成作为一个非线性优化问题，考虑平滑和安全。软约束方法利用梯度信息推动轨迹远离障碍物，但存在局部极小问题，没有很强的成功率和动力学可行性保证。我们的优化方法还利用梯度信息提高了轨迹的安全性。然而，与以往计算昂贵的沿轨迹线积分的方法不同，基于b样条的凸包特性，将公式设计得更加简单。它大大提高了计算效率和收敛速度。</p><h2 id="3-运动动力学路径搜索"><a href="#3-运动动力学路径搜索" class="headerlink" title="3 运动动力学路径搜索"></a>3 运动动力学路径搜索</h2><p>前端运动学路径搜素源于自动汽车的混合A*(hybrid-state A*)搜索算法，其可再体素网格网络中搜索一个安全的，运动学可行的、且相对时间以及控制成本最低的轨迹。</p><p>未完待续~~~</p>]]></content>
       
       
       <categories>
@@ -103,6 +128,8 @@
       
         <tags>
             
+            <tag> fast planner </tag>
+            
             <tag> ego planner </tag>
             
             <tag> 无人机 </tag>
@@ -131,6 +158,8 @@
       
       
         <tags>
+            
+            <tag> fast planner </tag>
             
             <tag> ego planner </tag>
             
@@ -215,10 +244,6 @@
       
         <tags>
             
-            <tag> CMakeLists.txt </tag>
-            
-            <tag> package.xml </tag>
-            
             <tag> ROS </tag>
             
         </tags>
@@ -244,8 +269,6 @@
       
         <tags>
             
-            <tag> launch </tag>
-            
             <tag> ROS </tag>
             
         </tags>
@@ -255,7 +278,7 @@
     
     
     <entry>
-      <title>无人机学习</title>
+      <title>无人机学习规划</title>
       <link href="/2021/10/16/wu-ren-ji-xue-xi/"/>
       <url>/2021/10/16/wu-ren-ji-xue-xi/</url>
       
@@ -289,18 +312,14 @@
       
       <categories>
           
-          <category> 文章撰写经验 </category>
+          <category> 学习经验 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> PSP </tag>
-            
-            <tag> CaRS </tag>
-            
-            <tag> 文章结构 </tag>
+            <tag> PSP-CaRS文章框架 </tag>
             
         </tags>
       
@@ -324,8 +343,6 @@
       
       
         <tags>
-            
-            <tag> Linux </tag>
             
             <tag> C++ </tag>
             
@@ -352,9 +369,7 @@
       
         <tags>
             
-            <tag> endnote </tag>
-            
-            <tag> 坚果云+pdf expert </tag>
+            <tag> 文献阅读 </tag>
             
         </tags>
       
@@ -431,8 +446,6 @@
             
             <tag> C++ </tag>
             
-            <tag> VSCode </tag>
-            
         </tags>
       
     </entry>
@@ -449,7 +462,7 @@
       
       <categories>
           
-          <category> 环境配置 </category>
+          <category> 学习经验 </category>
           
       </categories>
       
@@ -457,8 +470,6 @@
         <tags>
             
             <tag> C++ </tag>
-            
-            <tag> VSCode </tag>
             
         </tags>
       

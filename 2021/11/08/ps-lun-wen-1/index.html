@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++学习路线, Cao Dong">
+    <meta name="keywords" content="PS论文(1), Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C++学习路线 | Cao Dong</title>
+    <title>PS论文(1) | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++学习路线</h1>
+                    <h1 class="description center-align post-title">PS论文(1)</h1>
                 </div>
             </div>
         </div>
@@ -390,8 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                <span class="chip bg-color">无人机</span>
+                            </a>
+                        
+                            <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">PS论文</span>
                             </a>
                         
                     </div>
@@ -402,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
                             </a>
                         
                     </div>
@@ -415,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-11-08
                 </div>
                 
 
@@ -424,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    137
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -454,7 +458,92 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>二  基础四大件：<br>1.数据结构与算法 《大话数据结构》c/c++  ，《算法第四版》 java ，《剑指offer》<br>2.计算机网络《tcp/ip详解》<br>3.操作系统  《深入理解操作系统》<br>4.设计模式 《大话设计模式》<br>三 应用于编程<br>1.linux使用<br>《linux就该这么学》<br>2.编译和调试<br>GUN官方GCC和GDB文档<br>《debugging  with gdb 》中文版<br>《跟我一起写makefile》陈皓<br>3.linux环境编程<br>《unix环境高级编程》<br>《linux高性能服务器编程》<br>《posix多线程程序设计》</p>
+                <p>对应文章地址：<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/330591165_Decentralized_Motion_Control_in_a_Cabled-based_Multi-drone_Load_Transport_System">Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System</a></p>
+<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>提出了一种可证明稳定的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45346771">分散式控制方案</a>，允许多架传统四轴飞行器通过缆索悬挂携带载荷。该方法利用无人机、绳索和负载组成的系统的基本<a href="?">能量无源性</a>，稳定地将负载从原点移动到目的地。这是在不假设飞行期间绳索张力的状态以及不对负载的进行任何测量的情况下实现的。  因为反馈测量的无人机之间的通信是不需要的，所以控制器是分散的。通过李雅普诺夫法分析证明了运动的稳定性。所提出的控制器使用光学跟踪系统和无人机机载 IMU 的测量数据成功地在室内环境中的三无人机负载运输系统上实施。</p>
+<h2 id="2-引言"><a href="#2-引言" class="headerlink" title="2 引言"></a>2 引言</h2><h3 id="运输方案方案对比"><a href="#运输方案方案对比" class="headerlink" title="运输方案方案对比"></a>运输方案方案对比</h3><p>小型多旋翼无人机的缺点：运输负载质量受限，飞行时间短。</p>
+<p>可以通过增加动力单元数目以及电池大小，可以提高负载上限以及相应的飞行时间。从而设计出大型多旋翼无人机。</p>
+<p>但大型多旋翼无人机也存在缺点：在运送较小的物品时效率会非常低，在狭窄的环境中的运动也更不灵活，更难控制。</p>
+<p>而另外一种运输负载的方式：多无人机运输有效解决了上述两种运输方式存在的问题:根据负载的重量和大小调整无人机数目。</p>
+<h3 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h3><p>本文提出了一种简单有效的运动控制方法，用于多架无人机携带缆索悬吊载荷的控制。该系统除了具有可扩展性外，还因为其固有的冗余性而具有更强的容错能力。有一些有限的工作在多旋翼无人机的运动控制与缆索或刚性连杆悬挂负载在单一或多无人机配置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7843619">Geometric Control of Quadrotor UAVs Transporting a Cable-Suspended Rigid Body</a>中研究了多架四轴飞行器通过连接刚性连杆承载载荷的几何控制问题。虽然使用刚性连杆可以简化控制设计，但它限制了这种系统在航空运输中的实际用途。同时，这篇文章仅给出了仿真结果。</p>
+<p>在<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10514-017-9632-2">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中给出了具有点质量负载的单四轴飞行器的混合模型，其轨迹设计使负载的摆动最小化，这篇文章进行了实验验证，但缺少稳定性的证明。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中，基于点质量负载的单四轴飞行器的拉格朗日动力学模型，利用绳索始终处于张力状态的假设，提出了一种控制器。然而，这篇文章所提出的控制器无法保证该假设在包含起飞和降落过程的任意轨迹上的有效性。</p>
+<p>除了绳索的灵活性外，无人机-负载系统的运动控制也因无人机的固有欠驱动而变得复杂<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7353620">Adaptive motion control of aerial robotic manipulators based on virtual decomposition </a>，而悬挂负载的加入进一步加剧了这一问题<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems </a>。在控制工程文献中，这个问题一般被认为是<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106492555">双欠驱动系统</a>的轨迹跟踪问题。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems</a>和<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/272352741_Health_Healthcare_Access_and_Use_of_Traditional_Versus_Modern_Medicine_in_Remote_Peruvian_Amazon_Communities_A_Descriptive_Study_of_Knowledge_Attitudes_and_Practices">Quadcopter design for medicine transportation in the peruvian amazon rainforest</a>中提出的方法考虑的是固定的期望位置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/6631275">Trajectory generation and control of a quadrotor with a cable-suspended load - A differentially-flat hybrid system </a>中，研究了具有点质量负载的单四轴飞行器的运动控制问题。然而，其分析仅限于平面情况。</p>
+<p>本文提出了一种可证明稳定的多轴四轴飞行器的分布式运动控制方法。这种方法的控制思路为：运输应用不需要对负载本身进行非常精确的运动控制，真正重要的是整个控制系统的鲁棒稳定性。比例导数PD控制器可以在不需要精确跟踪的情况下，为传统机械臂提供鲁棒稳定的运动控制，这要归功于控制器和机械臂子系统的<a href="?">能量无源性</a>。事实上，在机器人的控制中，这种无源性已经得到了广泛的应用<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/194594">Adaptive motion control of rigid robots: a tutorial </a>,<br><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/1618740">Passive Bilateral Teleoperation With Constant Time Delay</a>,<br><a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-319-15171-7">Passivity-Based Control and Estimation in Networked Robotics（重点，是一本书）</a>。本文提出的运动控制方法依赖于无论绳索的状态如何，相互连接的无人机负载系统都具有<a href="?">能源被动性</a>的原理。该控制律由系统的无源性启发的李雅普诺夫函数导出，并考虑了无人机的欠驱动性。该控制方案可以使用局部位置/速度测量值以分布式方式在单个无人机上实施，不需要对负载进行的任何测量，也不假设绳索张力的状态。</p>
+<blockquote>
+<p>摘要中系统控制方案为 decentralized control (分散式控制方案)，而引言中的系统控制方案为distributed motion control(分布式运动控制)。我认为decentralized其实是被distributed所包含的，不用特意区分，具体理解可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/John1688888/article/details/82966807"> “去中心化(分散式)”和“分布式”的区别</a>。</p>
+</blockquote>
+<h2 id="3-系统建模"><a href="#3-系统建模" class="headerlink" title="3  系统建模"></a>3  系统建模</h2><p><img src="https://tva1.sinaimg.cn/large/007mx13gly1gwbfasj40rj309d05wwez.jpg" alt="多无人机运输绳系负载"></p>
+<p>在本文中，我们用上标来表示表示矢量的所在的坐标系。上标’ 0 ‘表示固定的世界坐标系，为了简单起见，去掉了上标’ 0 。该系统由非传统的四轴飞行器组成，通过柔性绳携带负载，如图1所示。每根绳索的一端连接到无人机的质心。在系统动力学和控制器的开发中，忽略了绳索质量。</p>
+<p>根据图1，当绳索处于张力时，下列运动学约束成立：$${q_i} - {q_L} = {R_L}(r_i^l - {l_i}e_i^l),\forall i \in \{ 1,...,n\} $$ $$\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i}$$
+
+其中， ${q_i}$和 ${q_L}$分别表示第 ${i}$个无人机质心和负载质心在世界坐标系中的三维位置；
+
+ ${R_L}$是负载体坐标系(固定在负载上的坐标系)转换为世界坐标系对应的旋转矩阵；
+
+ ${e_i^l}$是沿着第 ${i}$条绳索连接且指向负载上相关连接点的单位向量，在负载体坐标系中表示；
+
+ ${r_i^l}$是载荷的质心连接到第 ${i}$个附着点的矢量，并在负载体坐标系中表示；
+
+ ${l_i}$表示第 ${i}$个无人机与负载连接的绳索长度。
+
+而四旋翼的移动动力学方程如下所示：
+
+$${m_i}{\ddot q_i} = {f_i}{R_i}z - {m_i}gz + {T_i}{R_L}e_i^l$$
+
+其中
+
+ ${m_i}$， ${f_i}$分别表示无人机质量和推力；
+
+ $g$为重力加速度；
+
+ ${T_i}$为绳索的拉力；
+
+ ${R_i}$是第 ${i}$个无人机的机体坐标系(固定在四旋翼上的坐标系)转换为世界坐标系对应的旋转矩阵；
+
+ $z = {\left[ {\matrix{
+   0 &amp; 0 &amp; 1  \cr 
+
+ } } \right]^{\rm{T}}}$是在世界坐标系表示的单位向量。</p>
+<p>四旋翼的姿态动力学方程如下所示：</p>
+$${M_i}({\eta _i}){\ddot \eta _i} + {C_i}({\eta _i},{\dot \eta _i}){\dot \eta _i} = \Psi {({\eta _i})^{\rm{T}}}{{\rm{\tau }}_i}$$
+<p>其中</p>
+ $${\eta _i} = {\left[ {{\phi _i},{\theta _i},{\psi _i}} \right]^{\rm{T}}}$$
+$$\eqalign{
+  &amp; {M_i}({\eta _i}) = \Psi {({\eta _i})^{\rm{T}}}{J_i}\Psi ({\eta _i})  \cr 
+  &amp; {C_i}({\eta _i},{{\dot \eta }_i}) = \Psi {({\eta _i})^{\rm{T}}}{J_i}\Psi ({\eta _i}) -  \Psi {({\eta _i})^{\rm{T}}}sk(\Psi ({\eta _i}){{\dot \eta }_i}){J_i}\Psi ({\eta _i})  \cr 
+  &amp; \Psi ({\eta _i}) = \left[ {\matrix{
+   1 &amp; 0 &amp; { - \sin ({\theta _i})}  \cr 
+   0 &amp; {\cos ({\phi _i})} &amp; {\cos ({\theta _i})\sin ({\phi _i})}  \cr 
+   0 &amp; {\sin ({\phi _i})} &amp; {\cos ({\theta _i})\cos ({\phi _i})}  \cr 
+
+ } } \right] \cr} $$
+
+ ${J_i}$是四轴飞行器在其固定坐标系中的转动矩阵， $τ$是机体坐标系中的被施加的扭矩。 $sk(·)$是所谓的斜算子。
+
+四旋翼的动力学方程主要参考[Nonlinear Hierarchical Flight Controller for Unmanned Rotorcraft: Design, Stability, and Experiments | Journal of Guidance, Control, and Dynamics ](https://arc.aiaa.org/doi/abs/10.2514/1.43768)。
+
+
+
+单刚体负载的移动动力学方程和姿态动力学方程可表示为：
+
+$$\eqalign{
+  &amp; {m_L}{{\ddot q}_L} =  - \sum\limits_{i = 1}^n {{T_i}{R_L}{e_i}}  - {m_L}gz  \cr 
+  &amp; J_L^l\dot \Omega _L^l + sk(\Omega _L^l)J_L^l\Omega _L^l = \sum\limits_{i = 1}^n {sk(r_i^l)( - {T_i}e_i^l)}  \cr} $$
+<p>其中，其中 $J_L^l$是负载相对于质心的恒定惯量， ${m_L}$是负载的质量，  $\Omega _L^l$在其负载体坐标系中表示的负载的角速度。</p>
+<h2 id="4-控制设计与稳定性分析"><a href="#4-控制设计与稳定性分析" class="headerlink" title="4 控制设计与稳定性分析"></a>4 控制设计与稳定性分析</h2><p>控制设计从单个无人机的姿态控制开始。设 $\det \left( {\Psi \left( {{\eta _i}} \right)} \right) \ne 0$，采用以下反馈线性化控制律:</p>
+$${{\rm{\tau }}_i} = {(\psi {({\eta _i})^{\rm{T}}})^{ - 1}}({M_i}({\eta _i}){v_i} + {C_i}({\eta _i},{\dot \eta _i}){\dot \eta _i})$$
+ ${v_i}$的定义如下
+
+$${v_i} = {{\ddot \eta }_{{d_i}}} - {K_v}{{\dot e}_{{\eta _i}}} - {K_c}{e_{{\eta _i}}}$$
+ ${e_{{\eta _i}}}$定义如下
+
+$${e_{{\eta _i}}} = {\eta _i} - {\eta _{{d_i}}}$$
+<p>其中 ${\eta _{{d_i}}}$(<u>原文中的是 ${\eta _{{i}}}$，我怀疑是有错误，因为前文已经定义了 ${\eta _{{i}}}$</u>)为期望姿态将在后文定义。 ${K_v}、{K_c}$为正常量参数，该控制器的控制目标为：</p>
+$${{\ddot e}_{{\eta _i}}} + {K_v}{{\dot e}_{{\eta _i}}} + {K_c}{e_{{\eta _i}}} = 0,t \ge 0$$
+<p>反过来，</p>
+$$\left\| {{e_{{\eta _i}}}(t)} \right\| \le {k_1}\left\| {{\eta _{{0_i}}}} \right\|\exp ( - \alpha t),t \ge 0$$
+<p>其中 ${k_1}，\alpha$为正常量。</p>
+<p>空中运输系统的目标是从点A到点B运输负载。为了实现这一目标，为每架无人机分配一个参考虚拟点。控制律将被推导出来，这样无人机就会沿着虚拟点的轨迹从原点到终点。当无人机完全驱动时，简单的比例导数pd控制器作为无人机与参考虚拟点之间的虚拟弹簧阻尼器耦合来实现控制目标。这里提出的控制律是建立在这个简单的概念，考虑到无人机欠驱动。</p>
+<p>未完待续~~~</p>
 
                 
             </div>
@@ -481,7 +570,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/26/c-xue-xi-lu-xian/">http://example.com/2021/09/26/c-xue-xi-lu-xian/</a>
+                    <a href="http://example.com/2021/11/08/ps-lun-wen-1/">http://example.com/2021/11/08/ps-lun-wen-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -519,8 +608,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                    <span class="chip bg-color">无人机</span>
+                                </a>
+                            
+                                <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">PS论文</span>
                                 </a>
                             
                         </div>
@@ -564,46 +657,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/">
+                <a href="/2021/11/08/ps-lun-wen-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="使用PSP-CaRS框架撰写与工程相关的研究型文章">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="PS论文(1)">
                         
-                        <span class="card-title">使用PSP-CaRS框架撰写与工程相关的研究型文章</span>
+                        <span class="card-title">PS论文(1)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            PS论文记(1)《Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System》
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/PSP-CaRS%E6%96%87%E7%AB%A0%E6%A1%86%E6%9E%B6/">
-                        <span class="chip bg-color">PSP-CaRS文章框架</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -617,31 +716,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/23/wen-xian-yue-du/">
+                <a href="/2021/10/26/ego-planner-dai-ma-jing-du-simple-run-launch-wen-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="文献阅读">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="ego-planner代码精读(1)-simple_run_launch文件">
                         
-                        <span class="card-title">文献阅读</span>
+                        <span class="card-title">ego-planner代码精读(1)-simple_run_launch文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为了更好地阅读文献做的小笔记
+                            simple_run_launch文件代码学习
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    项目代码学习
                                 </a>
                             
                             
@@ -651,8 +750,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/">
-                        <span class="chip bg-color">文献阅读</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/ROS/">
+                        <span class="chip bg-color">ROS</span>
                     </a>
                     
                 </div>
@@ -783,6 +886,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
