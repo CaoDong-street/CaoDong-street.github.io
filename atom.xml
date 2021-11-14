@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-12T13:55:20.889Z</updated>
+  <updated>2021-11-14T14:04:43.334Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PS论文(2)</title>
+    <link href="http://example.com/2021/11/12/ps-lun-wen-2/"/>
+    <id>http://example.com/2021/11/12/ps-lun-wen-2/</id>
+    <published>2021-11-12T15:27:25.000Z</published>
+    <updated>2021-11-14T14:04:43.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;论文地址：&lt;a href=&quot;https://rss2017.lids.mit.edu/static/papers/31.pdf&quot;&gt;Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PS论文(1)</title>
     <link href="http://example.com/2021/11/08/ps-lun-wen-1/"/>
     <id>http://example.com/2021/11/08/ps-lun-wen-1/</id>
     <published>2021-11-08T13:17:36.000Z</published>
-    <updated>2021-11-12T13:55:20.889Z</updated>
+    <updated>2021-11-14T14:03:23.332Z</updated>
     
     
       
@@ -511,31 +538,6 @@
     
     
     <category term="转载内容" scheme="http://example.com/categories/%E8%BD%AC%E8%BD%BD%E5%86%85%E5%AE%B9/"/>
-    
-    
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo+Github+matery的个人博客搭建（补充）</title>
-    <link href="http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/"/>
-    <id>http://example.com/2021/09/18/hexo-github-matery-de-ge-ren-bo-ke-da-jian-bu-chong/</id>
-    <published>2021-09-18T02:43:00.000Z</published>
-    <updated>2021-11-11T16:23:16.588Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近想做一下自己的博客内容，记录一下平时的学习。参考了 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/111614119&quot;&gt;Github + Hexo 搭建个人博客超详细教程&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
     
     
     <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>

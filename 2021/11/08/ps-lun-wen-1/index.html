@@ -459,31 +459,31 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>对应文章地址：<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/330591165_Decentralized_Motion_Control_in_a_Cabled-based_Multi-drone_Load_Transport_System">Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System</a></p>
-<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>提出了一种可证明稳定的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45346771">分散式控制方案</a>，允许多架传统四轴飞行器通过缆索悬挂携带载荷。该方法利用无人机、绳索和负载组成的系统的基本<a href="?">能量无源性</a>，稳定地将负载从原点移动到目的地。这是在不假设飞行期间绳索张力的状态以及不对负载的进行任何测量的情况下实现的。  因为反馈测量的无人机之间的通信是不需要的，所以控制器是分散的。通过李雅普诺夫法分析证明了运动的稳定性。所提出的控制器使用光学跟踪系统和无人机机载 IMU 的测量数据成功地在室内环境中的三无人机负载运输系统上实施。</p>
+<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>提出了一种可证明稳定的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/45346771">分散式控制方案</a>，允许多架传统四轴飞行器通过缆绳悬挂携带负载。该方法利用无人机、缆绳和负载组成的系统的基本<a href="?">能量无源性</a>，稳定地将负载从原点移动到目的地。这是在不假设飞行期间缆绳张力的状态以及不对负载的进行任何测量的情况下实现的。  因为反馈测量的无人机之间的通信是不需要的，所以控制器是分散的。通过李雅普诺夫法分析证明了运动的稳定性。所提出的控制器使用光学跟踪系统和无人机机载 IMU 的测量数据成功地在室内环境中的三无人机负载运输系统上实施。</p>
 <h2 id="2-引言"><a href="#2-引言" class="headerlink" title="2 引言"></a>2 引言</h2><h3 id="运输方案方案对比"><a href="#运输方案方案对比" class="headerlink" title="运输方案方案对比"></a>运输方案方案对比</h3><p>小型多旋翼无人机的缺点：运输负载质量受限，飞行时间短。</p>
 <p>可以通过增加动力单元数目以及电池大小，可以提高负载上限以及相应的飞行时间。从而设计出大型多旋翼无人机。</p>
 <p>但大型多旋翼无人机也存在缺点：在运送较小的物品时效率会非常低，在狭窄的环境中的运动也更不灵活，更难控制。</p>
 <p>而另外一种运输负载的方式：多无人机运输有效解决了上述两种运输方式存在的问题:根据负载的重量和大小调整无人机数目。</p>
-<h3 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h3><p>本文提出了一种简单有效的运动控制方法，用于多架无人机携带缆索悬吊载荷的控制。该系统除了具有可扩展性外，还因为其固有的冗余性而具有更强的容错能力。有一些有限的工作在多旋翼无人机的运动控制与缆索或刚性连杆悬挂负载在单一或多无人机配置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7843619">Geometric Control of Quadrotor UAVs Transporting a Cable-Suspended Rigid Body</a>中研究了多架四轴飞行器通过连接刚性连杆承载载荷的几何控制问题。虽然使用刚性连杆可以简化控制设计，但它限制了这种系统在航空运输中的实际用途。同时，这篇文章仅给出了仿真结果。</p>
-<p>在<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10514-017-9632-2">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中给出了具有点质量负载的单四轴飞行器的混合模型，其轨迹设计使负载的摆动最小化，这篇文章进行了实验验证，但缺少稳定性的证明。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中，基于点质量负载的单四轴飞行器的拉格朗日动力学模型，利用绳索始终处于张力状态的假设，提出了一种控制器。然而，这篇文章所提出的控制器无法保证该假设在包含起飞和降落过程的任意轨迹上的有效性。</p>
-<p>除了绳索的灵活性外，无人机-负载系统的运动控制也因无人机的固有欠驱动而变得复杂<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7353620">Adaptive motion control of aerial robotic manipulators based on virtual decomposition </a>，而悬挂负载的加入进一步加剧了这一问题<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems </a>。在控制工程文献中，这个问题一般被认为是<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106492555">双欠驱动系统</a>的轨迹跟踪问题。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems</a>和<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/272352741_Health_Healthcare_Access_and_Use_of_Traditional_Versus_Modern_Medicine_in_Remote_Peruvian_Amazon_Communities_A_Descriptive_Study_of_Knowledge_Attitudes_and_Practices">Quadcopter design for medicine transportation in the peruvian amazon rainforest</a>中提出的方法考虑的是固定的期望位置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/6631275">Trajectory generation and control of a quadrotor with a cable-suspended load - A differentially-flat hybrid system </a>中，研究了具有点质量负载的单四轴飞行器的运动控制问题。然而，其分析仅限于平面情况。</p>
-<p>本文提出了一种可证明稳定的多轴四轴飞行器的分布式运动控制方法。这种方法的控制思路为：运输应用不需要对负载本身进行非常精确的运动控制，真正重要的是整个控制系统的鲁棒稳定性。比例导数PD控制器可以在不需要精确跟踪的情况下，为传统机械臂提供鲁棒稳定的运动控制，这要归功于控制器和机械臂子系统的<a href="?">能量无源性</a>。事实上，在机器人的控制中，这种无源性已经得到了广泛的应用<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/194594">Adaptive motion control of rigid robots: a tutorial </a>,<br><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/1618740">Passive Bilateral Teleoperation With Constant Time Delay</a>,<br><a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-319-15171-7">Passivity-Based Control and Estimation in Networked Robotics（重点，是一本书）</a>。本文提出的运动控制方法依赖于无论绳索的状态如何，相互连接的无人机负载系统都具有<a href="?">能源被动性</a>的原理。该控制律由系统的无源性启发的李雅普诺夫函数导出，并考虑了无人机的欠驱动性。该控制方案可以使用局部位置/速度测量值以分布式方式在单个无人机上实施，不需要对负载进行的任何测量，也不假设绳索张力的状态。</p>
+<h3 id="相关工作"><a href="#相关工作" class="headerlink" title="相关工作"></a>相关工作</h3><p>本文提出了一种简单有效的运动控制方法，用于多架无人机携带缆绳悬吊载荷的控制。该系统除了具有可扩展性外，还因为其固有的冗余性而具有更强的容错能力。有一些有限的工作在多旋翼无人机的运动控制与缆索或刚性连杆悬挂负载在单一或多无人机配置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7843619">Geometric Control of Quadrotor UAVs Transporting a Cable-Suspended Rigid Body</a>中研究了多架四轴飞行器通过连接刚性连杆承载载荷的几何控制问题。虽然使用刚性连杆可以简化控制设计，但它限制了这种系统在航空运输中的实际用途。同时，这篇文章仅给出了仿真结果。</p>
+<p>在<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s10514-017-9632-2">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中给出了具有点质量负载的单四轴飞行器的混合模型，其轨迹设计使负载的摆动最小化，这篇文章进行了实验验证，但缺少稳定性的证明。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Cable-suspended load lifting by a quadrotor UAV: hybrid model, trajectory generation, and control </a>中，基于点质量负载的单四轴飞行器的拉格朗日动力学模型，利用缆绳始终处于张力状态的假设，提出了一种控制器。然而，这篇文章所提出的控制器无法保证该假设在包含起飞和降落过程的任意轨迹上的有效性。</p>
+<p>除了缆绳的灵活性外，无人机-负载系统的运动控制也因无人机的固有欠驱动而变得复杂<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7353620">Adaptive motion control of aerial robotic manipulators based on virtual decomposition </a>，而悬挂负载的加入进一步加剧了这一问题<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems </a>。在控制工程文献中，这个问题一般被认为是<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106492555">双欠驱动系统</a>的轨迹跟踪问题。<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8038248">Nonlinear Hierarchical Control for Unmanned Quadrotor Transportation Systems</a>和<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/272352741_Health_Healthcare_Access_and_Use_of_Traditional_Versus_Modern_Medicine_in_Remote_Peruvian_Amazon_Communities_A_Descriptive_Study_of_Knowledge_Attitudes_and_Practices">Quadcopter design for medicine transportation in the peruvian amazon rainforest</a>中提出的方法考虑的是固定的期望位置。在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/6631275">Trajectory generation and control of a quadrotor with a cable-suspended load - A differentially-flat hybrid system </a>中，研究了具有点质量负载的单四轴飞行器的运动控制问题。然而，其分析仅限于平面情况。</p>
+<p>本文提出了一种可证明稳定的多轴四轴飞行器的分布式运动控制方法。这种方法的控制思路为：运输应用不需要对负载本身进行非常精确的运动控制，真正重要的是整个控制系统的鲁棒稳定性。比例导数PD控制器可以在不需要精确跟踪的情况下，为传统机械臂提供鲁棒稳定的运动控制，这要归功于控制器和机械臂子系统的<a href="?">能量无源性</a>。事实上，在机器人的控制中，这种无源性已经得到了广泛的应用<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/194594">Adaptive motion control of rigid robots: a tutorial </a>,<br><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/1618740">Passive Bilateral Teleoperation With Constant Time Delay</a>,<br><a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-319-15171-7">Passivity-Based Control and Estimation in Networked Robotics（重点，是一本书）</a>。本文提出的运动控制方法依赖于无论缆绳的状态如何，相互连接的无人机负载系统都具有<a href="?">能源被动性</a>的原理。该控制律由系统的无源性启发的李雅普诺夫函数导出，并考虑了无人机的欠驱动性。该控制方案可以使用局部位置/速度测量值以分布式方式在单个无人机上实施，不需要对负载进行的任何测量，也不假设缆绳张力的状态。</p>
 <blockquote>
 <p>摘要中系统控制方案为 decentralized control (分散式控制方案)，而引言中的系统控制方案为distributed motion control(分布式运动控制)。我认为decentralized其实是被distributed所包含的，不用特意区分，具体理解可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/John1688888/article/details/82966807"> “去中心化(分散式)”和“分布式”的区别</a>。</p>
 </blockquote>
 <h2 id="3-系统建模"><a href="#3-系统建模" class="headerlink" title="3  系统建模"></a>3  系统建模</h2><p><img src="https://tva1.sinaimg.cn/large/007mx13gly1gwbfasj40rj309d05wwez.jpg" alt="多无人机运输绳系负载"></p>
-<p>在本文中，我们用上标来表示表示矢量的所在的坐标系。上标’ 0 ‘表示固定的世界坐标系，为了简单起见，去掉了上标。该系统由非传统的四轴飞行器组成，通过柔性绳携带负载，如图1所示。每根绳索的一端连接到无人机的质心。在系统动力学和控制器的开发中，忽略了绳索质量。</p>
-<p>根据图1，当绳索处于张力时，下列运动学约束成立：$${q_i} - {q_L} = {R_L}(r_i^l - {l_i}e_i^l),\forall i \in \{ 1,...,n\} $$ $$\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i} $$
+<p>在本文中，我们用上标来表示表示矢量的所在的坐标系。上标’ 0 ‘表示固定的世界坐标系，为了简单起见，去掉了上标。该系统由非传统的四轴飞行器组成，通过柔性绳携带负载，如图1所示。每根缆绳的一端连接到无人机的质心。在系统动力学和控制器的开发中，忽略了缆绳质量。</p>
+<p>根据图1，当缆绳处于张力时，下列运动学约束成立：$${q_i} - {q_L} = {R_L}(r_i^l - {l_i}e_i^l),\forall i \in \{ 1,...,n\} $$ $$\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i} $$
 
 其中， ${q_i}$和 ${q_L}$分别表示第 ${i}$个无人机质心和负载质心在世界坐标系中的三维位置；
 
  ${R_L}$是负载体坐标系(固定在负载上的坐标系)转换为世界坐标系对应的旋转矩阵；
 
- ${e_i^l}$是沿着第 ${i}$条绳索连接且指向负载上相关连接点的单位向量，在负载体坐标系中表示；
+ ${e_i^l}$是沿着第 ${i}$条缆绳连接且指向负载上相关连接点的单位向量，在负载体坐标系中表示；
 
  ${r_i^l}$是载荷的质心连接到第 ${i}$个附着点的矢量，并在负载体坐标系中表示；
 
- ${l_i}$表示第 ${i}$个无人机与负载连接的绳索长度。
+ ${l_i}$表示第 ${i}$个无人机与负载连接的缆绳长度。
 
 而四旋翼的移动动力学方程如下所示：
 
@@ -495,7 +495,7 @@ $${m_i}{\ddot q_i} = {f_i}{R_i}z - {m_i}gz + {T_i}{R_L}e_i^l$$
 
  $g$为重力加速度；
 
- ${T_i}$为绳索的拉力；
+ ${T_i}$为缆绳的拉力；
 
  ${R_i}$是第 ${i}$个无人机的机体坐标系(固定在四旋翼上的坐标系)转换为世界坐标系对应的旋转矩阵；
 
@@ -581,7 +581,7 @@ ${\cal M} \buildrel \Delta \over = \mathop {\max }\limits_{i \in \{ 1,...,n\} } 
 
 能量函数导数小于0证明：
 
-不管绳索的状态如何，联合无人机-绳索-负载系统的无源性可以被利用：
+不管缆绳的状态如何，联合无人机-缆绳-负载系统的无源性可以被利用：
 
 无人机闭环姿态动力学如公式9所示。
 
@@ -594,7 +594,7 @@ $${m_i}{\ddot q_i} = {f_i}{R_i}z - {m_i}gz + {T_i}{R_L}e_i^l$$
 $${f_i}R({\eta _i})z = {f_i}R({\eta _{{d_i}}} + {e_{{\eta _i}}})z \buildrel \Delta \over = {f_i}R({\eta _{{d_i}}})z + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}}) = {\mu _i} + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}})$$
 <p>可以得到无人机的闭环移动动力学</p>
 <p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gwcgnmpuq4j30fw02bwel.jpg" style="zoom: 67%;"></p>
-<p>在任何给定的时间，以下两个约束中的一个适用于每根绳索。</p>
+<p>在任何给定的时间，以下两个约束中的一个适用于每根缆绳。</p>
 <ul>
 <li><p>如果绳子不受到拉力作用，则${T_i} = 0$</p>
 </li>
@@ -608,7 +608,7 @@ $${({R_L}{e_i})^{\rm{T}}}({\dot q_i} - {\dot q_L} - {R_L}sk({\Omega _L}){r_i}) =
 $$\sum\limits_{i = 1}^n {{{(sk({\Omega _L}){r_i})}^{\rm{T}}}( - {T_i}{e_i})}  = \sum\limits_{i = 1}^n {{{({R_L}sk({\Omega _L}){r_i})}^{\rm{T}}}( - {T_i}{R_L}{e_i})} $$
 <p>则有：</p>
 <p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gwchjrkl82j30hu04d74x.jpg" style="zoom:67%;"></p>
-<p>无论绳索张力的状态，最后一项始终是零，则得到最简单化的能量函数导数</p>
+<p>无论缆绳张力的状态，最后一项始终是零，则得到最简单化的能量函数导数</p>
 <p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gwchlpu6qzj30h503fq38.jpg" style="zoom:80%;"></p>
 <p>注意，第三项是由于系统欠驱动导致的。</p>
 <p>接下来证明能量函数的有界性。</p>
@@ -643,8 +643,9 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
 <p>  根据非自治系统的修正不变性原理<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2405896317320190">Almost Sure Attitude Consensus in Multispacecraft Systems With Stochastic Communication Links - ScienceDirect</a>，可以得到</p>
 <p>  <img src="https://tvax2.sinaimg.cn/large/007mx13gly1gwclcx5uz8j30bm01ct8n.jpg" alt=""></p>
 <p>  上式的物理表述为无人机和负载在行程结束时达到静止稳态状态。这种状态可以确定为参考虚拟点的最终位置、无人机的质量和控制增益$k_p$的函数。由于篇幅关系，最后部分的证明和稳态分析的细节省略了。</p>
-<h2 id="5-实验简述"><a href="#5-实验简述" class="headerlink" title="5 实验简述"></a>5 实验简述</h2><p>  在三无人机负载运输系统（结构如下图2）上进行了实验，验证了所提控制器的有效性。 0.23kg的负载通过绳索连接到无人机上。每架带电池的无人机重量为0.75kg。目标是在两点之间运输负载。无人机位置由动态捕捉系统获得。三个参考虚拟点的期望轨迹被设计成一个固定三角形的顶点，以固定的方向平行于地面移动。</p>
+<h2 id="5-实验简述"><a href="#5-实验简述" class="headerlink" title="5 实验简述"></a>5 实验简述</h2><p>  在三无人机负载运输系统（结构如下图2）上进行了实验，验证了所提控制器的有效性。 0.23kg的负载通过缆绳连接到无人机上。每架带电池的无人机重量为0.75kg。目标是在两点之间运输负载。无人机位置由动态捕捉系统获得。三个参考虚拟点的期望轨迹被设计成一个固定三角形的顶点，以固定的方向平行于地面移动。</p>
 <p>  <img src="https://tvax2.sinaimg.cn/large/007mx13gly1gwclik3cl5j30f70ebq6z.jpg" alt=""></p>
+<p>  未完待更新~~~</p>
 
                 
             </div>
@@ -758,30 +759,29 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/08/ps-lun-wen-1/">
+                <a href="/2021/11/12/ps-lun-wen-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="PS论文(1)">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="PS论文(2)">
                         
-                        <span class="card-title">PS论文(1)</span>
+                        <span class="card-title">PS论文(2)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PS论文记(1)《Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System》（文章部分概念未理解透彻待更新）
+                            PS论文记(2)《Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a Cable-Suspended Payload》
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -794,7 +794,6 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1066,7 +1065,7 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">65.4k</span>&nbsp;字
+                class="white-color">69k</span>&nbsp;字
             
             
             

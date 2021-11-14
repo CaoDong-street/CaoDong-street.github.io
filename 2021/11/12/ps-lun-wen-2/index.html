@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VSCode配置C++环境, Cao Dong">
+    <meta name="keywords" content="PS论文(2), Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>VSCode配置C++环境 | Cao Dong</title>
+    <title>PS论文(2) | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">VSCode配置C++环境</h1>
+                    <h1 class="description center-align post-title">PS论文(2)</h1>
                 </div>
             </div>
         </div>
@@ -390,8 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C/">
-                                <span class="chip bg-color">C++</span>
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                <span class="chip bg-color">无人机</span>
+                            </a>
+                        
+                            <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">PS论文</span>
                             </a>
                         
                     </div>
@@ -402,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
                             </a>
                         
                     </div>
@@ -415,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-18
+                    2021-11-12
                 </div>
                 
 
@@ -424,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    263
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    13 分
                 </div>
                 
 
@@ -454,30 +458,148 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="安装VSCode与C"><a href="#安装VSCode与C" class="headerlink" title="安装VSCode与C++"></a>安装VSCode与C++</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhouzi_heng/article/details/115014059">【c++】VSCode配置 c++ 环境（小白教程））</a></p>
-<h2 id="VSCode配置c"><a href="#VSCode配置c" class="headerlink" title="VSCode配置c++"></a>VSCode配置c++</h2><p>网上有许多关于vscode下c++配置，一种是配置文件的方法，一种是添加插件直接配置的方法</p>
-<h3 id="配置文件法"><a href="#配置文件法" class="headerlink" title="配置文件法"></a>配置文件法</h3><p><img src="https://tva2.sinaimg.cn/large/007mx13gly1gul7mhhg36j60k8087wfz02.jpg" alt="第一步"><br><img src="https://tva4.sinaimg.cn/large/007mx13gly1gul7mqrtwgj60c8047js602.jpg" alt="第二步"></p>
-<h3 id="配置插件法（两种）"><a href="#配置插件法（两种）" class="headerlink" title="配置插件法（两种）"></a>配置插件法（两种）</h3><p>可选两种：</p>
-<p><em>Code runner</em> （右上角箭头运行）</p>
-<p><em>C/C++ Compile Run</em>（F6运行）</p>
-<p>参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77645306">windows 10上使用vscode编译运行和调试C/C++</a></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="对应测试文件"><a href="#对应测试文件" class="headerlink" title="对应测试文件"></a>对应测试文件</h3><p><strong>test.cpp</strong></p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"> <span class="token comment">#include&lt;iostream&gt;</span>
- 
-using namespace std;
- 
-int main()
-<span class="token punctuation">{</span>
-	int num;
-	cout&lt;&lt;"请输入一个整型数：";
-	cin<span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span>num;
-	cout&lt;&lt;"八进制数是："&lt;&lt;oct&lt;&lt;num&lt;&lt;endl;
-	cout&lt;&lt;"十进制数是："&lt;&lt;dec&lt;&lt;num&lt;&lt;endl;
-	cout&lt;&lt;"十六进制数是："&lt;&lt;hex&lt;&lt;num&lt;&lt;endl;
-	return 0;
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>插件法可以直接在vscode中查看编译结果</p>
-<p>配置文件的方法需要再下载插件<em>Code Runner</em>运行生成的exe文件，配置成功后的运行文件可在输入数字后反应。（存在中文乱码的问题需要处理）</p>
+                <p>论文地址：<a target="_blank" rel="noopener" href="https://rss2017.lids.mit.edu/static/papers/31.pdf">Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a Cable-Suspended Payload</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文提出了一种新型的绳载负载的四旋翼系统的动力学模型和快速轨迹优化算法，贡献如下：</p>
+<ol>
+<li>提出一个定义新型的悬挂负载行为的公式。其被建模为连接到四旋翼与两个转动关节和一个移动关节的组合，上述关节都是被动的。与当前的工作不同，我们不需要根据缆绳张力使用混合模式来确定模型。</li>
+<li>提出了一种基于上述系统模型的快速轨迹优化算法。我们所提出的模型使我们能够将轨迹优化问题作为一个带互补约束的数学程序(MPCC， Mathematical Program with Complementarity Constraints)。在这个框架中，系统的期望行为(例如，避障)可以很容易地表述出来。</li>
+</ol>
+<p>提出的框架的具体优势</p>
+<ol>
+<li>在速度方面优于最先进的技术，而不限制轨道的复杂性;</li>
+<li>提供参数化不同任务的简单方法;</li>
+<li>根据系统动力学和控制输入边界，保证轨迹的可行性。</li>
+</ol>
+<p>实验简述：</p>
+<p>本文所提出的方法在计算速度方面优于目前的技术水平，并且在系统动力学和控制输入饱和方面保证了轨迹的可行性，同时使用更少的优化参数。</p>
+<p>我们在一个真实的四旋翼飞行器上实验验证了我们的方法，表明我们的方法适用于各种任务，如飞行通过理想的航路点，同时避免障碍物，或向理想的目标投掷有效载荷。</p>
+<p>据我们所知，这是第一次在绳载负载的四旋翼飞行器上实现了基于系统动力学的三维灵活运动，如图1所示。</p>
+<p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gwdb7xsotnj30ew06zgoo.jpg" alt="我们的四旋翼飞行轨迹通过多个航路点，同时通过缆索悬挂运输负载。"></p>
+<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><h3 id="A-动机"><a href="#A-动机" class="headerlink" title="A 动机"></a>A 动机</h3><p>部分或完全驱动的操作器已经被用于空中操纵，可以将它们安装在四旋翼上进行操作。虽然这种解决方案适用于精细操作和与环境的交互，但它有一些缺点(例如，能源损耗、整体平台的大小、额外的惯性)，降低了无人机的灵活性。相反，通过绳载负荷的方式显著降低了系统的机械复杂性和重量，并且不需要额外的驱动，因此所需的能量最小。与驱动机械臂方法相比，绳载系统在系统动力学建模和参数化特定行为以完成预期任务方面引入了各种挑战。</p>
+<p>缆绳张力的变化极大地改变了动力学描述，因为载荷可以通过缆绳将力传递给车辆，这取决于缆绳是否绷紧。通常引入一种混合动力学模型来处理系统的变化结构，根据拉索张力的不同有不同的数学描述(也称为模式)。这为系统提供了准确的描述，但使轨迹优化难以求解。实际上，混合优化会使用非常昂贵的计算性能，并且需要通过轨迹预先确定所需的模式序列。此外，这种公式通常会导致在为关键的安全功能(如缆绳缠绕)指定凸约束时遇到困难，并需要复杂的特定任务参数调整。此外，考虑工作空间，如在一组约束条件下考虑障碍物是困难的，并给轨迹优化带来额外的挑战。</p>
+<h3 id="B-相关工作"><a href="#B-相关工作" class="headerlink" title="B 相关工作"></a>B 相关工作</h3><p>针对无人机绳载负荷的最新技术大致可分为两种方法:</p>
+<ol>
+<li>跟踪负载期望轨迹的反馈控制。(对象是负载位置)</li>
+<li>绳载负荷的四旋翼飞行器的轨迹规划。(对象是四旋翼位置)</li>
+</ol>
+<p>本文主要使用的是第二种方法。</p>
+<p>一种可能的解决方案是使运输载荷的摆动行为最小化。减少有效载荷的摆动会导致次优结果，因为它没有能量效率(四旋翼必须抵消有效载荷的摆动运动)，而且它没有利用系统动力学，阻止了高速敏捷的运动。</p>
+<p>利用系统摆动动力学的敏捷导航轨迹规划也已进行了研究。虽然已经取得了令人印象深刻的成果，但仍有一些挑战尚未解决。已经提出了快速的轨迹计算方法，但往往不采用最优准则，不允许系统通过轨迹的行为约束或表示手动计算的系统状态硬约束。诸如航路点导航或避障等任务通常需要大量的参数，这些参数必须由专家操作人员手工调整，并显著影响系统的性能和所需的计算时间(例如，为每个障碍引入一个整数变量会成倍地增加问题的复杂性)。混合模式通常需要事先确定准确的模式序列。这迫使优化器沿着可能不是最优的单模态序列限制运动，并需要耗时的优化才能达到令人满意的结果。保证闭环系统性能的一个关键方面是计算轨迹的可行性。微分平坦度[ ]常被用来规划平滑的多项式轨迹，使基于系统输入的成本函数最小化，但不保证电机输入饱和。最后，其目前工作实验结构结果仅在仿真中显示，或在现实世界中仅限于二维运动的实验中显示。(参考文献<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6631275&amp;tag=1">Trajectory generation and control of a quadrotor with a cable-suspended load-a differentially-flat hybrid system</a>；<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7139492">Mixed Integer Quadratic Program trajectory generation for a quadrotor with a cable-suspended payload </a>；<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7171008">Lift of a cable-suspended load by a quadrotor: A hybrid system approach</a>；<a target="_blank" rel="noopener" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.713.8121"> Unified Motion Control for Dynamic Quadrotor Maneuvers Demonstrated on Slung Load and Rotor Failure Tasks </a>)</p>
+<h2 id="2-问题公式化"><a href="#2-问题公式化" class="headerlink" title="2 问题公式化"></a>2 问题公式化</h2><h3 id="A-系统动力学的公式"><a href="#A-系统动力学的公式" class="headerlink" title="A 系统动力学的公式"></a>A 系统动力学的公式</h3><p>大多数在绳载负载的空中操作都采用一种混合方法，根据缆索的张力建立两种模式的系统模型。在第一种模式中，缆绳完全绷紧并在四旋翼和负载之间传递力;在第二种模式中，缆绳是松弛的，导致有效载荷服从自由落体动力学。这使得轨迹优化成为一个复杂的问题，因为需要混合轨迹优化，并且系统状态约束通常是非凸的。</p>
+<p>相反地，我们引入了一种新颖而简单绳载负载的四旋翼系统参数化方法。我们通过一个由三个被动约束关节(两个转动关节和一个移动关节)组成的系统将负载建模为附着在四旋翼悬架基座上的质量点。通过利用关节限制的棱柱关节<em>ρ</em>模拟了绳载负载系统的混合模式。在<em>ρ</em>处于极限状态时，反作用力通过关节传输回悬挂基座。<u>(好像是把缆绳和负载当做机器臂的关节处理)</u>我们模型中的广义坐标如表1和图2所示：</p>
+$$${q_{coord}} = {\left[ {x,y,z,\phi ,\theta ,\psi ,\eta ,\mu ,\rho } \right]^T} \tag{1}$$
+<p>动力学可以被描述为一个二阶系统或使用如<a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-1-84628-642-1">Robotics | SpringerLink</a>所述的欧拉-拉格朗日方程，得到类似<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S1474667016336928">Cartesian Impedance Control of a UAV with a Robotic Arm - ScienceDirect</a>的公式:</p>
+$$H(q)\ddot q + C(q,\dot q) + G(q) = B(q)u \tag{2}$$
+<p>其中$q = \left[ {{q_{coord}},{{\dot q}_{coord}}} \right]$</p>
+<p><img src="https://tvax3.sinaimg.cn/large/007mx13gly1gwdb9vb1gvj30c10alwfl.jpg" alt="模型描述和整体结构"></p>
+<p><img src="https://tvax3.sinaimg.cn/large/007mx13gly1gwf0qtvzfvj30to07jjvs.jpg" alt="表1 绳载负载的四旋翼系统的变量"></p>
+<h3 id="B-轨迹优化问题"><a href="#B-轨迹优化问题" class="headerlink" title="B 轨迹优化问题"></a>B 轨迹优化问题</h3><p>我们提出的轨迹优化问题如下：</p>
+$${\text{find }}\ddot q{\text{ subjiect to}}$$
+$$H(q)\ddot q + C(q,\dot q) + G(q) = B(q)u \tag{3}$$
+$$f(q,u) \geqslant 0 \tag{4}$$
+<p>该轨迹被划分为N个时间节点，其中系统动力学包括一个直接转化方式。我们决定使用直接方法<a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/230872953_Direct_Trajectory_Optimization_Using_Nonlinear_Programming_and_Collocation">(PDF) Direct Trajectory Optimization Using Nonlinear Programming and Collocation </a>，因为它在数值上优于其他技术，如射击方法<a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-36279-8_32">Direct Trajectory Optimization of Rigid Body Dynamical Systems through Contact </a>。此外，尽管它们会导致更大的优化问题，但这些问题是稀疏的，可以非常快地解决。</p>
+<p>我们使用一阶欧拉逼近将动力学化作时间步长<em>q</em>(<em>n</em>)和<em>q</em>(<em>n</em>+ 1)之间的等式约束。这种等式约束通过最小化缺陷变量${\zeta _n}$被定义为:</p>
+$${\zeta _n} = q(n + 1) - q(n) - dt(n)\dot q(n) \tag{5}$$
+<p>这种一阶近似是可能的最简单的积分方案，因此可以得到有效的计算。此外，它得到了一个定义良好的非线性问题的近似，可以提供给求解器及其梯度。</p>
+<h3 id="C-将绳载负载的四旋翼运动问题视作MPCC问题"><a href="#C-将绳载负载的四旋翼运动问题视作MPCC问题" class="headerlink" title="C 将绳载负载的四旋翼运动问题视作MPCC问题"></a>C 将绳载负载的四旋翼运动问题视作MPCC问题</h3><p>我们将这个特殊问题作为一个带互补约束的数学程序(Mathematical Program<br>with Complementarity Constraint,MPCC),如下：</p>
+$$\eqalign{
+  &amp; \min {\text{ }}L(q,\dot q,u,t){\text{ subject to}}  \cr 
+  &amp; H(q)\ddot q + C(q,\dot q) + G(q) = B(q)u + J{(q)^T}\lambda ,  \cr 
+  &amp; f(q,u) \geqslant 0,  \cr 
+  &amp; \phi (q) = ({l_0} - \rho ) \geqslant 0,  \cr 
+  &amp; \lambda  \geqslant 0,  \cr 
+  &amp; \phi (q)\lambda  = 0 \cr} \tag{6}$$
+<p>接下来，我们介绍MPCC的成本函数和所有的约束。</p>
+<ol>
+<li><p>成本函数公式：</p>
+<p>我们基于状态、输入和时间构建成本函数如下<br>$$L(q,u,t) = {S_f}{t_f} + \int_t {q{{(t)}^T}Qq(t)}  + u{(t)^T}Ru(t)dt  \tag{7}$$
+   其中，
+   ${S_f}$为终止时间系数，*Q*和*R*是状态和输入对应的对角正定代价矩阵，维度分别为${\mathbb{R}^{18 \times 18}}$和${\mathbb{R}^{4 \times 4}}$。<br>通过将代价描述为具有终止时间代价的状态和输入的二次函数，我们减少了优化参数的数量，并利用了优化中的解析导数。(成本函数中的q和公式中的q有矛盾？)</p>
+</li>
+<li><p>线性互补约束：<br>用一个互补约束来模拟缆绳长度的限制，即把缆绳长度当作一个关节的限制。该约束公式与<a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-36279-8_32">Direct Trajectory Optimization of Rigid Body Dynamical Systems through Contact | （这篇文章中的公式与本文中的很相似）</a>中提出的约束公式类似，其形式如下：</p>
+$$\eqalign{
+     &amp; \phi (q) = ({l_0} - \rho ) \ge 0  \cr 
+     &amp; \lambda  \ge 0,  \cr 
+     &amp; \phi (q)\lambda  = 0 \cr} $$
+<p>$\phi (q)$为${l_0}$的突破约束；<br>λ为表示约束力的决定变量；<br>$\phi (q)\lambda  = 0$为实现了两者的互补约束。</p>
+</li>
+<li><p>输入限制约束:<br>我们考虑到驱动系统的物理限制，对每个电机提供的推力施加一个上限和下限:</p>
+$${T_{\min }} \leqslant u \leqslant {T_{\max }} \tag{9}$$
+</li>
+<li><p>关节限制约束：<br>限制了四旋翼和负载之间的最大角度以防止负载缆索进入旋翼。</p>
+${\alpha _{\min }} \leqslant \eta ,\mu  \leqslant {\alpha _{\max }} \tag{10}$
+</li>
+<li><p>避障：<br>为了简化避障，我们在工作空间中将障碍物建模为球体，并使用与<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/5152817">CHOMP: Gradient optimization techniques for efficient motion planning</a>相似但使用经过简化的带符号距离函数。因此，绳载负载的四旋翼系统与障碍物之间的距离可以约束为:</p>
+$$d(q(t)) = \sqrt {{{(p(t) - o)}^T}(p(t) - o)}  - \rho (t) - r \tag{11}$$
+   其中$p(t) = {\left[ {x(t),y(t),z(t)} \right]^T}$是四旋翼的位置，$o = {[{x_o},{y_o},{z_o}]^T}$为半径为*r*的障碍物位置。描述带符号距离的方法同样适用于无数个圆柱形障碍物，其中距离函数为:
+   $$\eqalign{
+     &amp; {r_{op}}(t) = (p(t) - o) - (p(t - o) \cdot n) \cdot n  \cr 
+     &amp; d(q(t)) = \sqrt {{r_{op}}{{(t)}^T}{r_{op}}(t)}  - \rho (t) - r \cr} \tag{12}$$
+<p>其中<em>n</em>为对称轴。这个函数可以作为一个不等式约束，因此，执行一个保守但安全的轨迹，实现无人机本体、负载、缆绳和障碍物之间的碰撞。从而就不需要任何模态序列或混合模型。</p>
+</li>
+</ol>
+<h3 id="D-实现特定任务"><a href="#D-实现特定任务" class="headerlink" title="D 实现特定任务"></a>D 实现特定任务</h3><p>在本节中，我们将展示如何将优化问题的一般公式用于特定的任务，如航点导航和向预期目标投掷负载。</p>
+<ol>
+<li><p>航点导航：<br>航点导航任务可以描述为前三个状态变量$p(n) = {\left[ {x(n),y(n),z(n)} \right]^T}$(<em>n</em>为系统的给点时间点)的边界框约束。为了算法的鲁棒性，我们不使用等式约束，而是允许一个路径点存在很小的容许误差δ，不等式约束如下:</p>
+$${p_{w,i}} - \delta  \leqslant p(n) \leqslant {p_{w,i}} + \delta \tag{13}$$
+<p>此外，还可以设置负载的位置，因为它是在系统状态中是完全定义的。</p>
+</li>
+<li><p>负载投掷:<br>投掷运动的目标是：释放负载，使其落向给定的目标。释放后，负载将遵循一个弹道轨迹，其最终位置可以被限制在期望的目标位置周围的一个给定的阈值内。</p>
+${p_r} = \left[ {{x_r},{y_r},{z_r}} \right]$为释放负载瞬间的负载在世界坐标系下的负载位置，${{\dot p}_r}$为释放负载瞬间的负载在世界坐标系下的负载速度。${p_t} = \left[ {{x_t},{y_t},{z_t}} \right]$为目标位置。${p_h}$为无人机处于期望高度时在弹道轨迹中的位置。需要注意${p_r},{{\dot p}_r}$可以通过$q(t)$和正向运动学雅克比矩阵$J(q(t))$的乘积得到(${{\dot p}_r} = J(q(t))\dot q(t)$).
+   $$\eqalign{
+     &amp; {t_1} = \left\{ \matrix{
+     {{{{\dot z}_r}} \over g}{\rm{,  }}{{\dot z}_r} &gt; 0 \hfill \cr 
+     0{\rm{, }}{{\dot z}_r} \le 0 \hfill \cr}  \right.  \cr 
+     &amp; {z_{\max }} = {z_r} + {{\dot z}_r}{t_1} - g{{t_2^2} \over 2}  \cr 
+     &amp; {t_2} = {t_1} + \sqrt {{{2({z_{\max }} - {z_t})} \over g}}   \cr 
+     &amp; {p_h} = {p_r} + {{\dot p}_r}{t_2} + \left[ {0,0, - g} \right]{{t_2^2} \over 2} \cr} \tag{14}$$
+
+   其中，${t_1}$为载体自由落体抛物运动达到峰值的时间，${t_2}$为载体到达期望高度的时间
+
+   此外，我们施加以下约束:
+
+   $$0 \le \left\| {{p_h} - {p_t}} \right\| \le {d_{\max }} \tag{15}$$
+<p>${d_{\max }}$为所允许的与目标位置的最大距离。这个公式的优点是，我们不限制释放的位置，而是让优化过程找到它的最佳值。</p>
+</li>
+</ol>
+<h2 id="3-实验过程简介"><a href="#3-实验过程简介" class="headerlink" title="3 实验过程简介"></a>3 实验过程简介</h2><p>用于实验的四旋翼系统的参数。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">无人机质量</th>
+<th>0.76kg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">负载质量</td>
+<td>0.084kg</td>
+</tr>
+<tr>
+<td style="text-align:center">磁力抓取器质量</td>
+<td>0.062kg</td>
+</tr>
+<tr>
+<td style="text-align:center">无人机臂长</td>
+<td>0.22m</td>
+</tr>
+<tr>
+<td style="text-align:center">缆绳长度</td>
+<td>0.82m</td>
+</tr>
+<tr>
+<td style="text-align:center">负载角度限制</td>
+<td>-60度/+60度</td>
+</tr>
+<tr>
+<td style="text-align:center">推力限制</td>
+<td>1N/5N</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>未完待更新~~~</p>
 
                 
             </div>
@@ -504,7 +626,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing/">http://example.com/2021/09/18/vscode-pei-zhi-c-huan-jing/</a>
+                    <a href="http://example.com/2021/11/12/ps-lun-wen-2/">http://example.com/2021/11/12/ps-lun-wen-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,8 +664,12 @@ int main()
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C/">
-                                    <span class="chip bg-color">C++</span>
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                    <span class="chip bg-color">无人机</span>
+                                </a>
+                            
+                                <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">PS论文</span>
                                 </a>
                             
                         </div>
@@ -587,46 +713,52 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/19/vscode-jia-c-huan-jing-xia-bian-yi-yu-yan-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-fa/">
+                <a href="/2021/11/12/ps-lun-wen-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="VSCode加C++环境下编译语言遇到的问题以及解决方法">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="PS论文(2)">
                         
-                        <span class="card-title">VSCode加C++环境下编译语言遇到的问题以及解决方法</span>
+                        <span class="card-title">PS论文(2)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解决问题：中文乱码
+                            PS论文记(2)《Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a Cable-Suspended Payload》
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -640,31 +772,31 @@ int main()
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/18/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">
+                <a href="/2021/11/08/ps-lun-wen-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Hexo博客主题之hexo-theme-matery的介绍（转载于blinkfox）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="PS论文(1)">
                         
-                        <span class="card-title">Hexo博客主题之hexo-theme-matery的介绍（转载于blinkfox）</span>
+                        <span class="card-title">PS论文(1)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            PS论文记(1)《Decentralized Motion Control in a Cabled-based Multi-drone Load Transport System》（文章部分概念未理解透彻待更新）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%BD%AC%E8%BD%BD%E5%86%85%E5%AE%B9/" class="post-category">
-                                    转载内容
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
@@ -674,8 +806,12 @@ int main()
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -806,6 +942,13 @@ int main()
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
