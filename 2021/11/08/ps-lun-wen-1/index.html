@@ -428,7 +428,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.3k
                 </div>
                 
 
@@ -517,9 +517,9 @@ $$\eqalign{
 
  } } \right] \cr} $$
 
- ${J_i}$是四轴飞行器在其固定坐标系中的转动矩阵， $τ$是机体坐标系中的被施加的扭矩。 $sk(·)$是所谓的[斜算子](?)。
+ ${J_i}$是四轴飞行器在其固定坐标系中的转动矩阵， $τ$是机体坐标系中的被施加的扭矩。 $sk(·)$是所谓的斜算子。
 
-四旋翼的动力学方程主要参考[核心文章](https://arc.aiaa.org/doi/10.2514/1.43768)（文章推导主要依托的文章）。
+
 
 单刚体负载的移动动力学方程和姿态动力学方程可表示为：
 
@@ -527,6 +527,7 @@ $$\eqalign{
   &amp; {m_L}{{\ddot q}_L} =  - \sum\limits_{i = 1}^n {{T_i}{R_L}{e_i}}  - {m_L}gz  \cr 
   &amp; J_L^l\dot \Omega _L^l + sk(\Omega _L^l)J_L^l\Omega _L^l = \sum\limits_{i = 1}^n {sk(r_i^l)( - {T_i}e_i^l)}  \cr} $$
 <p>其中，其中 $J_L^l$是负载相对于质心的恒定惯量， ${m_L}$是负载的质量，  $\Omega _L^l$在其负载体坐标系中表示的负载的角速度。</p>
+<p>四旋翼的动力学方程主要参考<a target="_blank" rel="noopener" href="https://arc.aiaa.org/doi/10.2514/1.43768">Nonlinear Hierarchical Flight Controller for Unmanned Rotorcraft: Design, Stability, and Experiments |核心文章（文章推导主要依托的文章）</a>。</p>
 <h2 id="4-控制器设计与稳定性分析"><a href="#4-控制器设计与稳定性分析" class="headerlink" title="4 控制器设计与稳定性分析"></a>4 控制器设计与稳定性分析</h2><h3 id="控制器设计"><a href="#控制器设计" class="headerlink" title="控制器设计"></a>控制器设计</h3><p>控制器设计从单个无人机的姿态控制开始。设 $\det \left( {\Psi \left( {{\eta _i}} \right)} \right) \ne 0$，采用以下反馈线性化控制律:</p>
 $${{\rm{\tau }}_i} = {(\psi {({\eta _i})^{\rm{T}}})^{ - 1}}({M_i}({\eta _i}){v_i} + {C_i}({\eta _i},{\dot \eta _i}){\dot \eta _i})$$
  ${v_i}$的定义如下
@@ -555,7 +556,7 @@ $$\eqalign{
 其中，$\tilde q \buildrel \Delta \over = q - {q_{{v_i}}}$，${K_p},{K_d} \in {\mathbb{R}^{3 \times 3}}$为表示虚拟弹簧-阻尼器的刚度和阻尼系数的正定矩阵。然而，考虑到无人机的力欠驱动，实际推力可能不完全遵循期望推力，即
 
 $${f_i}R({\eta _i})z = {f_i}R({\eta _{{d_i}}} + {e_{{\eta _i}}})z \buildrel \Delta \over = {f_i}R({\eta _{{d_i}}})z + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}}) = {\mu _i} + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}})$$
-<p>其中$H({\eta _{{d_i}}},{e_{{\eta _i}}}) \in {\mathbb{R}^{3}} $，$H({\eta _{{d_i}}},0) = 0$。上面等式的左边表示实际的推力。右手边的第一项是期望推力，第二项是推力误差。根据<a target="_blank" rel="noopener" href="https://arc.aiaa.org/doi/10.2514/1.43768">核心文章</a>可以证明</p>
+<p>其中$H({\eta _{{d_i}}},{e_{{\eta _i}}}) \in {\mathbb{R}^{3}} $，$H({\eta _{{d_i}}},0) = 0$。上面等式的左边表示实际的推力。右手边的第一项是期望推力，第二项是推力误差。根据<a target="_blank" rel="noopener" href="https://arc.aiaa.org/doi/10.2514/1.43768">Nonlinear Hierarchical Flight Controller for Unmanned Rotorcraft: Design, Stability, and Experiments |核心文章（文章推导主要依托的文章）</a>可以证明</p>
 $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\eta _i}}}} \right\|,{k_2} \in {\mathbb{R}^{+}}$$
 <p>三个非线性方程的集合为</p>
 $${f_i}R({\eta _{{d_i}}})z = {\mu _i} = {\left[ {\matrix{
@@ -565,19 +566,13 @@ $${f_i}R({\eta _{{d_i}}})z = {\mu _i} = {\left[ {\matrix{
 <p>其中包含四个未知量：推力的大小${f_i}$，三个欧拉角${\eta _{{d_i}}} = {\left[ {{\phi _{{d_i}}},{\theta _{{d_i}}},{\psi _{{d_i}}}} \right]^{\rm{T}}}$,这些方程可以解得拉力${f_i}$，两个欧拉角${{\phi _{{d_i}}}}$和${{\theta _{{d_i}}}}$。而剩下的期望欧拉角而${{\psi _{{d_i}}}}$被选着为线性运动的独立变量。</p>
 <p>注意，从无人机期望推力方程可以得出推力大小满足不等式：</p>
 <p><img src="https://tva2.sinaimg.cn/large/007mx13gly1gwcerbvp0xj30n80243yn.jpg" style="zoom:50%;"></p>
-${\cal M} \buildrel \Delta \over = \mathop {\max }\limits_{i \in \{ 1,...,n\} } {m_i}$表示编队中最大的无人机质量。
-
-#### 稳定性分析
-
-稳定性分析是使用<u>李雅普诺夫第二法</u>进行分析的。
-
-定义无人机运输系统的能量函数E如下：
-
-<img src="https://tvax4.sinaimg.cn/large/007mx13gly1gwceyoalizj30kz0eywg1.jpg" style="zoom:50%;">
-
-能量函数非负证明：
-
-其中$\mathcal{k}$调整重力势能参考点的正常数，${E_1}$明显大于0。已知${q_{{v_i}}}$的有界性($\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i}$)，我们还可以证明${E_2}$是下界的，所以通过选择适当的$\mathcal{k}$可以使${E_2}$非负。
+$$M{\rm{ }} \buildrel \Delta \over = \mathop {\max }\limits_{i \in \{ 1,...,n\} } {m_i}$$
+<p><em>M</em>表示编队中最大的无人机质量。</p>
+<h3 id="稳定性分析"><a href="#稳定性分析" class="headerlink" title="稳定性分析"></a>稳定性分析</h3><p>稳定性分析是使用<u>李雅普诺夫第二法</u>进行分析的。</p>
+<p>定义无人机运输系统的能量函数E如下：</p>
+<p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gwceyoalizj30kz0eywg1.jpg" style="zoom:50%;"></p>
+<p>能量函数非负证明：</p>
+<p>其中$\mathcal{k}$调整重力势能参考点的正常数，${E_1}$明显大于0。已知${q_{{v_i}}}$的有界性($\left\| {{q_i} - {q_L} - {R_L}r_i^l} \right\| &lt;  {l_i}$)，我们还可以证明${E_2}$是下界的，所以通过选择适当的$\mathcal{k}$可以使${E_2}$非负。
 
 能量函数导数小于0证明：
 
@@ -591,7 +586,7 @@ $${m_i}{\ddot q_i} = {f_i}{R_i}z - {m_i}gz + {T_i}{R_L}e_i^l$$
 
 <img src="https://tvax3.sinaimg.cn/large/007mx13gly1gwcer09os9j30it01lwek.jpg" style="zoom:50%;">
 
-$${f_i}R({\eta _i})z = {f_i}R({\eta _{{d_i}}} + {e_{{\eta _i}}})z \buildrel \Delta \over = {f_i}R({\eta _{{d_i}}})z + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}}) = {\mu _i} + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}})$$
+$${f_i}R({\eta _i})z = {f_i}R({\eta _{{d_i}}} + {e_{{\eta _i}}})z \buildrel \Delta \over = {f_i}R({\eta _{{d_i}}})z + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}}) = {\mu _i} + {f_i}H({\eta _{{d_i}}},{e_{{\eta _i}}})$$</p>
 <p>可以得到无人机的闭环移动动力学</p>
 <p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gwcgnmpuq4j30fw02bwel.jpg" style="zoom: 67%;"></p>
 <p>在任何给定的时间，以下两个约束中的一个适用于每根缆绳。</p>
@@ -647,6 +642,7 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
 <p>  <img src="https://tvax2.sinaimg.cn/large/007mx13gly1gwclik3cl5j30f70ebq6z.jpg" alt=""></p>
 <blockquote>
 <p>待了解点：无人机、缆绳和负载组成的系统的基本<a href="?">能量无源性</a>。</p>
+<p> $sk(·)$是所谓的<a href="?">斜算子</a></p>
 </blockquote>
 <p>  未完待更新~~~</p>
 
@@ -778,7 +774,7 @@ $$\left\| {H({\eta _{{d_i}}},{e_{{\eta _i}}})} \right\| \le {k_2}\left\| {{e_{{\
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PS论文记(2)《Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a Cable-Suspended Payload》文章部分概念未理解透彻待更新）
+                            PS论文记(2)《Fast Trajectory Optimization for Agile Quadrotor Maneuvers with a Cable-Suspended Payload》
                         
                     </div>
                     <div class="publish-info">
