@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo博客出现的问题及处理方法, Cao Dong">
+    <meta name="keywords" content="PS论文4, Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo博客出现的问题及处理方法 | Cao Dong</title>
+    <title>PS论文4 | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo博客出现的问题及处理方法</h1>
+                    <h1 class="description center-align post-title">PS论文4</h1>
                 </div>
             </div>
         </div>
@@ -390,8 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                <span class="chip bg-color">无人机</span>
+                            </a>
+                        
+                            <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">PS论文</span>
                             </a>
                         
                     </div>
@@ -402,8 +406,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
                             </a>
                         
                     </div>
@@ -415,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-19
+                    2021-11-17
                 </div>
                 
 
@@ -424,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    275
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    14 分
                 </div>
                 
 
@@ -454,22 +458,244 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="添加图片（添加线上图片）"><a href="#添加图片（添加线上图片）" class="headerlink" title="添加图片（添加线上图片）"></a>添加图片（添加线上图片）</h2><p>本地图片仍然无法添加进入图片,目前只能实现添加在线图片的功能。</p>
-<p>首先选择一个图床（我选择的微博图床<em>微博图床</em>），上传图片获得链接，具体方法参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv6075030/">想方便快捷的分享/收藏图片？试试免费好用的微博图床</a>。</p>
-<p>然后就可以通过<code>![图名](图片生成的URL链接)</code>的常见方式直接插入在线图片</p>
-<p>例如我的网站logo图片</p>
-<p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gult8rrmexj608c08cjra02.jpg" alt="图名"></p>
-<p>就可以直接通过如下指令直接插入</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token tag">!</span><span class="token punctuation">[</span>图名<span class="token punctuation">]</span>(https<span class="token punctuation">:</span>//tva3.sinaimg.cn/large/007mx13gly1gult8rrmexj608c08cjra02.jpg)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="如何插入公式"><a href="#如何插入公式" class="headerlink" title="如何插入公式"></a>如何插入公式</h2><p>可参考文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/108766968">结合MathType和MathJax在Hexo博客中插入数学公式 </a></p>
-<p>使用时注意：插入mathtype的复制<code>数学公式</code>时：</p>
-<p>首先对<code>Preferences</code>下的<code>Cut and Copy Preferences</code>进行设置。如下图：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-36c773a2a6453de2cd5e9524f5fb2c06_720w.jpg" alt=""></p>
-<p>然后以如下形式插入数学公式</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">{% raw%} 数学公式 {% endraw %}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>若想在一句话中<code>嵌入公式</code>，则只需要在<code>LaTex</code>公式两端用一个<code>$</code></p>
-<p>公式单行居中显示的方法为</p>
-<pre class="line-numbers language-none"><code class="language-none">$$ 数学公式 $$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <p>文章地址：<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/7946750">Dynamics and control of a quadrotor with a cable suspended payload | IEEE Conference Publication | IEEE Xplore</a></p>
+<p>本文为PS论文笔记(3)中的动力学基础。</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>研究了绳载负载的四旋翼飞行器的动力学与控制问题。</p>
+<p>系绳点偏离四旋翼飞行器质心的负载称为偏离中心的悬挂负载。利用 Kane方法的矩阵形式，得到了运动方程。该系统被分解为旋转子系统和平动子系统。通过利用系统的部分线性化，开发了一种非线性控制器来实现四旋翼的镇定。</p>
+<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><p>大多数控制器设计仍然局限于系绳点与四旋翼质心重合的构型。我们将该配置表示为居中有效负载配置。在本文中，偏心配置是指系绳点远离质心的情况。对于某些四旋翼无人机，负载配置在质心在机械上是不可行的，因为质心可能位于无人机内部。从而将系绳点固定质心上是非常困难的，此外，精确的坐标测量是困难的，因此一个偏离中心的系绳点是不可避免的。然而，对于偏心系绳构型的非线性控制器的研究还不够全面。主要难点在于偏离中心的载荷运动与四旋翼的旋转运动耦合，使得建模和控制难以推导。针对现有控制器的不足之处，研究了四旋翼飞行器偏心悬索载荷的动力学和控制问题。</p>
+<p>本文的贡献在于两部分:利用Kane方法对偏置无人机有效载荷系统进行建模，利用模型分解进行非线性控制设计。</p>
+<p>常用的拉格朗日方法是对无人机负载系统进行建模的常用方法。在偏心系绳构型下，载荷运动与四旋翼旋转耦合，载荷的动能包含四旋翼平动速度、旋转速度和载荷摆动速度，这使得拉格朗日法存在复杂性的后续微分。另一方面，利用偏导速度概念和D’Alembert’s原理发展的kane方法避免了对约束方程和系统拉格朗日函数的二阶微分，因此可以在没有符号计算工具箱的情况下用于推导动力学方程的显式形式。最后，凯恩方法的本质是外力和D’Alembert’s惯性力的力平衡在由偏导速度矩阵零空间上的投影，这给我们提供了一种简洁的使用矩阵形式的kane方法来建模存在偏心负载的绳载负载的四旋翼系统的。</p>
+<p>在<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6760219">Geometric control and differential flatness of a quadrotor UAV with a cable-suspended load | kumar</a>、<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/5717652">Geometric tracking control of a quadrotor UAV on SE(3) |</a>的基础上，提出了一种姿态稳定控制方法，通过改变四旋翼升力矢量的方向来控制其平动和载荷运动。</p>
+<h2 id="2-具有偏心绳载负载的四旋翼飞行器动力学模型"><a href="#2-具有偏心绳载负载的四旋翼飞行器动力学模型" class="headerlink" title="2 具有偏心绳载负载的四旋翼飞行器动力学模型"></a>2 具有偏心绳载负载的四旋翼飞行器动力学模型</h2><h3 id="A-矩阵形式的kane方程"><a href="#A-矩阵形式的kane方程" class="headerlink" title="A 矩阵形式的kane方程"></a>A 矩阵形式的kane方程</h3><p>kane法见<a target="_blank" rel="noopener" href="https://www.lukesy.net/docs/self-study/kane-dynamics/">Dynamics Theory and Applications – Thomas Kane and David Levinson | Luke Sy, PhD Candidate</a>。</p>
+<p>本文中的变量见表1</p>
+<p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gwij3z2l3gj30gz0im0wq.jpg" alt=""></p>
+<p>表1</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><em>V</em></th>
+<th>机体坐标系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>I</em></td>
+<td>惯性坐标系</td>
+</tr>
+<tr>
+<td>${R_{vi}}$</td>
+<td>由惯性坐标系转换为机体坐标系的旋转矩阵</td>
+</tr>
+<tr>
+<td>$m_q$</td>
+<td>四旋翼质量</td>
+</tr>
+<tr>
+<td><em>m</em></td>
+<td>负载质量</td>
+</tr>
+<tr>
+<td>$J_v$(3维实矩阵)</td>
+<td>四旋翼转动惯量</td>
+</tr>
+<tr>
+<td><em>L</em></td>
+<td>缆绳长度</td>
+</tr>
+<tr>
+<td>$g_i$</td>
+<td>惯性坐标系下的重力加速度</td>
+</tr>
+<tr>
+<td>$r_v^{tv}$(长度为3的实向量)</td>
+<td>系绳点相对于四旋翼质心的偏移量</td>
+</tr>
+<tr>
+<td>$r_v^{pv}$(长度为3的实向量)</td>
+<td>负载在机体坐标系中的位置</td>
+</tr>
+<tr>
+<td>$v_v^{pv}$(长度为3的实向量)</td>
+<td>负载在机体坐标系中的速度</td>
+</tr>
+<tr>
+<td>${r_p} = {\left[ {\matrix{   {r_{v,1}^{pv}} &amp; {r_{v,2}^{pv}}  } } \right]^T}$</td>
+<td>负载在机体坐标系中的位置的X Y分量</td>
+</tr>
+<tr>
+<td>${v_p} = {\left[ {\matrix{   {v_{v,1}^{pv}} &amp; {v_{v,2}^{pv}}  } } \right]^T}$</td>
+<td>负载在机体坐标系中的速度的X Y分量</td>
+</tr>
+<tr>
+<td>$r_v^{vi}$</td>
+<td>四旋翼在机体坐标系中的位置</td>
+</tr>
+<tr>
+<td>$v_v^{vi}$</td>
+<td>四旋翼在惯性坐标系中的平动速度</td>
+</tr>
+<tr>
+<td>$\omega _v^{vi}$$</td>
+<td>四旋翼在机体坐标系中的角速度</td>
+</tr>
+<tr>
+<td>${f_v}$</td>
+<td>在机体坐标系螺旋桨生成的力</td>
+</tr>
+<tr>
+<td>${x_i}$</td>
+<td>四旋翼在惯性坐标系中的位置</td>
+</tr>
+<tr>
+<td><script type="math/tex">{M_v}</script></td>
+<td>在机体坐标系螺旋桨生成的力矩</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>基于<a target="_blank" rel="noopener" href="https://www.lukesy.net/docs/self-study/kane-dynamics/">Dynamics Theory and Applications – Thomas Kane and David Levinson | Luke Sy, PhD Candidate</a>，<a target="_blank" rel="noopener" href="https://arc.aiaa.org/doi/abs/10.2514/6.2013-4649">Implementation of Kane’s Method for a Spacecraft Composed of Multiple Rigid Bodies | aiaa.org</a>，kane的运动方程可以通过引入局部速度矩阵<em>U</em>。注意，对于具有独立坐标的刚体系统，我们可以赋予广义速度来完全描述系统的运动。对于一个有外部力和D’Alembert’s惯性力的系统，kane方法是由以下虚功原理推导出来的:</p>
+$$\sum\limits_{k = 1}^N {({{\vec F}_k} + \vec F_k^*) \cdot {{\partial {{\vec v}_k}} \over {\partial {u_r}}} = 0,(r = 1,2,3,...m)} \tag{1}$$
+<p>其中${{\vec F}_k},\vec F_k^*$,分别为外部力和D’Alembert’s惯性力；${{{\vec v}_k}}$是对应惯性力的速度；${{u_r}}$是广义速度。</p>
+${{\vec F}_k},\vec F_k^*,{{{\vec v}_k}}$都在惯性坐标系中表示，我们可以得到基于虚功原理的坐标形式：
+
+$$\sum\limits_{k = 1}^N {{{\left( {{{\partial {v_{k,i}}} \over {\partial u_r^T}}} \right)}^T}({F_{k,i}} + F_{k,i}^*) = 0,(r = 1,2,3,...m)} \tag{2}$$
+<p>其中偏导速度项${{{\partial {v_{k,i}}} \over {\partial u_r^T}}}$为一个矩阵；其下标<em>i</em>表示惯性坐标系。以矢量形式，上面的公式可以转换为：</p>
+$$\eqalign{
+  &amp; \left[ {\matrix{
+   {{{\left( {{{\partial {v_{1,i}}} \over {\partial u_r^T}}} \right)}^T}} &amp; {...} &amp; {{{\left( {{{\partial {v_{n,i}}} \over {\partial u_r^T}}} \right)}^T}}  \cr  } } \right]\left[ {\matrix{
+   {{F_{1,i}} + F_{1,i}^*}  \cr 
+   {...}  \cr 
+   {{F_{n,i}} + F_{n,i}^*}  \cr  } } \right]  \cr 
+  &amp;  = U_r^T({F_i} + F_i^*) = 0,(r = 1,2,3,...m) \cr} \tag{3}$$
+<p>其中$U_r^T$是一个其中每个元素都是矩阵的块矩阵。对于由<em>n</em>对 D’Alembert’s惯性力、外力和广义速度组成的系统，我们可以得到矩阵形式的运动方程：</p>
+$${U^T}({F_i} + F_i^*) = 0 \tag{4}$$
+<p>其中：</p>
+$$\eqalign{
+  &amp; U = \left[ {\matrix{
+   {{U_1}} &amp; {{U_2}} &amp; {...} &amp; {{U_m}}  \cr } } \right]  \cr 
+  &amp; {F_i} = \left[ {\matrix{
+   {F_{1,i}^T} &amp; {...} &amp; {F_{n,i}^T}  \cr } } \right],F_i^* = \left[ {\matrix{
+   {F_{1,i}^{*,T}} &amp; {...} &amp; {F_{n,i}^{*,T}}  \cr  } } \right] \cr} \tag{5}$$
+<p>公式(4)表明运动方程是力平衡在偏导速度矩阵零空间上的投影。根据文献<a target="_blank" rel="noopener" href="https://www.lukesy.net/docs/self-study/kane-dynamics/">Dynamics Theory and Applications – Thomas Kane and David Levinson | Luke Sy, PhD Candidate</a>，刚体<em>k</em>的D’Alembert’s惯性力为:</p>
+$$\eqalign{
+  &amp; F_{k,i}^* =  - {m_k}{{\dot v}_{k,i}},  \cr 
+  &amp; M_{k,i}^* =  - {{\dot h}_{k,i}} =  - {R_{ib,k}}({J_{k,b}}\dot \omega _b^{k,i} + \omega _b^{k,i \wedge }{J_{k,b}}\dot \omega _b^{k,i}) \cr} \tag{6}$$
+<p>其中，$F_{k,i}^*，M_{k,i}^*$为 D’Alembert’s惯性力和惯性力矩；注意，在凯恩的运动方程中，表达惯性力矩的方式与惯性力是一样的。将系统第<em>k</em>个分量从机体坐标系转换到惯性坐标系的旋转矩阵为${R_{ib,k}}$。${J_{k,b}}$为第<em>k</em>个分量的转动惯量。∧的映射如下：</p>
+$${\phi ^ \wedge }: = \left[ {\matrix{
+   0 &amp; { - {\phi _3}} &amp; {{\phi _2}}  \cr 
+   {{\phi _3}} &amp; 0 &amp; { - {\phi _1}}  \cr 
+   { - {\phi _2}} &amp; {{\phi _1}} &amp; 0  \cr } } \right] ,\phi  \in {\mathbb{R}^{3}} \tag{7}$$
+<p>在本文中，<strong>∧</strong>等价于叉积矩阵算子 <strong>×</strong>。<strong>∧</strong>的逆映射算子定义为<strong>∨</strong>。</p>
+<h3 id="B-绳载负载的四旋翼系统动力学模型"><a href="#B-绳载负载的四旋翼系统动力学模型" class="headerlink" title="B 绳载负载的四旋翼系统动力学模型"></a>B 绳载负载的四旋翼系统动力学模型</h3><p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gwih6asu0yj30g50fhgox.jpg" alt="坐标系定义" style="zoom:80%;"></p>
+<p>偏心绳载负载的四旋翼系统结构如图1所示，其中参数定义见表一。由图一，可以得到如下的运动学关系：</p>
+$$r_i^{pi} = r_i^{vi} + {R_{iv}}(r_v^{tv} + r_v^{pv}) \tag{8}$$
+<p>对于绳载负载的四旋翼系统，我们使用如下的广义速度<em>u</em>：</p>
+$$u = {\left[ {v_p^T,v_v^{vi,T},\omega _v^{vi,T}} \right]^T} \tag{9}$$
+<p>通过对(8)微分，得到了惯性坐标系中负载的速度和加速度以及四旋翼的速度：</p>
+$$\eqalign{
+  &amp; v_i^{pi} = {R_{iv}}(v_i^{vi} + B{v_p} + A\omega _v^{pv})  \cr 
+  &amp; v_i^{vi} = {R_{iv}}v_v^{vi}  \cr 
+  &amp; \omega _i^{vi} = {R_{iv}}\omega _v^{vi} \cr} \tag{10}$$
+<p>定义以下负载的诱导交叉项：</p>
+$$\eqalign{
+  &amp; {{\dot R}_{iv}} = {R_{iv}}\omega _v^{vi, \wedge }  \cr 
+  &amp; A =  - {(r_v^{tv} + r_v^{pv})^ \wedge };B = \left[ {\matrix{
+   {{1_{2 \times 2}}}  \cr 
+   { - {{r_p^T} \over {\sqrt {{L^2} - r_p^T{r_p}} }}}  \cr  } } \right] \cr} \tag{11}$$
+<p>根据(4),其偏导速度矩阵如下所示：</p>
+$${U^T} = \left[ {\matrix{
+   {{B^T}{R_{vi}}} &amp; 0 &amp; 0  \cr 
+   {{R_{vi}}} &amp; {{R_{vi}}} &amp; 0  \cr 
+   {A{R_{vi}}} &amp; 0 &amp; {{R_{vi}}}  \cr  } } \right] \tag{12}$$
+<p>对(10)微分得到四旋翼和负载的加速度以及角动量的变化率$\dot h_i^{vi}$如下：</p>
+$$\eqalign{
+  &amp; \dot v_i^{pi} = {R_{iv}}(\dot v_i^{vi} + B{{\dot v}_p} + A\dot \omega _v^{pv} + R)  \cr 
+  &amp; \dot v_i^{vi} = {R_{iv}}(\dot v_v^{vi}{\rm{ + }}P){\rm{ }} \cr 
+  &amp; \dot h_i^{vi} = {R_{iv}}({J_v}\dot \omega _v^{vi} + Q) \cr} \tag{13}$$
+<p>定义了下列速度诱导力的量为：</p>
+$$\eqalign{
+  &amp; P = {(\omega _v^{vi})^ \wedge }v_v^{vi}  \cr 
+  &amp; Q = {(\omega _v^{vi})^ \wedge }{J_v}\omega _v^{vi}  \cr 
+  &amp; R = {(\omega _v^{vi})^ \wedge }(v_v^{vi} + A\omega _v^{vi} + 2B{v_p}) + \dot B{v_p} \cr} \tag{14}$$
+<p>D’Alembert’s惯性力与外力的平衡可以用以下形式表示:</p>
+$$F_i^* =  - \left[ {\matrix{
+   {m{R_{iv}}B} &amp; {m{R_{iv}}} &amp; {m{R_{iv}}A}  \cr 
+   0 &amp; {{m_q}{R_{iv}}} &amp; 0  \cr 
+   0 &amp; 0 &amp; {{R_{iv}}{J_V}}  \cr } } \right]\dot u - \left[ {\matrix{
+   {m{R_{iv}}R}  \cr 
+   {{m_q}{R_{iv}}P}  \cr 
+   {{R_{iv}}Q}  \cr } } \right] \tag{15}$$
+$${F_i} = {\left[ {\matrix{
+   {m{g_i}} &amp; {{m_q}{g_i}} &amp; 0  \cr } } \right]^T} + {\left[ {\matrix{
+   0 &amp; {{F_i}} &amp; {{M_i}}  \cr  } } \right]^T} \tag{16}$$
+<p>根据(4)，力平衡的投影为kane运动方程:</p>
+$$\eqalign{
+  &amp; \left[ {\matrix{
+   {m{B^T}B} &amp; {m{B^T}} &amp; {m{B^T}A}  \cr 
+   {mB} &amp; {({m_q} + m)1} &amp; {mA}  \cr 
+   {m{A^T}B} &amp; {m{A^T}} &amp; {{J_v} + m{A^T}A}  \cr  } } \right]\left[ {\matrix{
+   {{{\dot v}_p}}  \cr 
+   {\dot v_v^{vi}}  \cr 
+   {\dot \omega _v^{vi}}  \cr  } } \right] =   \cr 
+  &amp; \left[ {\matrix{
+   {m{B^T}}  \cr 
+   {({m_q} + m)1}  \cr 
+   {m{A^T}}  \cr } } \right]{R_{vi}}g + \left[ {\matrix{
+   {m{B^T}R}  \cr 
+   { - {m_q}P - mR}  \cr 
+   { - m{A^T}R - Q}  \cr } } \right] + \left[ {\matrix{
+   {{0_{4 \times 1}}}  \cr 
+   {{f_v}}  \cr 
+   {{M_v}}  \cr } } \right] \cr} \tag{17}$$
+<h2 id="3-控制设计"><a href="#3-控制设计" class="headerlink" title="3 控制设计"></a>3 控制设计</h2><h3 id="A-分解姿态运动"><a href="#A-分解姿态运动" class="headerlink" title="A 分解姿态运动"></a>A 分解姿态运动</h3><p>对于一个正定矩阵<em>C</em>，我们有如下的LDU分解：</p>
+$$C{\rm{ = }}\left[ {\matrix{
+   A &amp; {{B^T}}  \cr 
+   B &amp; D  \cr } } \right]{\rm{ = }}\left[ {\matrix{
+   1 &amp; 0  \cr 
+   {B{A^{ - 1}}} &amp; 1  \cr } } \right]\left[ {\matrix{
+   A &amp; 0  \cr 
+   0 &amp; S  \cr } } \right]\left[ {\matrix{
+   1 &amp; {{A^{ - 1}}{B^T}}  \cr 
+   0 &amp; 1  \cr } } \right] \tag{18}$$
+<p>其中<em>L</em>和<em>U</em>是上三角形矩阵和下三角矩阵；<em>D</em>为一个对角矩阵，其中$S = D - B{A^{ - 1}}{B^T}$。利用LDU分解，可以将姿态运动与系统其他部分解耦。我们按以下方式划分质量矩阵：</p>
+$$\eqalign{
+  &amp; A = \left[ {\matrix{
+   {m{B^T}B} &amp; {m{B^T}}  \cr 
+   {m{B^T}} &amp; {({m_q} + m)1}  \cr } } \right];B = [\matrix{
+   {m{A^T}B} &amp; {m{A^T}}  \cr  } ]  \cr 
+  &amp; D = {J_v}{\rm{ + }}m{A^T}A;S = D - B{A^{ - 1}}{B^T} \cr} \tag{19}$$
+<p>解耦后的姿态动力学方程为:</p>
+$$\eqalign{
+  &amp; \dot \omega _v^{vi} = \tau  = {S^{ - 1}}( - B{A^{ - 1}}{h_1} + {h_2} + {M_v})  \cr 
+  &amp; {h_1} = \left[ {\matrix{
+   {m{B^T}}  \cr 
+   {({m_q} + m)1}  \cr } } \right]{R_{vi}}{g_i} + \left[ {\matrix{
+   { - m{B^T}R}  \cr 
+   { - {m_q}P - mR}  \cr } } \right] + \left[ {\matrix{
+   {{0_{4 \times 1}}}  \cr 
+   {{f_v}}  \cr } } \right]  \cr 
+  &amp; {h_2} = m{A^T}{R_{vi}}{g_i} - m{A^T}R - Q \cr}  \tag{20}$$
+<p>由上式可知，姿态运动是完全驱动的。定义饱和函数如下:</p>
+$$sat(x,{x_0}) = \left\{ \matrix{
+  {x_0},{x_0} &lt; x \hfill \cr 
+  x, - {x_0} \le x \le {x_0},{x_0} &gt; 0 \hfill \cr {x_0},x &lt;  - {x_0} \hfill \cr}  \right. \tag{21}$$
+<p>如果<em>x</em>是一个向量，那么饱和函数适用于每个元素。如果$x_0$为∞，则表示该通道没有限制。</p>
+<p>在文献<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/5717652">Geometric tracking control of a quadrotor UAV on SE(3) </a>、<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6315143">Nonlinear robust tracking control of a quadrotor UAV on SE(3)</a>的基础上，我们得到以下控制律:</p>
+$$\eqalign{
+  &amp; \tau  =  - {K_\Omega }\omega _v^{vi} - sat({K_R}{e_R},{x_{R,0}});{x_{R,0}} = {\left[ {\infty ,\infty ,0.1} \right]^T}  \cr 
+  &amp; {e_R} = {1 \over 2}{(R_{vi,c}^T{R_{vi}} - R_{vi}^T{R_{vi,c}})^ \vee } \cr} \tag{22}$$
+<p>其中，$R_{vi,c}$为期望的姿态，期望角速度为$\omega _{v,c}^{vi} = 0$。；$K_Ω$和$K_R$为正定矩阵。该限制适用于偏航角通道，以防止大偏航角引起的负载大幅度摆动的影响。</p>
+<h3 id="B-平移运动控制设计"><a href="#B-平移运动控制设计" class="headerlink" title="B 平移运动控制设计"></a>B 平移运动控制设计</h3><p>基于姿态指令控制器，在文献<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/5717652">Geometric tracking control of a quadrotor UAV on SE(3) </a>、<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6315143">Nonlinear robust tracking control of a quadrotor UAV on SE(3)</a>的基础上设计了四旋翼飞行器的平移运动控制器,定义位置和速度误差为:</p>
+$${e_x} = {x_i} - {x_{i,d}};{e_v} = v_v^{vi} - v_{v,d}^{vi} \tag{23}$$
+<p>四旋翼的速度是通将倾斜控制的升力矢量控制在期望的方向实现的。然后将位置控制器定义为</p>
+$$\eqalign{
+  &amp; v_{v,d}^{vi} =  - {k_x}{e_x};{R_{vi,c}} = 1 + {k_v}{\left[ {\matrix{
+   {sat({e_{v,y}},{v_0})}  \cr 
+   { - sat({e_{v,x}},{v_0})}  \cr 
+   0  \cr  } } \right]^ \wedge }  \cr 
+  &amp; {f_v} = {f_{v,e}} - {k_v}({m_q} + m)sat({e_{v,z}},{v_1}) \cr} \tag{24}$$
+<p>通过在饱和函数中设置足够小的限制$v_0$，可以认为矩阵近似于SO(3)。${f_{v,e}}$即为四旋翼和有效载荷悬停时的纵倾力。由于姿态控制将使四旋翼飞行器最终达到接近$R_{vi}=1$的姿态，因此由$v_0$产生的小倾角使得$v_{v,d}^{vi} \approx v_{i,d}^{vi}$。因此，速度控制信号$v_{v,d}^{vi} =  - {k_x}{e_x}$可以将四旋翼飞行器带到目标位置。</p>
 
                 
             </div>
@@ -496,7 +722,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/">http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/</a>
+                    <a href="http://example.com/2021/11/17/ps-lun-wen-4/">http://example.com/2021/11/17/ps-lun-wen-4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,8 +760,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                    <span class="chip bg-color">无人机</span>
+                                </a>
+                            
+                                <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">PS论文</span>
                                 </a>
                             
                         </div>
@@ -579,46 +809,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/21/python-xue-xi-bi-ji/">
+                <a href="/2021/11/17/ps-lun-wen-4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="python学习笔记（数据分析）">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="PS论文4">
                         
-                        <span class="card-title">python学习笔记（数据分析）</span>
+                        <span class="card-title">PS论文4</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《利用Python进行数据分析·第2版》的学习（进度：5节）
+                            PS论文笔记(4)《Dynamics and Control of A Quadrotor with A Cable Suspended Payload》--payload组
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -632,31 +868,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/19/vscode-jia-c-huan-jing-xia-bian-yi-yu-yan-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-fa/">
+                <a href="/2021/11/15/ps-lun-wen-3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="VSCode加C++环境下编译语言遇到的问题以及解决方法">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="ps论文3">
                         
-                        <span class="card-title">VSCode加C++环境下编译语言遇到的问题以及解决方法</span>
+                        <span class="card-title">ps论文3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            解决问题：中文乱码
+                            PS论文记(3)《Path-Following Control of A Quadrotor UAV With A Cable-Suspended Payload Under Wind Disturbances》--payload组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                    学习经验
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
@@ -666,8 +902,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C/">
-                        <span class="chip bg-color">C++</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
