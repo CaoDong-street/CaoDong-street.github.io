@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="fast-planner初代论文笔记1, Cao Dong">
+    <meta name="keywords" content="PS论文（6）, Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>fast-planner初代论文笔记1 | Cao Dong</title>
+    <title>PS论文（6） | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Cao Dong" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Cao Dong" type="application/atom+xml">
 </head>
 
 
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">fast-planner初代论文笔记1</h1>
+                    <h1 class="description center-align post-title">PS论文（6）</h1>
                 </div>
             </div>
         </div>
@@ -390,16 +390,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/fast-planner/">
-                                <span class="chip bg-color">fast planner</span>
-                            </a>
-                        
                             <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
                                 <span class="chip bg-color">无人机</span>
                             </a>
                         
-                            <a href="/tags/%E8%BD%A8%E8%BF%B9%E4%BC%98%E5%8C%96/">
-                                <span class="chip bg-color">轨迹优化</span>
+                            <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">PS论文</span>
                             </a>
                         
                     </div>
@@ -423,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-25
+                    2022-01-02
                 </div>
                 
 
@@ -432,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    514
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -462,13 +458,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>对应代码地址：<a target="_blank" rel="noopener" href="https://github.com/HKUST-Aerial-Robotics/Fast-Planner">GitHub - HKUST-Aerial-Robotics/Fast-Planner: A Robust and Efficient Trajectory Planner for Quadrotors</a></p>
-<p>对应文章地址：<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/8758904">Robust and Efficient Quadrotor Trajectory Generation for Fast Autonomous Flight | IEEE Journals &amp; Magazine | IEEE Xplore</a></p>
-<h2 id="1-摘要"><a href="#1-摘要" class="headerlink" title="1 摘要"></a>1 摘要</h2><p>利用b样条的凸包特性，结合欧几里得距离场的梯度信息和动态约束，采用b样条优化算法提高了轨迹的光滑性和间隙。最后，通过将最终轨迹表示为非均匀b样条，采用迭代时间调整方法保证轨迹的动态可行性和非保守性。</p>
-<h2 id="2-相关工作"><a href="#2-相关工作" class="headerlink" title="2 相关工作"></a>2 相关工作</h2><h3 id="硬约束方法"><a href="#硬约束方法" class="headerlink" title="硬约束方法"></a>硬约束方法</h3><p>硬约束方法的首创是最小snap轨迹生成<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>.，其中轨迹表示为分段多项式，并通过求解二次规划( quadratic programming, QP)问题生成。硬约束方法通过凸形式保证全局最优性。然而，忽略了自由空间中与障碍物的距离，这往往导致轨迹接近障碍物。此外，动力学约束是保守的，使轨迹速度不足，以快速飞行。</p>
-<h3 id="软约束方法-本文选用的"><a href="#软约束方法-本文选用的" class="headerlink" title="软约束方法(本文选用的)"></a>软约束方法(本文选用的)</h3><p>也有方法将轨迹生成作为一个非线性优化问题，考虑平滑和安全。软约束方法利用梯度信息推动轨迹远离障碍物，但存在局部极小问题，没有很强的成功率和动力学可行性保证。我们的优化方法还利用梯度信息提高了轨迹的安全性。然而，与以往计算昂贵的沿轨迹线积分的方法不同，基于b样条的凸包特性，将公式设计得更加简单。它大大提高了计算效率和收敛速度。</p>
-<h2 id="3-运动动力学路径搜索"><a href="#3-运动动力学路径搜索" class="headerlink" title="3 运动动力学路径搜索"></a>3 运动动力学路径搜索</h2><p>前端运动学路径搜素源于自动汽车的混合A*(hybrid-state A*)搜索算法，其可再体素网格网络中搜索一个安全的，运动学可行的、且相对时间以及控制成本最低的轨迹。</p>
-<p>未完待续~~~</p>
+                <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>考虑了一种具有8自由度并且存在4自由度欠驱动的绳载负载的四旋翼飞行器，将其建立为微分平坦混合动力系统。利用平坦特性，提出了一种轨迹生成方法，该方法能够找到具有各种约束的标称轨迹，这些轨迹不仅能在需要时产生最小的载荷摆动，而且还能在动态敏捷运动中引起较大的负载摆动。本文提出了一种控制器设计，专门用于平面情况下的系统，使其跟踪四旋翼姿态，负载姿态或负载位置。</p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>希望无人机最小化负载摆动的需求是显然易见的，但是我们也希望能使负载也能产生较大的负载摆动。</p>
+<p>即针对如下两种情况：</p>
+<p>a）为了使无人机携带绳载负载进入/退出窄口(如窗户)，载荷需要动态摆动进入窄口，从而使在正确的时间点，缆绳的张力为零，使得无人机能够在缆绳的张力重新出现之前在负载经历自由落体时穿过窗户。</p>
+<p>b）为了使无人机能够在严格的天花板高度限制下飞行时运输悬浮载荷，且避免雷达探测或在室内飞行时，需要载荷的动态运动，以避免地面上的大型障碍物。</p>
+<p>需要实现绳载负载的无人机系统的如下功能：实现具有大振荡相位的负载轨迹，以及在有限的持续时间内，当缆绳中的张力趋于零时，并使用适当设计的反馈控制器跟踪轨迹。</p>
+<h1 id="动力学模型"><a href="#动力学模型" class="headerlink" title="动力学模型"></a>动力学模型</h1><p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gxzjir4np1j30n90ebta7.jpg" alt="图1.(a)绳载负载的无人机在3d空间的表现(b)绳载负载的无人机在2d平面的表现"></p>
+<p><img src="https://tva3.sinaimg.cn/large/007mx13gly1gxzjpcev2uj30ie0gln29.jpg" alt="本文中定义的参数"></p>
+<h2 id="非零张力的动力学模型"><a href="#非零张力的动力学模型" class="headerlink" title="非零张力的动力学模型"></a>非零张力的动力学模型</h2><p>如图1（a）四旋翼位置 $x_Q$ 和负载位置 $x_L$ 由如下公式联系，其中<em>L</em>为绳长，<em>p</em>为四旋翼指向负载的单位向量</p>
+ $$x_Q=x_L-Lp\tag{1}$$ 
+<p>四旋翼在绳载负载作用下的动力学方程为:</p>
+ $$\dot{x}_{L}=v_{L}$$ 
+ $$\left(m_{Q}+m_{L}\right)\left(\dot{v}_{L}+g e_{3}\right)=\left(p \cdot f R e_{3}-m_{Q} L(\dot{p} \cdot \dot{p})\right) p$$ 
+ $$\dot{p}=\omega \times p$$ 
+ $$m_{Q} L \dot{\omega}=-p \times f R e_{3}$$ 
+ $$\dot{R}=R \hat{\Omega}$$ 
+ $$J_{Q} \dot{\Omega}+\Omega \times J_{Q} \Omega=M .\tag{2}$$ 
+<p>注1:四旋翼姿态动力学分别与负载姿态和位置动力学解耦，而负载姿态动力学与负载位置动力学解耦。重力不影响负载姿态动力学。</p>
+<h2 id="零张力的动力学模型"><a href="#零张力的动力学模型" class="headerlink" title="零张力的动力学模型"></a>零张力的动力学模型</h2><p>四旋翼和负载作为独立的系统，负载呈自由落体状态。（两个系统都是微分平坦的）对应的动力学模型为</p>
+ $$\dot{x}_{L}=v_{L}$$ 
+ $$m_{L}\left(\dot{v}_{L}+g e_{3}\right)=0$$ ,
+ $$\dot{x}_{Q}=v_{Q}$$ ,
+ $$m_{Q}\left(\dot{v}_{Q}+g e_{3}\right)=f R e_{3}$$ ,
+ $$\dot{R}=R \hat{\Omega}$$ ,
+ $$J_{Q} \dot{\Omega}+\Omega \times J_{Q} \Omega=M .\tag{3}$$ 
+<h2 id="专门针对平面的动力学模型"><a href="#专门针对平面的动力学模型" class="headerlink" title="专门针对平面的动力学模型"></a>专门针对平面的动力学模型</h2><p>如图1（b）， $φ_L$ 为负载的滚转角， $φ_Q$ 为四旋翼的滚转角，<em>p</em>和旋转矩阵<em>R</em>定义如下</p>
+ $$p=\left[\begin{array}{c}\sin \left(\phi_{L}\right) \\ -\cos \left(\phi_{L}\right)\end{array}\right], \quad R=\left[\begin{array}{cc}\cos \left(\phi_{Q}\right) &amp; -\sin \left(\phi_{Q}\right) \\ \sin \left(\phi_{Q}\right) &amp; \cos \left(\phi_{Q}\right)\end{array}\right] \tag{3}$$ 
+<p>由公式（2）得到的平面动力学方程为：</p>
+ $$\left(m_{Q}+m_{L}\right)\left(\dot{v}_{L}+g e_{3}\right)=\left(f \cos \left(\phi_{Q}-\phi_{L}\right)-m_{Q} l \dot{\phi}_{L}^{2}\right) p$$ 
+ $$m_{Q} l \ddot{\phi}_{L}=\sin \left(\phi_{Q}-\phi_{L}\right)$$ 
+ $$J_{Q} \ddot{\phi}_{Q}=M$$ 
+<h1 id="微分平坦性"><a href="#微分平坦性" class="headerlink" title="微分平坦性"></a>微分平坦性</h1><blockquote>
+<p>如果存在一组平坦输出，系统的状态和输入可以表示为平坦输出及其高阶导数的平滑函数，则系统是微分平坦的。</p>
+</blockquote>
+<p>本文采用微分平面度法对四旋翼系统进行了动态轨迹规划，本文证明了具有缆索悬挂负载的四旋翼是微分平坦的，而且它是一个定义如下的微分平坦混合系统。</p>
+ $$\Sigma: \begin{cases}\dot{x}_{1}=f_{1}\left(x_{1}\right)+g_{1}\left(x_{1}\right) u_{1}, &amp; x_{1} \notin \mathcal{S}_{1} \\ x_{2}^{+}=\Delta_{1}\left(x_{1}^{-}\right), &amp; x_{1}^{-} \in \mathcal{S}_{1} \\ \dot{x}_{2}=f_{2}\left(x_{2}\right)+g_{2}\left(x_{2}\right) u_{2}, &amp; x_{2} \notin \mathcal{S}_{2} \\ x_{1}^{+}=\Delta_{2}\left(x_{2}^{-}\right), &amp; x_{2}^{-} \in \mathcal{S}_{2},\end{cases} \tag{4}$$ 
+<p>假设 $x_1,  x_2$ 的动力学是微分平坦的，分别有一个平坦的输出 $y_1,y_2$ 。输出 $y_2$ 的过渡后值是平坦输出 $y_1 $ 的过渡前值及其高阶导数的函数，则系统Σ是微分平坦混合系统。</p>
+<p>为了表明由四旋翼和缆索悬挂载荷组成的系统是微分平坦的，我们将看由Newton-Euler推导出的动力学运动方程，从而系统的内部约束力（对应于缆索中的张力）被引入了。如图1a，运动方程可以写成公式（5）， <em>T</em>为缆绳的张力。</p>
+ $$m_{Q} \ddot{x}_{Q}=f R e_{3}-m_{Q} g e_{3}+T p$$ 
+ $$J \dot{\Omega}+\Omega \times J \Omega=M$$ 
+ $$m_{L} \ddot{x}_{L}=-T p-m_{L} g e_{3}\tag{5}$$ 
+<p>定理1： $y_1 = (x_L,ψ)$ 是上述系统的平坦输出，其中 $ψ∈R$ 是四旋翼飞行器的偏航角。</p>
+<p>证明：由公式（5）可以得到单位向量<em>p</em>，从而由公式（1）可以得到四旋翼无人机的位置 $x_Q$ 。而 $(x_Q,ψ)$ 为四旋翼无人机的平坦输出，则 $y_1 = (x_L,ψ)$ 是上述系统的平坦输出。<em>（拉力为零时不成立）</em></p>
+<p>注2:输入M（四旋翼在固定机体坐标系中的力矩矢量）由负载位置的6阶导数求得。</p>
+<h1 id="控制器设计"><a href="#控制器设计" class="headerlink" title="控制器设计"></a>控制器设计</h1><p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gxznhn7qvbj30yd08kwgy.jpg" alt="用于跟踪负载位置的控制器结构"></p>
+<p>上述控制器可以跟踪(a) 无人机姿态,(b)负载姿态,或(c)负载位置</p>
+<p>四旋翼力矩定义如下：</p>
+ $$M=J_{Q}\left(-k_{p}^{Q} e_{Q}-k_{d}^{Q} \dot{e}_{Q}+\ddot{\phi}_{Q}^{d}\right)$$ 
+<p>其中， $e_Q =φ_Q−φ^d_Q$ 为跟踪期望的四旋翼姿态的误差。</p>
+<p>四旋翼姿态定义如下：</p>
+ $$\phi_{Q}^{c}:=\phi_{L}+\sin ^{-1}\left(-k_{p}^{L} e_{L}-k_{d}^{L} \dot{e}_{L}+\frac{\ddot{\phi}_{L}^{d} m_{Q} l}{f}\right)$$ 
+<p>其中， $eL =φ_L−φ^d_L$ 为跟踪期望负载姿态的误差。</p>
+<p>四旋翼推力和期望负载姿态定义如下：</p>
+ $$f=(A+B) \cdot R e_{3}$$ 
+ $$p_{d}=-\frac{A}{\|A\|} \Longrightarrow \phi_{L}^{d}=\tan ^{-1}\left(\frac{-A_{1}}{A_{2}}\right)$$ 
+<p>其中，A，B定义如下， $A_1,A_2$ 为A的分量。</p>
+ $$\begin{aligned} A &amp;=-k_{p}^{x} e_{x}-k_{d}^{x} \dot{e}_{x}+m_{L} \ddot{x}_{L}^{d}+m_{L} g e_{3} \\ B &amp;=m_{Q} \ddot{x}_{Q}^{d}+m_{Q} g e_{3} \\ &amp;=m_{L} \ddot{x}_{L}^{d}-m_{Q} l \ddot{p}^{d}+m_{Q} g e_{3} \end{aligned}$$ 
+<p>其中 $e_{x}=x_{L}-x_{L}^{d}, e_{v}=\dot{e}_{x}$ 为跟踪期望的负载位置的误差。</p>
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>四旋翼与负载配备了Vicon标记，以便能够感知它们的位置和姿态以进行反馈控制。缆绳长度1m，负载90gm。</p>
 
                 
             </div>
@@ -495,7 +543,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/">http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/</a>
+                    <a href="http://example.com/2022/01/02/ps-lun-wen-6/">http://example.com/2022/01/02/ps-lun-wen-6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,16 +581,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/fast-planner/">
-                                    <span class="chip bg-color">fast planner</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
                                     <span class="chip bg-color">无人机</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BD%A8%E8%BF%B9%E4%BC%98%E5%8C%96/">
-                                    <span class="chip bg-color">轨迹优化</span>
+                                <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">PS论文</span>
                                 </a>
                             
                         </div>
@@ -586,46 +630,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/26/li-cheng-ji-hua-ti-du-qu/">
+                <a href="/2022/01/02/ps-lun-wen-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="里程计话题读取">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="PS论文（6）">
                         
-                        <span class="card-title">里程计话题读取</span>
+                        <span class="card-title">PS论文（6）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ROS学习笔记-《ego-planner》中的odom_topic里程计话题读取
+                            PS论文笔记(6)《Trajectory Generation and Control of a Quadrotor with a Cable-Suspended Load– A Differentially-Flat Hybrid System》--kumar组
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    项目代码学习
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ROS/">
-                        <span class="chip bg-color">ROS</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                        <span class="chip bg-color">无人机</span>
+                    </a>
+                    
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -639,24 +689,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/23/ji-yu-ego-planner-de-wu-ren-ji-bian-dui-ego-swarm/">
+                <a href="/2022/01/02/ps-lun-wen-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="基于ego-planner的无人机编队：EGO-Swarm">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="PS论文（5）">
                         
-                        <span class="card-title">基于ego-planner的无人机编队：EGO-Swarm</span>
+                        <span class="card-title">PS论文（5）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《EGO-Swarm  A Fully Autonomous and Decentralized QuadrotorSwarm System in Cluttered Environments》 阅读笔记
+                            PS论文笔记(5)《Trajectory Generation and Control of a Quadrotor with a Cable-Suspended Load– A Differentially-Flat Hybrid System》--kumar组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
                             </span>
                         <span class="publish-author">
                             
@@ -673,20 +723,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/fast-planner/">
-                        <span class="chip bg-color">fast planner</span>
-                    </a>
-                    
-                    <a href="/tags/ego-planner/">
-                        <span class="chip bg-color">ego planner</span>
-                    </a>
-                    
                     <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
                         <span class="chip bg-color">无人机</span>
                     </a>
                     
-                    <a href="/tags/%E7%BC%96%E9%98%9F%E6%8E%A7%E5%88%B6/">
-                        <span class="chip bg-color">编队控制</span>
+                    <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                        <span class="chip bg-color">PS论文</span>
                     </a>
                     
                 </div>
@@ -887,7 +929,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021</span>
+                <span id="year">2021-2022</span>
             
             <span id="year">2021</span>
             <a href="/about" target="_blank">Cao Dong street</a>
@@ -896,7 +938,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">81.5k</span>&nbsp;字
+                class="white-color">83.3k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-26T08:14:13.005Z</updated>
+  <updated>2022-01-02T13:59:18.150Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PS论文（6）</title>
+    <link href="http://example.com/2022/01/02/ps-lun-wen-6/"/>
+    <id>http://example.com/2022/01/02/ps-lun-wen-6/</id>
+    <published>2022-01-02T08:10:38.000Z</published>
+    <updated>2022-01-02T13:59:18.150Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PS论文（5）</title>
+    <link href="http://example.com/2022/01/02/ps-lun-wen-5/"/>
+    <id>http://example.com/2022/01/02/ps-lun-wen-5/</id>
+    <published>2022-01-02T08:01:25.000Z</published>
+    <updated>2022-01-02T08:10:25.956Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;文章地址：&lt;a href=&quot;https://ieeexplore.ieee.org/document/6631275&quot;&gt;Trajectory generation and control of a quadrotor with a cable-suspended load</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>PS论文(4)</title>
@@ -179,8 +233,8 @@
   
   <entry>
     <title>fast-planner初代论文笔记1</title>
-    <link href="http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/"/>
-    <id>http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1/</id>
+    <link href="http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1-wei-xie-wan/"/>
+    <id>http://example.com/2021/10/25/fast-planner-chu-dai-lun-wen-bi-ji-1-wei-xie-wan/</id>
     <published>2021-10-25T12:32:36.000Z</published>
     <updated>2021-11-11T16:04:29.192Z</updated>
     
@@ -495,56 +549,6 @@
     
     
     <category term="python" scheme="http://example.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客出现的问题及处理方法</title>
-    <link href="http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/"/>
-    <id>http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/</id>
-    <published>2021-09-19T03:55:31.000Z</published>
-    <updated>2021-11-11T16:06:19.011Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;添加图片（添加线上图片）&quot;&gt;&lt;a href=&quot;#添加图片（添加线上图片）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode加C++环境下编译语言遇到的问题以及解决方法</title>
-    <link href="http://example.com/2021/09/19/vscode-jia-c-huan-jing-xia-bian-yi-yu-yan-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-fa/"/>
-    <id>http://example.com/2021/09/19/vscode-jia-c-huan-jing-xia-bian-yi-yu-yan-yu-dao-de-wen-ti-yi-ji-jie-jue-fang-fa/</id>
-    <published>2021-09-19T02:56:02.000Z</published>
-    <updated>2021-11-11T16:16:30.865Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;中文乱码问题&quot;&gt;&lt;a href=&quot;#中文乱码问题&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="C++" scheme="http://example.com/tags/C/"/>
     
   </entry>
   
