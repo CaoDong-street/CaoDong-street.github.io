@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-03T03:03:35.401Z</updated>
+  <updated>2022-01-03T08:38:51.127Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,157 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ICRA2019文章目录</title>
+    <link href="http://example.com/2022/01/03/icra2019-paper-list/"/>
+    <id>http://example.com/2022/01/03/icra2019-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:38:51.127Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ICRA2019-paper-list&quot;&gt;&lt;a href=&quot;#ICRA2019-paper-list&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ICRA" scheme="http://example.com/tags/ICRA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IROS2019文章目录</title>
+    <link href="http://example.com/2022/01/03/iros2019-paper-list/"/>
+    <id>http://example.com/2022/01/03/iros2019-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:39:33.095Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IROS2019-paper-list&quot;&gt;&lt;a href=&quot;#IROS2019-paper-list&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="IROS" scheme="http://example.com/tags/IROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IROS2021文章目录</title>
+    <link href="http://example.com/2022/01/03/iros2021-paper-list/"/>
+    <id>http://example.com/2022/01/03/iros2021-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:40:54.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IROS2021PaperList&quot;&gt;&lt;a href=&quot;#IROS2021PaperList&quot; class=&quot;headerlink&quot; title=&quot;IROS2021PaperList&quot;&gt;&lt;/a&gt;IROS2021PaperList&lt;/h1&gt;&lt;p&gt;This repo</summary>
+        
+      
+    
+    
+    
+    
+    <category term="IROS" scheme="http://example.com/tags/IROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ICRA2020文章目录</title>
+    <link href="http://example.com/2022/01/03/icra2020-paper-list/"/>
+    <id>http://example.com/2022/01/03/icra2020-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:39:13.201Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ICRA2020-paper-list&quot;&gt;&lt;a href=&quot;#ICRA2020-paper-list&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ICRA" scheme="http://example.com/tags/ICRA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ICRA2021文章目录</title>
+    <link href="http://example.com/2022/01/03/icra2021-paper-list/"/>
+    <id>http://example.com/2022/01/03/icra2021-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:39:22.297Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ICRA2021-paper-list&quot;&gt;&lt;a href=&quot;#ICRA2021-paper-list&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ICRA" scheme="http://example.com/tags/ICRA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IROS2020文章目录</title>
+    <link href="http://example.com/2022/01/03/iros2020-paper-list/"/>
+    <id>http://example.com/2022/01/03/iros2020-paper-list/</id>
+    <published>2022-01-03T08:10:38.000Z</published>
+    <updated>2022-01-03T08:39:43.158Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IROS2020-paper-list&quot;&gt;&lt;a href=&quot;#IROS2020-paper-list&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="IROS" scheme="http://example.com/tags/IROS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>state</title>
+    <link href="http://example.com/2022/01/03/ps-state-lun-wen-1/"/>
+    <id>http://example.com/2022/01/03/ps-state-lun-wen-1/</id>
+    <published>2022-01-03T08:01:53.000Z</published>
+    <updated>2022-01-03T08:01:53.512Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>PS论文（5）</title>
@@ -371,182 +522,6 @@
     
     
     <category term="ROS" scheme="http://example.com/tags/ROS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ROS中的launch启动文件</title>
-    <link href="http://example.com/2021/10/18/ros-zhong-de-launch-qi-dong-wen-jian/"/>
-    <id>http://example.com/2021/10/18/ros-zhong-de-launch-qi-dong-wen-jian/</id>
-    <published>2021-10-18T03:18:47.000Z</published>
-    <updated>2021-11-11T16:21:39.341Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;launch启动文件&quot;&gt;&lt;a href=&quot;#launch启动文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ROS学习笔记" scheme="http://example.com/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ROS" scheme="http://example.com/tags/ROS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无人机学习规划</title>
-    <link href="http://example.com/2021/10/16/wu-ren-ji-xue-xi/"/>
-    <id>http://example.com/2021/10/16/wu-ren-ji-xue-xi/</id>
-    <published>2021-10-16T03:45:50.000Z</published>
-    <updated>2021-11-11T16:23:58.192Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ubuntu&quot;&gt;&lt;a href=&quot;#ubuntu&quot; class=&quot;headerlink&quot; title=&quot;ubuntu&quot;&gt;&lt;/a&gt;ubuntu&lt;/h2&gt;&lt;p&gt;这个下载一本工具书来随时查随时用就可以了，大部分时候我都是网上查指令。&lt;/p&gt;
-&lt;p&gt;推荐书籍:</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用PSP-CaRS框架撰写与工程相关的研究型文章</title>
-    <link href="http://example.com/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/"/>
-    <id>http://example.com/2021/10/07/shi-yong-psp-cars-kuang-jia-zhuan-xie-yu-gong-cheng-xiang-guan-de-yan-jiu-xing-wen-zhang/</id>
-    <published>2021-10-07T08:26:41.000Z</published>
-    <updated>2021-11-11T16:25:40.970Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-CaRS与PSP简介&quot;&gt;&lt;a href=&quot;#1-CaRS与PSP简介&quot; class=&quot;headerlink&quot; title=&quot;1    CaRS与PSP简介&quot;&gt;&lt;/a&gt;1    CaRS与PSP简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-CaRS简介&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="文章写作技巧与文献阅读查找经验" scheme="http://example.com/tags/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%9F%A5%E6%89%BE%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++学习路线</title>
-    <link href="http://example.com/2021/09/26/c-xue-xi-lu-xian/"/>
-    <id>http://example.com/2021/09/26/c-xue-xi-lu-xian/</id>
-    <published>2021-09-26T05:42:30.000Z</published>
-    <updated>2021-11-11T16:15:02.904Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;二  基础四大件：&lt;br&gt;1.数据结构与算法 《大话数据结构》c/c++  ，《算法第四版》 java ，《剑指offer》&lt;br&gt;2.计算机网络《tcp/ip详解》&lt;br&gt;3.操作系统  《深入理解操作系统》&lt;br&gt;4.设计模式 《大话设计模式》&lt;br&gt;三</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="C++" scheme="http://example.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读</title>
-    <link href="http://example.com/2021/09/23/wen-xian-yue-du/"/>
-    <id>http://example.com/2021/09/23/wen-xian-yue-du/</id>
-    <published>2021-09-23T13:33:41.000Z</published>
-    <updated>2021-11-11T16:26:11.483Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;利用坚果云-pdf-expert实现文档云同步-可参考文献管理的多平台操作-Mendeley-坚果云-PDFexpert-——让iPad-pencil-成为科研生产力&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="文章写作技巧与文献阅读查找经验" scheme="http://example.com/tags/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%9F%A5%E6%89%BE%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python学习笔记（数据分析）</title>
-    <link href="http://example.com/2021/09/21/python-xue-xi-bi-ji/"/>
-    <id>http://example.com/2021/09/21/python-xue-xi-bi-ji/</id>
-    <published>2021-09-21T09:09:03.000Z</published>
-    <updated>2021-10-18T07:34:08.294Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;学习书籍-《利用Python进行数据分析·第2版》&quot;&gt;&lt;a href=&quot;#学习书籍-《利用Python进行数据分析·第2版》&quot; class=&quot;headerlink&quot; title=&quot;学习书籍: 《利用Python进行数据分析·第2版》&quot;&gt;&lt;/a&gt;学习书籍: &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="python" scheme="http://example.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客出现的问题及处理方法</title>
-    <link href="http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/"/>
-    <id>http://example.com/2021/09/19/hexo-bo-ke-chu-xian-de-wen-ti-ji-chu-li-fang-fa/</id>
-    <published>2021-09-19T03:55:31.000Z</published>
-    <updated>2021-11-11T16:06:19.011Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;添加图片（添加线上图片）&quot;&gt;&lt;a href=&quot;#添加图片（添加线上图片）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习经验" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
     
   </entry>
   
