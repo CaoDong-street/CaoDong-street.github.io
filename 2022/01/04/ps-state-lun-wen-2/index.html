@@ -530,7 +530,8 @@ $$\begin{gathered}
 \end{gathered}$$
 <p>利用公式(1)，实时计算得到融合的负载位置估计。</p>
 <blockquote>
-<p>对于上标B表示机体坐标系，但前文编码器中的负载位置在估计器坐标系中表示，不对应有问题，还是具体是怎么通过高斯分布融合传感器，没看懂。</p>
+<p>传感器融合实际上就是直接对两个传感器测得的同一个对象的测量值取平均数，从而降低测量值中的噪声，提高精确度。<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qV411e78g?from=search&amp;seid=17646318753860577233&amp;spm_id_from=333.337.0.0">了解传感器融合和跟踪 （全6P）MATLAB&amp;Simulink</a></p>
+<p>对于上标B表示机体坐标系，但前文编码器中的负载位置在估计器坐标系中表示，不对应有问题。</p>
 </blockquote>
 <h2 id="轨迹生成与控制"><a href="#轨迹生成与控制" class="headerlink" title="轨迹生成与控制"></a>轨迹生成与控制</h2><h3 id="A-轨迹生成"><a href="#A-轨迹生成" class="headerlink" title="A 轨迹生成"></a>A 轨迹生成</h3><p>这部分内容与[<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8258883类似，本文负载位置最高阶导数为4阶，而https://ieeexplore.ieee.org/document/8258883为负载位置最高阶导数为6阶。">https://ieeexplore.ieee.org/document/8258883类似，本文负载位置最高阶导数为4阶，而https://ieeexplore.ieee.org/document/8258883为负载位置最高阶导数为6阶。</a></p>
 <h3 id="B-控制设计和控制器切换策略"><a href="#B-控制设计和控制器切换策略" class="headerlink" title="B 控制设计和控制器切换策略"></a>B 控制设计和控制器切换策略</h3><p>与<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6760219">Geometric control and differential flatness of a quadrotor UAV with a cable-suspended load | IEEE Conference Publication | IEEE Xplore</a>的控制器一样，分为绳子有张力和无张力处理。有张力时为一个负载-无人机系统。无张力时，系统退化为无人机和负载两个系统。</p>
