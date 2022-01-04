@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-03T08:38:51.127Z</updated>
+  <updated>2022-01-04T13:10:28.180Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>state论文2</title>
+    <link href="http://example.com/2022/01/04/ps-state-lun-wen-2/"/>
+    <id>http://example.com/2022/01/04/ps-state-lun-wen-2/</id>
+    <published>2022-01-04T07:32:49.000Z</published>
+    <updated>2022-01-04T13:10:28.180Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对应文章地址：&lt;a href=&quot;https://github.com/RENyunfan/visual_encoder_estimator&quot;&gt;Vision-encoder-based Payload State Estimation for Autonomous</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>ICRA2019文章目录</title>
@@ -159,7 +186,7 @@
     <link href="http://example.com/2022/01/03/ps-state-lun-wen-1/"/>
     <id>http://example.com/2022/01/03/ps-state-lun-wen-1/</id>
     <published>2022-01-03T08:01:53.000Z</published>
-    <updated>2022-01-04T06:13:02.925Z</updated>
+    <updated>2022-01-04T07:33:52.758Z</updated>
     
     
       
@@ -186,7 +213,7 @@
     <link href="http://example.com/2022/01/02/ps-lun-wen-5/"/>
     <id>http://example.com/2022/01/02/ps-lun-wen-5/</id>
     <published>2022-01-02T08:10:38.000Z</published>
-    <updated>2022-01-03T11:13:21.974Z</updated>
+    <updated>2022-01-04T07:05:53.924Z</updated>
     
     
       
@@ -511,31 +538,6 @@
     <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
     <category term="轨迹优化" scheme="http://example.com/tags/%E8%BD%A8%E8%BF%B9%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ROS中的CMakeLists.txt与package.xml</title>
-    <link href="http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/"/>
-    <id>http://example.com/2021/10/18/ros-zhong-de-cmakelists-txt-yu-package-xml/</id>
-    <published>2021-10-18T06:51:03.000Z</published>
-    <updated>2021-11-11T16:15:38.646Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;CMakeLists-txt文件编辑说明&quot;&gt;&lt;a href=&quot;#CMakeLists-txt文件编辑说明&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ROS学习笔记" scheme="http://example.com/categories/ROS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="ROS" scheme="http://example.com/tags/ROS/"/>
     
   </entry>
   
