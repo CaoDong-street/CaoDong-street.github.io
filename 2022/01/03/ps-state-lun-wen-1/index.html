@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="state, Cao Dong">
+    <meta name="keywords" content="PS state论文（1）, Cao Dong">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>state | Cao Dong</title>
+    <title>PS state论文（1） | Cao Dong</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -269,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">state</h1>
+                    <h1 class="description center-align post-title">PS state论文（1）</h1>
                 </div>
             </div>
         </div>
@@ -388,12 +388,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                <span class="chip bg-color">无人机</span>
+                            </a>
+                        
+                            <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                <span class="chip bg-color">PS论文</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -411,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -441,7 +458,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>对应文章地址：<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8258883">Aggressive Flight With Suspended Payloads Using Vision-Based Control | IEEE Journals &amp; Magazine | IEEE Xplore</a></p>
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>绳载负载的四旋翼系统的非线性动力学轨迹执行完全通过<strong>动作捕捉系统</strong>实现，或者将系统限制在<strong>二维空间</strong>或者仅建立四旋翼的闭环控制但是<strong>不建立负载的闭环控制</strong>从而对系统进行简化（这种简化是不可忽视）。</p>
+<p>针对上述问题，本文用向下的摄像机观察负载，利用<strong>扩展卡尔曼滤波器</strong>估计其相对于四旋翼的状态。</p>
+<h1 id="动力学模型与控制设计"><a href="#动力学模型与控制设计" class="headerlink" title="动力学模型与控制设计"></a>动力学模型与控制设计</h1><p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gy0rmkb4vsj30un0ecafj.jpg" alt="文中定义的变量与参数"></p>
+<p>动力学模型与控制器与<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6760219">Geometric control and differential flatness of a quadrotor UAV with a cable-suspended load | IEEE Conference Publication | IEEE Xplore</a>一样。</p>
+<p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gy0rbmer5ij30nm06f75o.jpg" alt="控制器结构与传感器反馈"></p>
+<h1 id="负载状态估计"><a href="#负载状态估计" class="headerlink" title="负载状态估计"></a>负载状态估计</h1><p>控制器需要精确的负载状态测量。我们使用向下的摄像机检测负载，并使用扩展卡尔曼滤波器(EKF)对测量值进行滤波，得出高频、动态的估计结果。</p>
+<p>无人机的滚动角和俯仰角以及角速度通过无人机上的IMU（惯性测量单元）获得，无人机的偏航角通过Vicon动作捕捉系统获得。对于负载姿态控制环，我们设计了一种EKF来融合IMU和Vicon的偏航角测量结果（无人机的测量结果）与机载相机的图像（负载测量结果），从而估计出<em>p</em>以及其导数。再通过公式（1）结合负载位置$x_L$以及无人机位置$x_Q$以实现有效负载的位置闭环控制。</p>
+$$-T \mathbf{p}=m_{L}\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right),\mathbf{p}=-\frac{\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right)}{\left\|\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right\|_{2}}, x_Q = x_L− lp \tag{1}$$
+<p>下图描述了估计出<em>p</em>以及其导数的流程图</p>
+<p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gy0rqxchglj315103jwfg.jpg" alt="负载状态估计流程图"></p>
+<h2 id="A-观测器"><a href="#A-观测器" class="headerlink" title="A 观测器"></a>A 观测器</h2><p>本文通过<strong>黑白圆形标记</strong>检测负载<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/4059340。如下图（a）所示。从而可以得到标记的像素位置">https://ieeexplore.ieee.org/abstract/document/4059340。如下图（a）所示。从而可以得到标记的像素位置</a>$x_u  = [u, v]^T$。<strong>该系统具有亚像素精度，对可变光照条件具有鲁棒性，并且需要相对较少的处理时间。</strong></p>
+<p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gy0rs2thnsj310p0jdwms.jpg" alt="(a)硬件组件 (b)实验架构"></p>
+<h2 id="B-相机模型"><a href="#B-相机模型" class="headerlink" title="B 相机模型"></a>B 相机模型</h2><p>本文利用全向模型来建模相机<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/4059340">A Toolbox for Easily Calibrating Omnidirectional Cameras | IEEE Conference Publication | IEEE Xplore</a>。像素坐标中标记中心之间的仿射变换$x_u  = [u, v]^T$以及调整过的像素坐标$\mathbf{x}_{u^{\prime}}=\left[u^{\prime}, v^{\prime}\right]^T$,是由于相机传感器错位造成的。摄像机到负载的矢量在摄像机坐标系内为:</p>
+$$\mathbf{n}^{\mathcal{C}}=\left[\begin{array}{c}n_{x} \\ n_{y} \\ n_{z}\end{array}\right] \approx \lambda\left[\begin{array}{c}u^{\prime} \\ v^{\prime} \\ f\left(u^{\prime}, v^{\prime}\right)\end{array}\right] $$
+<p>其中因子λ代表了量化的模糊度，将成像函数$f\left(u^{\prime}, v^{\prime}\right)$表示为$ρ :=\sqrt {u^2 + v^2}$的泰勒级数：</p>
+$$f\left(u^{\prime}, v^{\prime}\right)=f(\rho)=a_{0}+a_{1} \rho+a_{2} \rho^{2}+\ldots+a_{N} \rho^{N}$$
+<p>其中<em>N</em>为调整得到的，仿射变换和$a_0，…， a_N$是在校准时确定的。从而得到了$\mathbf{n}^{\mathcal{C}}$。</p>
+<h2 id="C-缆绳长度约束"><a href="#C-缆绳长度约束" class="headerlink" title="C 缆绳长度约束"></a>C 缆绳长度约束</h2><p>如下图所示，我们可以得到在缆绳有拉力的假设下存在：</p>
+$$\mathbf{x}_{L}^{\mathcal{B}}=l \mathbf{p}^{\mathcal{B}}=\mathbf{x}_{C}^{\mathcal{B}}+d \mathbf{R}_{\mathcal{C}}^{\mathcal{B}} \mathbf{n}^{\mathcal{C}} \tag{2}$$
+$\mathbf{x}_{L}^{\mathcal{B}}$和$\mathbf{x}_{C}^{\mathcal{B}}$分别为机体坐标系下的负载位置和相机位置。$\mathbf{R}_{\mathcal{C}}^{\mathcal{B}}$为相机坐标系到机体坐标系的旋转矩阵。通过$\mathbf{x}_{C}^{\mathcal{B}}$已知，我们可以通过如下公式计算得到*d*，从而通过公式2可以计算得到负载相对于无人机的位置。
+
+$$l=\left|\mathbf{x}_{C}^{\mathcal{B}}+d \mathbf{n}^{\mathcal{B}}\right|$$
+<p><img src="https://tvax2.sinaimg.cn/large/007mx13gly1gy0rn217bgj30ly0gj0v8.jpg" alt="四旋翼，有效载荷和机载相机以及惯性坐标系，机体坐标系和相机坐标系。"></p>
+<h2 id="D-基于模型的估计器"><a href="#D-基于模型的估计器" class="headerlink" title="D 基于模型的估计器"></a>D 基于模型的估计器</h2><p>为了进行估计，我们考虑一个具有状态的系统:</p>
+$$\mathbf{X}=\left[\mathbf{p}^{\top} \dot{\mathbf{p}}^{\top}\right]^{\top}$$
+<p>其中p以及其导数存在于惯性坐标系中，以及系统输入为</p>
+$$\mathbf{U}=\left[f\;\boldsymbol{R}\; \boldsymbol{\Omega}^{\top}\right]^{\top}$$
+<p>我们将过程噪声建模为加性高斯白噪声$N \in {\mathbb{R}^6}$，其均值为零，其标准差为$Q \in {\mathbb{R}^{6,6}}$。得到的过程模型是</p>
+$$\begin{aligned} \dot{\mathbf{X}} &amp;=\left[\begin{array}{l}\dot{\mathbf{p}} \\ \ddot{\mathbf{p}}\end{array}\right]=\mathbf{f}(\mathbf{X}, \mathbf{U}, \mathbf{N}), \quad \mathbf{N} \sim \mathcal{N}(0, \mathbf{Q}), \\ &amp;=\left[\begin{array}{c}\dot{\mathbf{p}} \\ \frac{1}{m_{Q} l} \mathbf{p} \times\left(\mathbf{p} \times f \mathbf{R e}_{3}\right)-(\dot{\mathbf{p}} \cdot \dot{\mathbf{p}}) \mathbf{p}\end{array}\right]+\mathbf{N} . \end{aligned} \tag{3}$$
+<p>已经在本文的A到C节中获得了机体坐标系中负载位置$\mathbf{x}_{L}^{\mathcal{B}}$以及其对应的数值离散时间导数${\mathbf{\dot x}}_L^\mathcal{B}$。其对应的测量模型为：</p>
+$$\begin{aligned} \mathbf{Z} &amp;=\left[\begin{array}{l}\mathbf{x}_{L}^{B} \\ \dot{\mathbf{x}}_{L}^{B}\end{array}\right]=\mathbf{g}(\mathbf{X}, \mathbf{U}, \mathbf{V}), \quad \mathbf{V} \sim \mathcal{N}(0, \mathbf{S}), \\ &amp;=\left[\begin{array}{c}\mathbf{R}^{\top} l \mathbf{p} \\ l\left(\mathbf{R}^{\top} \dot{\mathbf{p}}-\boldsymbol{\Omega} \times\left(\mathbf{R}^{\top} \mathbf{p}\right)\right)\end{array}\right]+\mathbf{V} . \end{aligned} \tag{4}$$
+<p>其中加性高斯白噪声为$	V \in {\mathbb{R}^6}$，其均值为零，其标准差为$S \in {\mathbb{R}^{6,6}}$。</p>
+<p><strong>从而有公式（3）和（4）构成了标准卡尔曼滤波器中的考虑高斯白噪声的非线性系统。</strong></p>
+<p>注意，我们也用无坐标的方式表示EKF。当相机测量频率较低时，EKF利用动态模型估计IMU测量速率较高时的状态。当收到新的IMU测量数据时，我们会使用最新的控制输入和偏航j角测量数据进行流程更新。当接收到新的原始图像时，我们缓存当前状态估计以及之后的IMU、Vicon偏航角测量值、控制输入。在$\mathbf{x}_{L}^{\mathcal{B}}$和其导数被计算后，我们对第一个被缓存的状态估计进行测量更新，并重新计算过程更新，以考虑图像处理延迟。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/gangdanerya/article/details/105105611"> 扩展卡尔曼滤波（EKF）算法详细推导及仿真（Matlab)</a></p>
+</blockquote>
+<h1 id="轨迹生成"><a href="#轨迹生成" class="headerlink" title="轨迹生成"></a>轨迹生成</h1><p>我们通过优化负载轨迹$\mathbf{x}_{L, \text { des }} \in \mathbb{R}^{3}$来规划系统的轨迹。为了实现动态可行性，轨迹必须至少具有6阶段可微性以及5次函数，输入中出现的最高导数为$x^{(6)}_L$(输入M（四旋翼在固定机体坐标系中的力矩矢量）为负载位置的6阶导数)，对应的成本函数为：</p>
+$$\mathbf{x}_{L, \text { des }}=\arg \min _{\mathbf{x}_{L}} \int_{0}^{t_{m}}\left\|\mathbf{x}_{L}^{(6)}\right\|_{2}^{2} d t \tag{5}$$
+<p>欧拉-拉格朗日条件得到以下条件:</p>
+$$x^{(12)}_L= 0$$ 
+<p>它的解是一个11阶多项式。因此，最优负载轨迹采用分段多项式的形式:</p>
+$$\mathbf{x}_{L, d e s}=\left\{\begin{array}{cc}
+\mathbf{x}_{L, d e s, 1}=\sum_{i=0}^{11} c_{i, 0} t^{i} &amp; t_{0} \leq t \leq t_{1} \\
+\mathbf{x}_{L, d e s, 2}=\sum_{i=0}^{11} c_{i, 1} t^{i} &amp; t_{1}<t \leq="" t_{2}="" \\="" \ldots="" &="" \mathbf{x}_{l,="" d="" e="" s,="" m}="\sum_{i=0}^{11}" c_{i,="" m-1}="" t^{i}="" t_{m-1}<t="" t_{m},="" \end{array}\right.$$="" <p="">其中 $\mathcal{T}=\left\{t_{0}, \ldots, t_{m}\right\}$ 为事先决定的中断时间， $\mathbf{x}_{L, \text { des }}$ 为向量函数。 考虑到决策向量<p></p>
+$\mathbf{c}=\left[\begin{array}{lllll}
+c_{0,0} &amp; c_{1,0} &amp; c_{2,0} &amp; \ldots &amp; c_{N, m-1}
+\end{array}\right]^{\top}$
+<p>公式(5) 是关于c的正定二次函数，为了实现动力学可行性，我们施加连续性约束:</p>
+$$\mathbf{x}_{L, d e s, j}^{(k)}\left(t_{j}\right)=\mathbf{x}_{L, d e s, j+1}^{(k)}\left(t_{j}\right) \forall j \in[0,5], k \in[1, m-1] .\tag{6}$$
+<p>为了确保系统开始和结束于悬停，我们强制:</p>
+$$\mathbf{x}_{L, d e s}^{(k)}\left(t_{j}\right)=\mathbf{0} \forall j \in\{0, m\}, k \in[1,5] \text {. } \tag{7}$$
+<p>注意到上式中对应与状态的平坦微分$\mathbf{p}= -\mathbf{e}_{z}^{\mathcal{T}}, \mathbf{R}=\mathcal{I}, \dot{\mathbf{p}}=\Omega=0$。最终我们确定需要穿过的路径点$x_{L,j}$为</p>
+$$\mathbf{x}_{L, d e s}\left(t_{j}\right)=\mathbf{x}_{L, j} \forall j \in[0, m] \tag{8}$$
+<p>上述约束（6-8）对于<em>c</em>是线性的。利用式(5)和式(6)-(8)，我们得到了一个二次规划问题(QP)，可以用商业优化软件进行求解。</p>
+<p>有一种可能性，优化轨迹违反了我们的系统中的缆绳是拉紧的假设。由公式(1)得到，保证${\ddot x_L}{e_z} &gt; {\rm{ - }}g$就可以使T &gt;0。为了保证缆绳是拉紧的假设，我们首先通过求解初始T的QP问题来求得所需的轨迹系数。然后，我们通过选择αT来调整轨迹中断时间，使${\ddot x_L}{e_z} &gt; {\rm{ - }}g$。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>证明了中断时间T是可以调整但是不影响轨迹路线的（Nondimensionalization无量钢化）。</p>
+</blockquote>
+<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><p>无人机总质量为835 g，负载质量为88 g，缆绳长度为0.4 ~ 0.7 m。</p>
+</t>
                 
             </div>
             <hr/>
@@ -457,7 +535,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Cao Dong street</a>
+                    <a href="/about" rel="external nofollow noreferrer">CaoDong street</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -480,7 +558,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Cao Dong street</a>
+                    <a href="/about" target="_blank">CaoDong street</a>
                     !
                 </span>
             </div>
@@ -504,7 +582,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/">
+                                    <span class="chip bg-color">无人机</span>
+                                </a>
+                            
+                                <a href="/tags/PS%E8%AE%BA%E6%96%87/">
+                                    <span class="chip bg-color">PS论文</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -766,6 +852,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -837,7 +930,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">196.5k</span>&nbsp;字
+                class="white-color">198.7k</span>&nbsp;字
             
             
             
