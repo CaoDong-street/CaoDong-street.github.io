@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-04T14:11:57.102Z</updated>
+  <updated>2022-01-05T11:15:28.864Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>state论文2</title>
+    <title>state论文3</title>
+    <link href="http://example.com/2022/01/05/ps-state-lun-wen-3/"/>
+    <id>http://example.com/2022/01/05/ps-state-lun-wen-3/</id>
+    <published>2022-01-05T01:17:59.000Z</published>
+    <updated>2022-01-05T11:15:28.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;文章地址：&lt;a href=&quot;https://ieeexplore.ieee.org/document/7989532&quot;&gt;Autonomous swing-angle estimation for stable slung-load flight of</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>state论文(2)</title>
     <link href="http://example.com/2022/01/04/ps-state-lun-wen-2/"/>
     <id>http://example.com/2022/01/04/ps-state-lun-wen-2/</id>
     <published>2022-01-04T07:32:49.000Z</published>
-    <updated>2022-01-04T14:11:57.102Z</updated>
+    <updated>2022-01-05T01:20:25.631Z</updated>
     
     
       
@@ -182,11 +209,11 @@
   </entry>
   
   <entry>
-    <title>PS state论文（1）</title>
+    <title>PS state论文(1)</title>
     <link href="http://example.com/2022/01/03/ps-state-lun-wen-1/"/>
     <id>http://example.com/2022/01/03/ps-state-lun-wen-1/</id>
     <published>2022-01-03T08:01:53.000Z</published>
-    <updated>2022-01-04T07:33:52.758Z</updated>
+    <updated>2022-01-05T01:20:20.592Z</updated>
     
     
       
@@ -509,35 +536,6 @@
     
     
     <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fast-planner初代论文笔记2</title>
-    <link href="http://example.com/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/"/>
-    <id>http://example.com/2021/10/20/fast-planner-chu-dai-lun-wen-bi-ji-2/</id>
-    <published>2021-10-20T14:55:47.000Z</published>
-    <updated>2021-12-11T06:02:29.422Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;对应代码地址：&lt;a href=&quot;https://github.com/HKUST-Aerial-Robotics/Fast-Planner&quot;&gt;GitHub - HKUST-Aerial-Robotics/Fast-Planner: A Robust and</summary>
-        
-      
-    
-    
-    
-    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="fast planner" scheme="http://example.com/tags/fast-planner/"/>
-    
-    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-    <category term="轨迹优化" scheme="http://example.com/tags/%E8%BD%A8%E8%BF%B9%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
