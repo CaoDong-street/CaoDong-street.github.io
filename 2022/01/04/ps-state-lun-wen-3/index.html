@@ -432,14 +432,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -511,8 +511,8 @@ p\left(\mathbf{x}_{L}^{\mathcal{E}} \mid \theta\right) &amp;=\mathcal{N}\left(\m
 $$f(u, v)=\gamma_{t p} f_{t p}(u, v)+\gamma_{h t} f_{h t}(u, v),$$
 <p>其中 $f_{t p}(u, v)$ 为由相关过滤器计算的模板分数; $f_{h t}(u, v)$ 是直方图分数; $\gamma_{t p}$ 和 $\gamma_{h t}$  为评分函数中的权重。 STAPLE对运动模糊、光照变化、物体变形和复杂背景等具有挑战性的情况具有很强的鲁棒性。有了这些特征，我们的视觉系统在室内和室外实验中显示出了很强的鲁棒性。<br>此外，得益于基于编码器的估计器，我们赋予STAPLE检索丢失的跟踪对象的能力。在原始STAPLE中存有一个低概率事件，在重新跟踪对象时，对象是在视野之外。在我们的系统中，如果目标跟踪在基于视觉的估计器中失败，它将由基于编码器的估计器估计的位置重新初始化。</p>
 <p>为了判断电缆的绷紧状态，计算基于编码器的估计器和基于视觉的估计器之间的估计位置差 $\Delta \mathbf{x}_{L}=\left\|\mathbf{x}_{L_{\text {vision }}}-\mathbf{x}_{L_{\text {encoder }}}\right\|_{2}$ 。</p>
-<p>定义负载外接圆半径为<em>r</em>，当 $\Delta \mathbf{x}_{L}<r$时，缆绳为拉紧，反之为松弛。< p="">
-</r$时，缆绳为拉紧，反之为松弛。<></p><h3 id="C-基于视觉和编码器的传感器融合"><a href="#C-基于视觉和编码器的传感器融合" class="headerlink" title="C 基于视觉和编码器的传感器融合"></a>C 基于视觉和编码器的传感器融合</h3><p>如A、B节所述，编码器和基于视觉的估计器都提供了负载的位置估计。由于这两种估计都受到噪声干扰，因此有必要将两种传感器的测量结果进行融合以提供精确的结果。不失一般性，假设整个视觉-编码器系统得到的位置估计量$\mathbf{x}_{L_{e s t}}^{B}$服从高斯分布：</p>
+<p>定义负载外接圆半径为<em>r</em>，当上述估计位置差小于<em>r</em>时，缆绳为拉紧，反之为松弛。</p>
+<h3 id="C-基于视觉和编码器的传感器融合"><a href="#C-基于视觉和编码器的传感器融合" class="headerlink" title="C 基于视觉和编码器的传感器融合"></a>C 基于视觉和编码器的传感器融合</h3><p>如A、B节所述，编码器和基于视觉的估计器都提供了负载的位置估计。由于这两种估计都受到噪声干扰，因此有必要将两种传感器的测量结果进行融合以提供精确的结果。不失一般性，假设整个视觉-编码器系统得到的位置估计量$\mathbf{x}_{L_{e s t}}^{B}$服从高斯分布：</p>
 $$P\left(\mathbf{x}_{L_{e s t}}^{B}\right)=\mathcal{N}\left(\mu, \sigma^{2}\right) .\tag{2}$$
 <p>视觉和编码器的观测结果也服从高斯分布</p>
 $$P\left(\mathbf{x}_{L_{o b x}}^{\mathcal{B}}\right)=\mathcal{N}\left(\mu_{o b s}, \sigma_{o b s}^{2}\right) .$$
@@ -948,7 +948,7 @@ $$\begin{gathered}
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">215.6k</span>&nbsp;字
+                class="white-color">216.2k</span>&nbsp;字
             
             
             
