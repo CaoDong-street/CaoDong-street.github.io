@@ -75,11 +75,11 @@
   </entry>
   
   <entry>
-    <title>state论文(2)</title>
+    <title>PS state论文(2)</title>
     <link href="http://example.com/2022/01/04/ps-state-lun-wen-2/"/>
     <id>http://example.com/2022/01/04/ps-state-lun-wen-2/</id>
     <published>2022-01-04T07:32:49.000Z</published>
-    <updated>2022-01-05T01:20:25.631Z</updated>
+    <updated>2022-01-07T12:58:31.826Z</updated>
     
     
       
@@ -98,6 +98,8 @@
     <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
     <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="负载状态" scheme="http://example.com/tags/%E8%B4%9F%E8%BD%BD%E7%8A%B6%E6%80%81/"/>
     
   </entry>
   
