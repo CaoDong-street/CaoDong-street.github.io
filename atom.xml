@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-07T12:44:26.222Z</updated>
+  <updated>2022-01-08T02:18:52.765Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PS state论文(3)</title>
+    <link href="http://example.com/2022/01/06/ps-state-lun-wen-3/"/>
+    <id>http://example.com/2022/01/06/ps-state-lun-wen-3/</id>
+    <published>2022-01-06T07:32:49.000Z</published>
+    <updated>2022-01-08T02:18:52.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对应文章地址：&lt;a href=&quot;https://github.com/RENyunfan/visual_encoder_estimator&quot;&gt;Vision-encoder-based Payload State Estimation for Autonomous</summary>
+        
+      
+    
+    
+    
+    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
+    
+    <category term="负载状态" scheme="http://example.com/tags/%E8%B4%9F%E8%BD%BD%E7%8A%B6%E6%80%81/"/>
+    
+  </entry>
   
   <entry>
     <title>PS control 论文（1）</title>
@@ -58,35 +87,6 @@
         
         
     <summary type="html">&lt;p&gt;文章地址：&lt;a href=&quot;https://ieeexplore.ieee.org/document/7989532&quot;&gt;Autonomous swing-angle estimation for stable slung-load flight of</summary>
-        
-      
-    
-    
-    
-    <category term="论文笔记" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="无人机" scheme="http://example.com/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-    <category term="PS论文" scheme="http://example.com/tags/PS%E8%AE%BA%E6%96%87/"/>
-    
-    <category term="负载状态" scheme="http://example.com/tags/%E8%B4%9F%E8%BD%BD%E7%8A%B6%E6%80%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PS state论文(3)</title>
-    <link href="http://example.com/2022/01/04/ps-state-lun-wen-3/"/>
-    <id>http://example.com/2022/01/04/ps-state-lun-wen-3/</id>
-    <published>2022-01-04T07:32:49.000Z</published>
-    <updated>2022-01-07T14:21:08.797Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;对应文章地址：&lt;a href=&quot;https://github.com/RENyunfan/visual_encoder_estimator&quot;&gt;Vision-encoder-based Payload State Estimation for Autonomous</summary>
         
       
     
@@ -246,7 +246,7 @@
     <link href="http://example.com/2022/01/03/ps-state-lun-wen-1/"/>
     <id>http://example.com/2022/01/03/ps-state-lun-wen-1/</id>
     <published>2022-01-03T08:01:53.000Z</published>
-    <updated>2022-01-07T13:21:51.621Z</updated>
+    <updated>2022-01-08T02:24:08.991Z</updated>
     
     
       

@@ -432,14 +432,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -464,7 +464,7 @@
             <div id="articleContent">
                 <p>对应文章地址：<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8258883">Aggressive Flight With Suspended Payloads Using Vision-Based Control | IEEE Journals &amp; Magazine | IEEE Xplore</a></p>
 <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>绳载负载的四旋翼系统的非线性动力学轨迹执行完全通过<strong>动作捕捉系统</strong>实现，或者将系统限制在<strong>二维空间</strong>或者仅建立四旋翼的闭环控制但是<strong>不建立负载的闭环控制</strong>从而对系统进行简化（这种简化是不可忽视）。</p>
-<p>针对上述问题，本文用向下的摄像机观察负载，利用<strong>扩展卡尔曼滤波器</strong>估计其相对于四旋翼的状态。</p>
+<p>针对上述问题，本文用无人机上装载向下的摄像机观察负载状态（负载上面存在<strong>黑白圆形标记</strong>），利用<strong>扩展卡尔曼滤波器</strong>估计负载相对于四旋翼的状态。</p>
 <h2 id="动力学模型与控制设计"><a href="#动力学模型与控制设计" class="headerlink" title="动力学模型与控制设计"></a>动力学模型与控制设计</h2><p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gy0rmkb4vsj30un0ecafj.jpg" alt="文中定义的变量与参数"></p>
 <p>动力学模型与控制器与<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6760219">Geometric control and differential flatness of a quadrotor UAV with a cable-suspended load | IEEE Conference Publication | IEEE Xplore</a>一样。</p>
 <p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gy0rbmer5ij30nm06f75o.jpg" alt="控制器结构与传感器反馈"></p>
@@ -505,9 +505,8 @@ $$\mathbf{x}_{L, \text { des }}=\arg \min _{\mathbf{x}_{L}} \int_{0}^{t_{m}}\lef
 <p>欧拉-拉格朗日条件得到以下条件:</p>
 $$x^{(12)}_L= 0$$ 
 <p>它的解是一个11阶多项式。因此，最优负载轨迹采用分段多项式的形式:</p>
-$$\mathbf{x}_{L, d e s}=\left\{\begin{array}{cc}
-\mathbf{x}_{L, d e s, 1}=\sum_{i=0}^{11} c_{i, 0} t^{i} &amp; t_{0} \leq t \leq t_{1} \\
-\mathbf{x}_{L, d e s, 2}=\sum_{i=0}^{11} c_{i, 1} t^{i} &amp; t_{1}<t \leq="" t_{2}="" \\="" \ldots="" &="" \mathbf{x}_{l,="" d="" e="" s,="" m}="\sum_{i=0}^{11}" c_{i,="" m-1}="" t^{i}="" t_{m-1}<t="" t_{m},="" \end{array}\right.$$="" <p="">其中 $\mathcal{T}=\left\{t_{0}, \ldots, t_{m}\right\}$ 为事先决定的中断时间， $\mathbf{x}_{L, \text { des }}$ 为向量函数。 考虑到决策向量<p></p>
+<p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gy61xajsg6j30wy09iwg4.jpg" alt=""></p>
+<p>其中 $\mathcal{T}=\left\{t_{0}, \ldots, t_{m}\right\}$ 为事先决定的中断时间， $\mathbf{x}_{L, \text { des }}$ 为向量函数。 考虑到决策向量</p>
 $\mathbf{c}=\left[\begin{array}{lllll}
 c_{0,0} &amp; c_{1,0} &amp; c_{2,0} &amp; \ldots &amp; c_{N, m-1}
 \end{array}\right]^{\top}$
@@ -523,7 +522,7 @@ $$\mathbf{x}_{L, d e s}\left(t_{j}\right)=\mathbf{x}_{L, j} \forall j \in[0, m] 
 <p><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/5980409">Minimum snap trajectory generation and control for quadrotors | IEEE Conference Publication | IEEE Xplore</a>证明了中断时间T是可以调整但是不影响轨迹路线的（Nondimensionalization无量钢化）。</p>
 </blockquote>
 <h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>无人机总质量为835 g，负载质量为88 g，缆绳长度为0.4 ~ 0.7 m。</p>
-</t>
+
                 
             </div>
             <hr/>
@@ -938,7 +937,7 @@ $$\mathbf{x}_{L, d e s}\left(t_{j}\right)=\mathbf{x}_{L, j} \forall j \in[0, m] 
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">216.2k</span>&nbsp;字
+                class="white-color">216.7k</span>&nbsp;字
             
             
             
