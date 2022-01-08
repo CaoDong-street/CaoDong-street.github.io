@@ -512,7 +512,7 @@ $$\left\{\begin{array}{l}
 \ddot{\mathbf{x}}=G\left(\mathbf{q}, \Sigma F_{i}\right) \mathbf{\Gamma}+g \mathbf{z}_{e} \\
 \ddot{\mathbf{q}}=J^{-1} T_{m}
 \end{array}\right. \tag{5}$$
-<p>在进一步的描述中， 其中 $\boldsymbol{\Gamma}=\left[\phi \theta \Sigma F_{i}\right]^{T}$ 为无人机控制的状态集 $G\left(\mathbf{q}, \Sigma F_{i}\right)$  是$\ddot{\mathbf{X}}$ 与 $\boldsymbol{\Gamma}$之间的关系矩阵。</p>
+<p>在进一步的描述中， 其中 $\boldsymbol{\Gamma}=\left[\phi, \theta, \Sigma F_{i}\right]^{T}$ 为无人机控制的状态集 $G\left(\mathbf{q}, \Sigma F_{i}\right)$  是$\ddot{\mathbf{X}}$ 与 $\boldsymbol{\Gamma}$之间的关系矩阵。</p>
 <p>同时，当负载附加时，系绳张力起扰力作用。在这一方面，在方程(5)中增加一个额外的力和一个力矩项，就完成了负载附加后的方程。将式(5)改写后，无人机的动力学方程为</p>
 $$\left\{\begin{array}{l}
 \ddot{\mathbf{x}}=G\left(\mathbf{q}, \Sigma F_{i}\right) \boldsymbol{\Gamma}+g \mathbf{z}_{e}+\frac{1}{m} F_{s} \\
@@ -520,10 +520,11 @@ $$\left\{\begin{array}{l}
 \end{array}\right. \tag{6}$$
 <p>其中$F_{s}=\left[\begin{array}{lll}F_{s, x} &amp; F_{s, y} &amp; F_{s, z}\end{array}\right]^{T}$和$T_{s}=\left[T_{s, x} T_{s, y} T_{s, z}\right]^{T}$分别是由复杂期产生的扰动力和力矩。方程(6)的概念通过推导扰动力与摆角的关系给出了摆角估计的关键思想。</p>
 <p>同时，用于仿真的无人机动力学既要考虑全动力学，又要考虑吊挂载荷动力学。因此，我们应该将仿真的动力学写为</p>
-<script type="math/tex; mode=display">\left\{\begin{array}{c}
+$$\left\{\begin{array}{c}
 m \ddot{\mathbf{x}}=R(\mathbf{q}) T_{f}+F_{s}+m g \mathbf{z}_{c} \\
 J \dot{\Omega}=T_{m}+T_{s}-\Omega \times J \Omega
-\end{array}\right.\tag{7}</script><p>但(7)式不能直接用于仿真，因为计算$F_{s}$和$T_{s}$随时间变化的解还未知。$F_{s}$和$T_{s}$是由系统的机械约束产生的力和力矩。在我们的案例中，机械约束是无人机和负载之间的恒定长度。因此，对于无人机和负载的仿真，我们需要在长度约束的基础上，计算出每个时间步长中的$F_{s}$值。</p>
+\end{array}\right.\tag{7}$$
+<p>但(7)式不能直接用于仿真，因为计算$F_{s}$和$T_{s}$随时间变化的解还未知。$F_{s}$和$T_{s}$是由系统的机械约束产生的力和力矩。在我们的案例中，机械约束是无人机和负载之间的恒定长度。因此，对于无人机和负载的仿真，我们需要在长度约束的基础上，计算出每个时间步长中的$F_{s}$值。</p>
 <h3 id="B-负载-无人机动力学仿真"><a href="#B-负载-无人机动力学仿真" class="headerlink" title="B 负载-无人机动力学仿真"></a>B 负载-无人机动力学仿真</h3><p>多年来，对悬载直升机的约束动力学系统建模进行了研究。最有前途的方法之一是Udwadia-Kalaba  (UK)方程。U-K方程是基于高斯最小约束原理的动力学方程，其中系统运动由满足约束条件下最接近无约束加速度的系统的加速度矢量控制。在方程中，可以写成</p>
 $$\ddot{\zeta}=\arg \min \Delta\left(\ddot{\zeta}_{\delta}\right) \tag{8}$$
 <p>其中 $\Delta\left(\ddot{\zeta}_{\delta}\right)=\left(\ddot{\zeta}_{\delta}-\ddot{\zeta}_{u}\right)^{T} M\left(\ddot{\zeta}_{\delta}-\ddot{\zeta}_{u}\right)=\Upsilon^{T} \Upsilon$ 需要最小化的成本函数， $\zeta_{\delta}$ 表示所有可能的加速度矢量, $\ddot{\zeta}_{u}$自由状态下不受任何物理约束的加速度而 $M$为质量矩阵。$\Upsilon$ 满足式(8)和约束方程 $A \ddot{\zeta}_{\delta}=b$，则有 </p>
@@ -544,15 +545,15 @@ $$\boldsymbol{\Gamma}_{\mathrm{d}}=G^{-1}\left(\mathbf{q}, \Sigma F_{i}\right)\l
 <p>为了计算出 公式(11)中的$\Gamma_{\mathrm{d}}$， 需要其总拉力 $\Sigma F_{i}$计算出 $G^{-1}$。虽然许多研究将推力值作为一种可测量的输出状态，但获取精确的推力值非常困难。这种在$\Sigma F_{i}$中的不确定性是由于转子动力学的不完善和电池电压的持续下降，使得电子速度控制器(ESC)难以保持输入指令和输出电压/电流之间的恒定关系。因此，需要引入了一种利用式(1)代替输入输出推力指令关系的数学模型估计$\Sigma F_{i}$的替代方法。得到的$T_f$估计为</p>
 $$T_{f}=m R^{-1}(\mathbf{q})\left(\ddot{\mathbf{x}}-g \mathbf{z}_{c}\right) . \tag{12}$$
 <p>上式中的变量都是已知的，通过估计总推力，我们现在可以在式(11)中计算$Γ_d$，这是一个$Λ_p$的输入命令，$Λ_p$图2为中的灰框，它由带有姿态和推力控制器的六旋翼装置组成($y =Λ_pΓ_d$)。</p>
-<p>为了估计干扰力，$\hat{\bar{x}}_{d}$的估计量 $\tilde{\tilde{x}}_{\mathrm{d}}+d$ 应该被计算。符号 $\hat{*}$ 代表全文中的估计量. 首先, $\hat{\Gamma}$是 $\Gamma$在 $\ddot{\mathbf{x}}$的基础上计算最近的加速度。 在这个时候，由于轴向力的干扰会影响无人机的正常性能，$\hat{\boldsymbol{\Gamma}}$ 会不同于 $\Gamma$ 。 随后通过使用正常传递函数的倒数$\Lambda_{n}^{-1}$计算出期望姿态指令$\hat{\boldsymbol{\Gamma}}_{\mathrm{d}}$。   $\Lambda_{n}$ 代表 $\Lambda_{p}$ 处于正常状态。然后通过,  信号通过$G$ 模块将 $\hat{\Gamma}_{d}$ 转化为了 $\tilde{\tilde{x}}_{d}$ （期望的轴向加速度指令），这也可能与实际轴向加速度指令有很大的不同，因为它是基于$\hat{\boldsymbol{\Gamma}}_{\mathrm{d}}$计算出来的，最后，估计的扰动加速度$\hat{d}$由下式计算出。</p>
-$$\hat{d}=\hat{\tilde{\mathbf{x}}}_{d}-\tilde{\tilde{\mathbf{x}}}_{d}=G\left(\mathbf{q}, \Sigma F_{i}\right) \Lambda_{n}{ }^{-1} G^{-1}\left(\mathbf{q}, \Sigma F_{i}\right) \ddot{\mathbf{x}}-\tilde{\tilde{\mathbf{x}}}_{d} \tag{13}$$
-$\hat{d}$受到外界影响的扰动加速度指令估计值，因此可以通过将质量乘以各轴上估计的扰动来估计各轴上的扰动力，即
+<p>为了估计干扰力， $\tilde{\ddot{x}}_{\mathrm{d}}+d$的估计量$\hat{\tilde{\ddot{x}}}_{d}$应该被计算。符号 $\hat{*}$ 代表全文中的估计量. 首先,  $\Gamma$的估计量$\hat{\Gamma}$导致在 $\ddot{\mathbf{x}}$的基础上计算最近的加速度。 在这个时候，由于轴向力的干扰会影响无人机的正常性能，$\hat{\boldsymbol{\Gamma}}$ 会不同于 $\Gamma$ 。 随后通过使用正常传递函数的倒数$\Lambda_{n}^{-1}$计算出期望姿态指令$\hat{\boldsymbol{\Gamma}}_{\mathrm{d}}$。   $\Lambda_{n}$ 代表 $\Lambda_{p}$ 处于正常状态。然后通过,  信号通过$G$ 模块将 $\hat{\Gamma}_{d}$ 转化为了 $\hat{\tilde{\ddot{x}}}_{d}$ （期望的轴向加速度指令），这也可能与实际轴向加速度指令有很大的不同，因为它是基于$\hat{\boldsymbol{\Gamma}}_{\mathrm{d}}$计算出来的，最后，估计的扰动加速度$\hat{d}$由下式计算出。</p>
+$$\hat{d}=\hat{\tilde{\ddot{\mathbf{x}}}}_{d}-\tilde{\ddot{\mathbf{x}}}_{d}=G\left(\mathbf{q}, \Sigma F_{i}\right) \Lambda_{n}{ }^{-1} G^{-1}\left(\mathbf{q}, \Sigma F_{i}\right) \ddot{\mathbf{x}}-\tilde{{\ddot{x}}}_{d} \tag{13}$$
+$\hat{d}$为受到外界影响的扰动加速度指令估计值，因此可以通过将质量乘以各轴上估计的扰动来估计各轴上的扰动力，即
 
 $$\hat{F}_{s}=m \hat{d} \tag{14}$$
 <p>干扰力的估计是本文实现摆动角估计的一个关键概念。该方法的特殊意义在于，$\hat{d}$不仅是一个用于增强系统稳定性的集中值，而且是一个具有物理意义的值，特别是一个通过简单修改作用于系统的外力。此外，它是非常实用的，因为没有其他传感器，但只需要IMU的工作。</p>
 <p>我们认为，这种方法是本文中介绍的一个独特的概念。但由于现代无人机硬件的不完善，这种方法在实现上存在一定的局限性。在下一小节中，我们将讨论局限性，并找出解决问题的方法。</p>
 <h3 id="C-克服物理极限"><a href="#C-克服物理极限" class="headerlink" title="C 克服物理极限"></a>C 克服物理极限</h3><p>所提出的扰动估计的一个问题是几乎不可能精确的$z_e$方向扰动估计。这是因为与$x_e$和$y_e$方向模型相比，推进器的传递函数不断变化，这与上一小节引入的$T_f$估计不准确的原因是一样的。因此，需要另一种方法来补充这种不准确性。</p>
-<p>本文提出的实用解决方案是使用一个测绳拉力的测力元件，它给出了悬索产生的整体扰动力的范数$|| F_s||$。根据摆角的定义，地球坐标系中中的轴向扰动力为</p>
+<p>本文提出的实用解决方案是使用一个测绳拉力的测力元件，它给出了绳索产生的整体扰动力的范数$|| F_s||$。根据摆角的定义，地球坐标系中中的轴向扰动力为</p>
 $$\left\{\begin{array}{l}
 F_{s, x}=\left\|F_{s}\right\| \sin \beta \\
 F_{s, y}=\left\|F_{s}\right\| \cos \beta \sin \alpha \\
@@ -573,7 +574,8 @@ $$\left\{\begin{aligned}
 \hat{\beta} &amp;=\arcsin \left(\frac{\hat{F}_{s, x}}{\left\|F_{s}\right\|}\right) \\
 \hat{\alpha} &amp;=\arcsin \left(\frac{\hat{F}_{s, y}}{\left\|F_{s}\right\| \cos \hat{\beta}}\right)
 \end{aligned}\right.$$
-<p>然后用更新后的估计摆动角度计算更好的$F_{s, z}=\left\|F_{s}\right\| \cos \beta \cos \alpha\\$在方程(15)。.从而补充了 $\hat{F}_{s}$的所有分量而实现了更精确的 $T_{f}$ 估计。</p>
+<p>然后用更新后的估计摆动角度计算更好的$F_{s, z}=\left\|F_{s}\right\| \cos \beta \cos \alpha\\$在方程(15)。.从而补充了 $\hat{F}_{s}$的所有分量而实现了更精确的 $T_{f}$ 估计。估计量之间的关系图如下图所示，这四个估计量都相互依赖。</p>
+<p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gy64aq5s4uj30tn0it7co.jpg" alt="估计量之间的关系图，每个估计值需要另一个估计值的估计值来进行计算。"></p>
 
                 
             </div>

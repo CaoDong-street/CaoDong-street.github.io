@@ -469,9 +469,9 @@
 <p>动力学模型与控制器与<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/6760219">Geometric control and differential flatness of a quadrotor UAV with a cable-suspended load | IEEE Conference Publication | IEEE Xplore</a>一样。</p>
 <p><img src="https://tva4.sinaimg.cn/large/007mx13gly1gy0rbmer5ij30nm06f75o.jpg" alt="控制器结构与传感器反馈"></p>
 <h2 id="负载状态估计"><a href="#负载状态估计" class="headerlink" title="负载状态估计"></a>负载状态估计</h2><p>控制器需要精确的负载状态测量。我们使用向下的摄像机检测负载，并使用扩展卡尔曼滤波器(EKF)对测量值进行滤波，得出高频、动态的估计结果。</p>
-<p>无人机的滚动角和俯仰角以及角速度通过无人机上的IMU（惯性测量单元）获得，无人机的偏航角通过Vicon动作捕捉系统获得。对于负载姿态控制环，我们设计了一种EKF来融合IMU和Vicon的偏航角测量结果（无人机的测量结果）与机载相机的图像（负载测量结果），从而估计出<em>p</em>以及其导数。再通过公式（1）结合负载位置$x_L$以及无人机位置$x_Q$以实现有效负载的位置闭环控制。</p>
-$$-T \mathbf{p}=m_{L}\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right),\mathbf{p}=-\frac{\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right)}{\left\|\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right\|_{2}}, x_Q = x_L− lp \tag{1}$$
-<p>下图描述了估计出<em>p</em>以及其导数的流程图</p>
+<p>无人机的滚动角和俯仰角以及角速度通过无人机上的IMU（惯性测量单元）获得，无人机的偏航角通过Vicon动作捕捉系统获得。对于负载姿态控制环，我们设计了一种EKF来融合IMU和Vicon的偏航角测量结果（无人机的测量结果）与机载相机的图像（负载测量结果），从而估计出<em>p</em>以及其导数。再通过公式（1）结合负载位置$x_L$以及无人机位置$x_Q$以实现有效负载的位置闭环控制，下式中<em>T</em>代表绳的拉力。</p>
+$$-T \mathbf{p}=m_{L}\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right),\mathbf{p}=-\frac{\left(\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right)}{\left\|\ddot{\mathbf{x}}_{L}+g \mathbf{e}_{z}^{\mathcal{I}}\right\|_{2}}, x_Q = x_L− l\mathbf{p} \tag{1}$$
+<p>下图描述了估计出<em>p</em>以及其导数的流程图。</p>
 <p><img src="https://tvax4.sinaimg.cn/large/007mx13gly1gy0rqxchglj315103jwfg.jpg" alt="负载状态估计流程图"></p>
 <h3 id="A-观测器"><a href="#A-观测器" class="headerlink" title="A 观测器"></a>A 观测器</h3><p>本文通过<strong>黑白圆形标记</strong>检测负载<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/4059340">A Toolbox for Easily Calibrating Omnidirectional Cameras | IEEE Conference Publication | IEEE Xplore</a>。如下图（a）所示。从而可以得到标记的像素位置$x_u  = [u, v]^T$。<strong>该系统具有亚像素精度，对可变光照条件具有鲁棒性，并且需要相对较少的处理时间。</strong></p>
 <p><img src="https://tvax1.sinaimg.cn/large/007mx13gly1gy0rs2thnsj310p0jdwms.jpg" alt="(a)硬件组件 (b)实验架构"></p>

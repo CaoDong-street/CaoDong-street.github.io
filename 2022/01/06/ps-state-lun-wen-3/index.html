@@ -466,7 +466,7 @@
 <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>负载状态估计的鲁棒性和在线性很重要，但具有挑战性，特别是在户外环境中。本文开发了一种新型的实时有效载荷位置估计系统;该系统由单目鱼眼摄像机和一种基于编码器的新型装置组成。提出了一种基于高斯融合的负载状态估计算法。在负载位置估计鲁棒的基础上，提出了一种有效负载控制器，以保证可靠的快速轨迹跟踪性能。</p>
 <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>实现负载状态估计的方法有很多。</p>
 <p>例如，<a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/8258883">Aggressive Flight With Suspended Payloads Using Vision-Based Control | IEEE Journals &amp; Magazine | IEEE Xplore</a>使用视觉方法来估计载荷的位置。该方法要求负载上有特定的人工标记(如白色圆形标签)，而视频流的低频和高延迟使其难以准确估计负载的状态。</p>
-<p><a target="_blank" rel="noopener" href="https://83cc9dc9-26fc-4d30-af80-fb51f5335552.filesusr.com/ugd/5878bd_9240d7f63adb4034aa2ee56c0291b309.pdf">Autonomous Swing-Angle Estimation for Stable Slung-Load Flight of Multi-Rotor UAVs </a>使用惯性测量单元(IMU)来估计负载的位置;但IMU作为积分型传感器，在长时间工作后可能会产生累积误差。</p>
+<p><a target="_blank" rel="noopener" href="https://83cc9dc9-26fc-4d30-af80-fb51f5335552.filesusr.com/ugd/5878bd_9240d7f63adb4034aa2ee56c0291b309.pdf">Autonomous Swing-Angle Estimation for Stable Slung-Load Flight of Multi-Rotor UAVs </a>使用惯性测量单元(IMU)来估计负载的位置(这里有误，其实是通过负载的受力估计来估计负载位置);但IMU作为积分型传感器，在长时间工作后可能会产生累积误差。</p>
 <p>本文贡献分为三部分：</p>
 <p>首先，针对无外界观测的实际场景（无法使用动作捕捉），设计了一种结合编码器和鱼眼摄像机的负载估计系统。通过对编码器和视觉信息的融合，进一步提出了一种基于高斯融合的估计算法，以获得精确和鲁棒的性能。</p>
 <p>其次，提出了一种负载控制器，该控制器能够保证可靠的快速轨迹的跟踪性能。提高视觉-编码器估计系统检测缆绳是否绷紧，并自动切换控制策略。</p>
