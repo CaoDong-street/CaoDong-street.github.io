@@ -428,7 +428,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    981
+                    985
                 </div>
                 
 
@@ -574,9 +574,10 @@ int main(int argc,char **argv)
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">add_executable(control src/control.cpp)
 target_link_libraries(control ${catkin_LIBRARIES})
 add_dependencies(control  ${PROJECT_NAME}_generate_messages_cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="运行小车避障运动"><a href="#运行小车避障运动" class="headerlink" title="运行小车避障运动"></a>运行小车避障运动</h2><p>导入环境变量：</p>
+<h2 id="运行小车避障运动"><a href="#运行小车避障运动" class="headerlink" title="运行小车避障运动"></a>运行小车避障运动</h2><p>编译并导入环境变量：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd ~/learning_ws
-source ./devel/setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+catkin_make
+source ./devel/setup.bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>运行launch文件</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">roslaunch control control.launch <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>打开coppeliasim与对应的controlleViaRos.ttt并运行，可看到小车运动并具备避障功能。</p>
